@@ -110,25 +110,29 @@ const LandingHeader = () => {
           <div className="flex flex-col gap-6">
             {options.map((option) =>
               option.name === "Home" ? (
-                <CustomLink key={option.path} to={`/`} className="link text-sm">
+                <CustomLink
+                  onClick={() => setIsOpen(false)}
+                  key={option.path}
+                  to={`/`}
+                  className="text-3xl font-medium transition-colors duration-300 link"
+                >
                   Home
                 </CustomLink>
               ) : (
                 <Link
+                  onClick={() => setIsOpen(false)}
                   to={option.path}
-                  className="link text-sm"
+                  className="text-3xl font-medium transition-colors duration-300 link"
                   key={option.path}
                   spy={true}
                   smooth={true}
                   offset={-60}
                   duration={1000}
-                  activeClass="active-link"
                 >
                   {option.name}
                 </Link>
               )
             )}
-            <Link className={`link text-sm `}>Blogs</Link>
           </div>
         </Drawer>
         <div
@@ -136,7 +140,7 @@ const LandingHeader = () => {
           onClick={toggleDrawer}
         >
           <Hamburger
-            color="white"
+            color="black"
             size="23"
             toggled={isOpen}
             rounded

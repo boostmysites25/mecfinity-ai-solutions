@@ -73,7 +73,7 @@ body {
 
 /* menu offcanvas styles */
 .EZDrawer .EZDrawer__container {
-  background: #000000 !important;
+  background: #f1f1f1 !important;
   width: 100vw !important;
   min-height: 100vh !important;
   overflow-y: scroll;
@@ -148,16 +148,4 @@ body {
 
 .react-player video {
   object-fit: fill !important;
-}
-
-@layer components {
-  .gradient-border {
-    @apply border-2 border-transparent;
-    border-image: linear-gradient(
-      90deg,
-      rgba(123, 83, 242, 0.568) 0%,
-      rgba(120, 120, 133, 0.413624824929972) 100%
-    );
-    border-image-slice: 1;
-  }
 }
