@@ -65,7 +65,7 @@ const AboutUs = () => {
                   data-aos="fade-up"
                   className="text-lg text-start leading-relaxed text-gray-600"
                 >
-                  At Gulnazion Technologies, we believe that every business has
+                  At Mecfinity AI Solutions, we believe that every business has
                   the potential to excel in the digital era. Since our
                   inception, we have been dedicated to providing innovative,
                   high-quality digital solutions that enable companies to
@@ -169,7 +169,7 @@ const AboutUs = () => {
               data-aos="fade-up"
               className="heading-2 font-bold text-center mb-12 text-black"
             >
-              Why Choose Gulnazion Technologies?
+              Why Choose Mecfinity AI Solutions?
             </h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {whyChooseUsContent.map((feature, index) => (

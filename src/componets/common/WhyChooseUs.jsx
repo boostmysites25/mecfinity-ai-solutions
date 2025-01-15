@@ -84,11 +84,11 @@ const WhyChooseUs = () => {
             and long-term success.
           </p>
           <div className="flex flex-col-reverse md:grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[60rem] mr-auto">
-            <div className="flex flex-col gap-5">
+            <div className="grid grid-cols-1 gap-5">
               <div
                 data-aos-offset={-200}
                 data-aos="fade-right"
-                className="p-5 border border-primary rounded-xl w-full h-fit"
+                className="p-5 border border-primary rounded-xl w-full h-full"
               >
                 <div className="flex w-full text-start items-center justify-between gap-3">
                   <h5 className="text-xl font-semibold">
@@ -109,7 +109,7 @@ const WhyChooseUs = () => {
               <div
                 data-aos-offset={-200}
                 data-aos="fade-right"
-                className="p-5 border border-primary rounded-xl w-full h-fit"
+                className="p-5 border border-primary rounded-xl w-full h-full"
               >
                 <div className="flex w-full text-start items-center justify-between gap-3">
                   <h5 className="text-xl font-semibold">
@@ -130,12 +130,12 @@ const WhyChooseUs = () => {
             <div
               data-aos-offset={-200}
               data-aos="fade-up"
-              className="w-fit mx-auto md:mx-0"
+              className="w-fit h-full mx-auto md:mx-0"
             >
               <img
                 src={whyus1}
                 alt="whyus1"
-                className="h-[392px] object-cover  rounded-xl"
+                className="h-[365px] object-cover rounded-xl"
               />
             </div>
           </div>
@@ -148,11 +148,11 @@ const WhyChooseUs = () => {
               <img
                 src={whyus2}
                 alt="whyus1"
-                className="max-h-[416px] w-full min-h-[300px] rounded-xl object-cover"
+                className="max-h-[438px] w-full min-h-[300px] rounded-xl object-cover"
               />
             </div>
 
-            <div className="flex flex-col gap-5 h-full">
+            <div className="grid grid-cols-1 gap-5 h-full">
               <div
                 data-aos-offset={-200}
                 data-aos="fade-left"

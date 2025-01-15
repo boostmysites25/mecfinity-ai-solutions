@@ -131,7 +131,6 @@ export const LandingPage = ({ page }) => {
           </div>
         </div>
       </div>
-      <Contact />
 
       <section
         id="about"
@@ -190,6 +189,7 @@ export const LandingPage = ({ page }) => {
         </div>
       </section>
 
+      <Contact />
       <LandingServices page={page} />
       <WhyChooseUs />
       <UnlockEfficiency />
@@ -207,7 +207,7 @@ export const LandingPage = ({ page }) => {
             <div className="flex flex-col gap-4">
               <h2 className="heading-2">Ready to Get Started?</h2>
               <p className="desc">
-                At Gulnazion Technologies, we are passionate about helping you
+                At Mecfinity AI Solutions, we are passionate about helping you
                 achieve your business goals with our innovative and customized
                 digital solutions. Whether you’re looking to develop a
                 cutting-edge website or build a high-impact mobile app, we’re
