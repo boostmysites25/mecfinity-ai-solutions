@@ -359,7 +359,7 @@ export const reviews = [
     profileImg: profileImg1,
     name: "Emily S",
     role: "Co-Founder, Eco Solutions",
-    desc: "“Mecfinity AI Solutions transformed our website into a sleek, user-centric platform. Their team's dedication and innovative approach resulted in a significant increase in user engagement and satisfaction. We couldn't be happier with the outcome.”",
+    desc: "“Developing VR training simulations with Mecfinity AI Solutions has been one of the best decisions we’ve made. The immersive experience has made training more effective and engaging for our employees. The VR scenarios feel incredibly realistic, which has helped our team prepare for real-world situations without the risks. We are thrilled with the outcome and look forward to exploring more VR solutions in the future.”",
   },
   {
     id: 3,
@@ -373,14 +373,14 @@ export const reviews = [
     profileImg: profileImg2,
     name: "Sarah W",
     role: "CEO, HealthTech Solutions",
-    desc: "“Integrating blockchain technology into our operations was seamless with Mecfinity AI Solutions. Their team's deep understanding of blockchain ensured a secure and transparent solution that has greatly enhanced our business processes.”",
+    desc: "“The AI-powered customer service solution from Mecfinity AI Solutions has made a huge difference for our business. It has improved response times, streamlined our operations, and freed up our agents to focus on more complex tasks. Customers appreciate the quick and accurate answers they get, and we’ve seen a noticeable increase in satisfaction and efficiency. The team was easy to work with, and their support has been invaluable.”",
   },
   {
     id: 5,
     profileImg: profileImg1,
     name: "David M",
     role: "Data Analyst, Future Insights",
-    desc: "“Mecfinity AI Solutions implemented an AI-driven predictive analytics system for us. The solution has been instrumental in improving our decision-making processes and efficiency. Their expertise in AI and machine learning is truly impressive.”",
+    desc: "“Working with Mecfinity AI Solutions to implement blockchain into our business has been a transformative experience. Their team helped us develop a secure and efficient blockchain system that has improved the transparency and security of our transactions. We’ve gained a competitive edge, and the entire process was smooth and well-managed. We couldn’t be more satisfied with the results.”",
   },
 ];
 
