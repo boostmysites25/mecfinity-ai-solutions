@@ -10,7 +10,7 @@ import PopupForm from "../../components/common/PopupForm";
 const Services = () => {
   return (
     <>
-      <PopupForm storageKey={"servicesFormModalClosed"} />
+      <PopupForm storageKey={"formModalClosed"} />
       <Banner page="Services" />
       <ServiceItems />
       {/* <OurServices /> */}

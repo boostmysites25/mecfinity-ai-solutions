@@ -10,12 +10,10 @@ import Testimonials from "../../components/common/Testimonials";
 import Faqs from "../../components/common/Faqs";
 import Credibility from "../../components/common/Credibility";
 import CommonProject from "../../components/website/CommonProject";
-import PopupForm from "../../components/common/PopupForm";
 
 const Home = () => {
   return (
     <>
-      <PopupForm storageKey={"formModalClosed"} />
       <div
         id="banner"
         className="min-h-screen flex items-center py-[2rem] relative"

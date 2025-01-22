@@ -19,7 +19,6 @@ import Credibility from "../../components/common/Credibility";
 import image from "../../assets/images/contactimage.jpg";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import PopupForm from "../../components/common/PopupForm";
 
 export const LandingPage = ({ page }) => {
   const isWebDevelopment = Boolean(page === "web-development");
@@ -72,7 +71,6 @@ export const LandingPage = ({ page }) => {
   };
   return (
     <>
-      <PopupForm />
       <div id="banner" className="h-screen relative">
         <ReactPlayer
           url={landingpagevideo}
