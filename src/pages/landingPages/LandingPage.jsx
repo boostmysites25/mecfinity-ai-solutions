@@ -43,7 +43,7 @@ export const LandingPage = ({ page }) => {
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      subject: "You have a new message from Mecfinity AI Solutions",
+      subject: "Mecfinityai.com lead generation responses",
       body: emailBody,
     };
 
