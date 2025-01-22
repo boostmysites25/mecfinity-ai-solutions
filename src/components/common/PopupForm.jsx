@@ -5,7 +5,7 @@ import { companyDetails } from "../../constant";
 import toast from "react-hot-toast";
 import { ImSpinner3 } from "react-icons/im";
 
-const PopupForm = () => {
+const PopupForm = ({storageKey}) => {
   const [isOpen, setIsOpen] = React.useState(true);
   const [spinner, setSpinner] = useState(false);
 
@@ -61,7 +61,7 @@ const PopupForm = () => {
 
   const closePopup = ()=>{
     setIsOpen(false);
-    localStorage.setItem("formModalClosed", true);
+    localStorage.setItem(storageKey, true);
   }
   return (
     <div className="p-4">
@@ -69,7 +69,7 @@ const PopupForm = () => {
         isOpen={isOpen}
         onClose={closePopup}
         title="🚨 Limited Time Offer!"
-        storageKey="formModalClosed"
+        storageKey={storageKey}
       >
         <div className="grid grid-cols-1 gap-4">
           <div className="space-y-3 text-[.95rem]">

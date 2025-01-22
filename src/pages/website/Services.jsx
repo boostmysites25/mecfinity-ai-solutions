@@ -5,10 +5,12 @@ import Testimonials from "../../components/common/Testimonials";
 import Banner from "../../components/website/Banner";
 import CommonProject from "../../components/website/CommonProject";
 import ServiceItems from "../../components/common/ServiceItems";
+import PopupForm from "../../components/common/PopupForm";
 
 const Services = () => {
   return (
     <>
+      <PopupForm storageKey={"servicesFormModalClosed"} />
       <Banner page="Services" />
       <ServiceItems />
       {/* <OurServices /> */}

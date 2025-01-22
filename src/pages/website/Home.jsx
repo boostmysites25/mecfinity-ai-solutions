@@ -15,8 +15,11 @@ import PopupForm from "../../components/common/PopupForm";
 const Home = () => {
   return (
     <>
-      <PopupForm />
-      <div id="banner" className="min-h-screen flex items-center py-[2rem] relative">
+      <PopupForm storageKey={"formModalClosed"} />
+      <div
+        id="banner"
+        className="min-h-screen flex items-center py-[2rem] relative"
+      >
         <ReactPlayer
           url={homeBannerVideo}
           loop
