@@ -32,7 +32,6 @@ const ContactUs = () => {
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      // to: "remeesreme4u@gmail.com",
       subject: "You have a new message from Mecfinity AI Solutions",
       body: emailBody,
     };
@@ -176,7 +175,7 @@ const ContactUs = () => {
                 </div>
                 <div className="flex flex-col gap-1">
                   <input
-                    type="tel"
+                    type="text"
                     className="border-primary/40 p-2 rounded-md border outline-none bg-transparent"
                     placeholder="Subject"
                     {...register("subject", {
