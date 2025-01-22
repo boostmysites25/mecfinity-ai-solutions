@@ -2,7 +2,6 @@ import React from "react";
 import { allServices } from "../../constant";
 import { Link } from "react-router-dom";
 import { PiCaretDoubleRightBold } from "react-icons/pi";
-import { BiBrain } from "react-icons/bi";
 
 const ServiceItems = () => {
   return (

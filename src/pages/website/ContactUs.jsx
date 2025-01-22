@@ -1,5 +1,5 @@
 import React, { lazy, useState } from "react";
-import Banner from "../../componets/website/Banner";
+import Banner from "../../components/website/Banner";
 import { Link, useNavigate } from "react-router-dom";
 import { FaPhone } from "react-icons/fa";
 import { companyDetails } from "../../constant";
@@ -8,7 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-const MapComponent = lazy(() => import("../../componets/website/MapComponent"));
+const MapComponent = lazy(() => import("../../components/website/MapComponent"));
 
 const ContactUs = () => {
   const [spinner, setSpinner] = useState(false);

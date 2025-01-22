@@ -6,12 +6,12 @@ import {
   aboutUsItems,
   whyChooseUsContent,
 } from "../../constant";
-import UnlockEfficiency from "../../componets/common/UnlockEfficiency";
-import OurServices from "../../componets/website/OurServices";
-import Testimonials from "../../componets/common/Testimonials";
+import UnlockEfficiency from "../../components/common/UnlockEfficiency";
+import OurServices from "../../components/website/OurServices";
+import Testimonials from "../../components/common/Testimonials";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-import Credibility from "../../componets/common/Credibility";
+import Credibility from "../../components/common/Credibility";
 
 const AboutUs = () => {
   return (

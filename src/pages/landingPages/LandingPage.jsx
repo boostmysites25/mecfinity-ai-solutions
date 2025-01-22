@@ -1,24 +1,25 @@
 import React, { useState } from "react";
-import Contact from "../../componets/landingPages/Contact";
+import Contact from "../../components/landingPages/Contact";
 import {
   appLandingAbout,
   companyDetails,
   webLandingAbout,
 } from "../../constant";
 import { Link as ScrollLink } from "react-scroll";
-import WhyChooseUs from "../../componets/common/WhyChooseUs";
-import LandingServices from "../../componets/landingPages/LandingServices";
-import UnlockEfficiency from "../../componets/common/UnlockEfficiency";
-import Testimonials from "../../componets/common/Testimonials";
-import Portfolio from "../../componets/landingPages/Portfolio";
+import WhyChooseUs from "../../components/common/WhyChooseUs";
+import LandingServices from "../../components/landingPages/LandingServices";
+import UnlockEfficiency from "../../components/common/UnlockEfficiency";
+import Testimonials from "../../components/common/Testimonials";
+import Portfolio from "../../components/landingPages/Portfolio";
 import ReactPlayer from "react-player";
 import landingpagevideo from "../../assets/videos/home-banner.mp4";
-import Faqs from "../../componets/common/Faqs";
+import Faqs from "../../components/common/Faqs";
 import { useForm } from "react-hook-form";
-import Credibility from "../../componets/common/Credibility";
+import Credibility from "../../components/common/Credibility";
 import image from "../../assets/images/contactimage.jpg";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import PopupForm from "../../components/common/PopupForm";
 
 export const LandingPage = ({ page }) => {
   const isWebDevelopment = Boolean(page === "web-development");
@@ -38,13 +39,12 @@ export const LandingPage = ({ page }) => {
     var emailBody = "Name: " + data.fullName + "\n\n";
     emailBody += "Email: " + data.email + "\n\n";
     emailBody += "Phone: " + data.mobileNumber + "\n\n";
-    // emailBody += "Subject: " + data.subject + "\n\n";
     emailBody += "Message:\n" + data.message;
 
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      subject: "You have a new message from [you company name]",
+      subject: "You have a new message from Mecfinity AI Solutions",
       body: emailBody,
     };
 
@@ -72,6 +72,7 @@ export const LandingPage = ({ page }) => {
   };
   return (
     <>
+      <PopupForm />
       <div id="banner" className="h-screen relative">
         <ReactPlayer
           url={landingpagevideo}

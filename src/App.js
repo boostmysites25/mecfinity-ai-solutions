@@ -2,17 +2,17 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { LandingPage } from "./pages/landingPages/LandingPage";
-import LandingHeader from "./componets/landingPages/LandingHeader";
-import LandingFooter from "./componets/landingPages/LandingFooter";
-import WebsiteHeader from "./componets/website/WebsiteHeader";
-import WebsiteFooter from "./componets/website/WebsiteFooter";
+import LandingHeader from "./components/landingPages/LandingHeader";
+import LandingFooter from "./components/landingPages/LandingFooter";
+import WebsiteHeader from "./components/website/WebsiteHeader";
+import WebsiteFooter from "./components/website/WebsiteFooter";
 import { routes } from "./constant";
 import { lazy, Suspense, useEffect } from "react";
-import { LoadingSpinner } from "./componets/common/LoadingSpinner";
+import { LoadingSpinner } from "./components/common/LoadingSpinner";
 import SpinnerContextProvider, {
   LoadingSpinnerContext,
-} from "./componets/SpinnerContext";
-import WhatsAppIcon from "./componets/common/Whatsapp.jsx";
+} from "./components/SpinnerContext";
+import WhatsAppIcon from "./components/common/Whatsapp.jsx";
 import { Toaster } from "react-hot-toast";
 
 const ServicePageLayout = lazy(() => import("./layout/ServicePageLayout"));

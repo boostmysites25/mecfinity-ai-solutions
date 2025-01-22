@@ -1,21 +1,22 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import Contact from "../../componets/landingPages/Contact";
+import Contact from "../../components/landingPages/Contact";
 import aboutUsImg from "../../assets/images/aboutuscontent.jpg";
-import WhyChooseUs from "../../componets/common/WhyChooseUs";
+import WhyChooseUs from "../../components/common/WhyChooseUs";
 import ReactPlayer from "react-player";
 import { homeBannerVideo } from "../../constant";
-import OurServices from "../../componets/website/OurServices";
-import UnlockEfficiency from "../../componets/common/UnlockEfficiency";
-import Testimonials from "../../componets/common/Testimonials";
-import Faqs from "../../componets/common/Faqs";
-import Credibility from "../../componets/common/Credibility";
-import CommonProject from "../../componets/website/CommonProject";
+import OurServices from "../../components/website/OurServices";
+import UnlockEfficiency from "../../components/common/UnlockEfficiency";
+import Testimonials from "../../components/common/Testimonials";
+import Faqs from "../../components/common/Faqs";
+import Credibility from "../../components/common/Credibility";
+import CommonProject from "../../components/website/CommonProject";
+import PopupForm from "../../components/common/PopupForm";
 
 const Home = () => {
   return (
     <>
-      <div id="banner" className="h-screen relative">
+      <PopupForm />
+      <div id="banner" className="min-h-screen flex items-center py-[2rem] relative">
         <ReactPlayer
           url={homeBannerVideo}
           loop

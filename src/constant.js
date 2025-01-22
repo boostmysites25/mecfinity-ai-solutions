@@ -112,8 +112,8 @@ export const companyDetails = {
   phone: "+917483139873",
   whatsapp: "+917483139873",
   whatsappbox: "+917483139873",
-  email: "abc@example.com",
-  address: "Valencia, Mangalore, India",
+  email: "info@mecfinityai.com",
+  address: "Mangalore, India",
 };
 
 // website routes
@@ -148,33 +148,51 @@ export const routes = [
 export const faqs = [
   {
     id: 1,
-    question: "How can I start using your services?",
+    question: "What services does Mecfinity AI Solutions offer?",
     answer:
-      "Getting started is easy! Schedule a free consultation to discuss your ideas. We'll collaborate with you to create a plan that transforms your vision into a successful AI-driven solution for your business.",
+      "We specialize in Web Development, App Development, IoT Development, Cloud Computing Services, AI Calling Agency, Blockchain Development, and Virtual & Augmented Reality Development.",
   },
   {
     id: 2,
-    question: "Do I need technical skills to launch an AI business?",
+    question: "How can I contact Mecfinity AI Solutions?",
     answer:
-      "No technical expertise is required! Our team of AI specialists will manage all the technical details, allowing you to focus on your business vision and strategy.",
+      "You can reach us through the 'Contact Us' page on our website or email us directly at info@mecfinityai.com.",
   },
   {
     id: 3,
-    question: "What is the timeline for launching my AI product?",
+    question: "What industries do you serve?",
     answer:
-      "The timeline varies based on complexity, but typically it takes about 3 to 6 months to develop a Minimum Viable Product (MVP) and start the launch phase.",
+      "We cater to a diverse range of industries, including healthcare, finance, retail, and more, providing tailored solutions to meet specific business needs.",
   },
   {
     id: 4,
-    question: "How can I determine if my AI idea is feasible?",
+    question: "Do you offer customized solutions?",
     answer:
-      "We offer an initial consultation to evaluate the feasibility of your idea, assess its market potential, and provide recommendations for refinement and success.",
+      "Yes, we provide bespoke solutions tailored to your business requirements to ensure optimal outcomes.",
   },
   {
     id: 5,
-    question: "What types of AI solutions do you provide?",
+    question: "What is your project development process?",
     answer:
-      "We offer a variety of AI solutions, including predictive analytics, natural language processing, computer vision, and custom AI model development, all tailored to your specific business needs.",
+      "Our process includes initial consultation, requirement analysis, design and development, testing, deployment, and ongoing support.",
+  },
+  {
+    id: 6,
+    question: "How long does it take to complete a project?",
+    answer:
+      "Project timelines vary based on complexity and scope. After understanding your requirements, we provide a detailed timeline.",
+  },
+  {
+    id: 7,
+    question: "What are your pricing models?",
+    answer:
+      "We offer flexible pricing models, including fixed-price and time-and-materials, to suit different project needs.",
+  },
+  {
+    id: 8,
+    question: "Do you provide post-deployment support?",
+    answer:
+      "Yes, we offer comprehensive post-deployment support and maintenance service.",
   },
 ];
 

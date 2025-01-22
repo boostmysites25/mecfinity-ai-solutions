@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Testimonials from "../../componets/common/Testimonials";
+import Testimonials from "../../components/common/Testimonials";
 import { allServices } from "../../constant";
 
 const ServiceDetails = () => {

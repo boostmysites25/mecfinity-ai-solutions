@@ -3,11 +3,11 @@ import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BsClock } from "react-icons/bs";
-import WebsiteHeader from "../componets/website/WebsiteHeader";
-import WebsiteFooter from "../componets/website/WebsiteFooter";
+import WebsiteHeader from "../components/website/WebsiteHeader";
+import WebsiteFooter from "../components/website/WebsiteFooter";
 import { companyDetails, allServices } from "../constant";
-import ServiceDetailsBanner from "../componets/common/ServiceBannerDetails";
-import GetInTouch from "../componets/website/GetInTouch";
+import ServiceDetailsBanner from "../components/common/ServiceBannerDetails";
+import GetInTouch from "../components/website/GetInTouch";
 
 const ServicePageLayout = () => {
   const { pathname } = useLocation();

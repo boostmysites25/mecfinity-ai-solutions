@@ -47,15 +47,15 @@ body {
     @apply text-headertexthoverandactive font-semibold;
   }
   .primary-btn {
-    @apply text-white hover:text-primary cursor-pointer font-light border border-primary  tracking-wide bg-primary hover:bg-transparent text-sm hover:shadow-black hover:-translate-y-1  shadow-transparent rounded-[.3rem] px-4 py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300;
+    @apply text-white hover:text-primary cursor-pointer font-light border border-primary  tracking-wide bg-primary hover:bg-transparent text-sm hover:shadow-black hover:-translate-y-1  shadow-transparent rounded-[.3rem] px-4 py-2 min-w-[7rem] flex justify-center text-center transition-all duration-300;
   }
   .secondary-btn {
-    @apply text-primary hover:text-white cursor-pointer font-light tracking-wide bg-transparent border border-primary hover:bg-primary text-sm  hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-4 py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300;
+    @apply text-primary hover:text-white cursor-pointer font-light tracking-wide bg-transparent border border-primary hover:bg-primary text-sm  hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-4 py-2 min-w-[7rem] flex justify-center text-center transition-all duration-300;
   }
   /* 600018 */
   /* #e2f5fb */
   .tertiary-btn {
-    @apply text-white cursor-pointer font-light tracking-wide bg-primary border border-primary hover:bg-black text-sm hover:shadow-primary hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-4 py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300;
+    @apply text-white cursor-pointer font-light tracking-wide bg-primary border border-primary hover:bg-black text-sm hover:shadow-primary hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-4 py-2 min-w-[7rem] flex justify-center text-center transition-all duration-300;
   }
   .btn-styles {
     @apply hover:shadow-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-4 py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-sm;
