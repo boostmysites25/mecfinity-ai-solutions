@@ -3,6 +3,7 @@ import Contact from "../../components/landingPages/Contact";
 import {
   appLandingAbout,
   companyDetails,
+  emailjsDetails,
   webLandingAbout,
 } from "../../constant";
 import { Link as ScrollLink } from "react-scroll";
@@ -19,6 +20,7 @@ import Credibility from "../../components/common/Credibility";
 import image from "../../assets/images/contactimage.jpg";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 export const LandingPage = ({ page }) => {
   const isWebDevelopment = Boolean(page === "web-development");
@@ -40,32 +42,26 @@ export const LandingPage = ({ page }) => {
     emailBody += "Phone: " + data.mobileNumber + "\n\n";
     emailBody += "Message:\n" + data.message;
 
-    // Construct the request payload
-    var payload = {
-      to: companyDetails.email,
-      subject: "Mecfinityai.com lead generation responses",
-      body: emailBody,
+   
+    const formData = {
+      from_name: data.fullName,
+      message: emailBody,
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.json())
-      .then((res) => {
-        console.log(res);
-        if (res.error) {
-          return toast.error(res.error);
-        }
+    emailjs
+      .send(
+        emailjsDetails.serviceId,
+        emailjsDetails.templateId,
+        formData,
+        emailjsDetails.publicKey
+      )
+      .then((response) => {
         toast.success("Email sent successfully");
         reset();
         navigate("/thank-you");
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error("Failed to send email");
       })
       .finally(() => setSpinner(false));
   };

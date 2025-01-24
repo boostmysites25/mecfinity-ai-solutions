@@ -114,6 +114,12 @@ export const companyDetails = {
   address: "Mangalore, India",
 };
 
+export const emailjsDetails = {
+  serviceId: "service_uisbzh8",
+  templateId: "template_e8t5y0i",
+  publicKey: "_UFO43_P5mAN3U4jH",
+};
+
 // website routes
 export const routes = [
   {
@@ -365,35 +371,35 @@ export const whyChooseUsContent = [
 export const reviews = [
   {
     id: 1,
-    profileImg: require('./assets/images/testimonials/2.jpg'),
+    profileImg: require("./assets/images/testimonials/2.jpg"),
     name: "Arjun R",
     role: "Chief Technology Officer, Tech Innovators",
     desc: "“Working with Mecfinity AI Solutions was a game-changer for our startup. Their expertise in web and app development was evident from the start. They delivered a high-quality, user-friendly platform that has significantly boosted our market presence.”",
   },
   {
     id: 2,
-    profileImg: require('./assets/images/testimonials/1.jpg'),
+    profileImg: require("./assets/images/testimonials/1.jpg"),
     name: "Priya S",
     role: "Co-Founder, Eco Solutions",
     desc: "“Developing VR training simulations with Mecfinity AI Solutions has been one of the best decisions we’ve made. The immersive experience has made training more effective and engaging for our employees. The VR scenarios feel incredibly realistic, which has helped our team prepare for real-world situations without the risks. We are thrilled with the outcome and look forward to exploring more VR solutions in the future.”",
   },
   {
     id: 3,
-    profileImg: require('./assets/images/testimonials/4.jpg'),
+    profileImg: require("./assets/images/testimonials/4.jpg"),
     name: "Vikram M",
     role: "Owner, Fashion Hub",
     desc: "“We tasked Mecfinity AI Solutions with developing a custom mobile app for our business. They exceeded our expectations by delivering a feature-rich app that our customers love. Their attention to detail and commitment to quality have been outstanding.”",
   },
   {
     id: 4,
-    profileImg: require('./assets/images/testimonials/3.jpg'),
+    profileImg: require("./assets/images/testimonials/3.jpg"),
     name: "Aarav Kumar",
     role: "CEO, HealthTech Solutions",
     desc: "“The AI-powered customer service solution from Mecfinity AI Solutions has made a huge difference for our business. It has improved response times, streamlined our operations, and freed up our agents to focus on more complex tasks. Customers appreciate the quick and accurate answers they get, and we’ve seen a noticeable increase in satisfaction and efficiency. The team was easy to work with, and their support has been invaluable.”",
   },
   {
     id: 5,
-    profileImg: require('./assets/images/testimonials/5.jpg'),
+    profileImg: require("./assets/images/testimonials/5.jpg"),
     name: "Rajesh P",
     role: "Data Analyst, Future Insights",
     desc: "“Working with Mecfinity AI Solutions to implement blockchain into our business has been a transformative experience. Their team helped us develop a secure and efficient blockchain system that has improved the transparency and security of our transactions. We’ve gained a competitive edge, and the entire process was smooth and well-managed. We couldn’t be more satisfied with the results.”",

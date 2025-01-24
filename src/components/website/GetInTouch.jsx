@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import image from "../../assets/images/contactimage.jpg";
-import { companyDetails } from "../../constant";
+import { companyDetails, emailjsDetails } from "../../constant";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 
 const GetInTouch = () => {
   const [spinner, setSpinner] = useState(false);
@@ -24,31 +25,25 @@ const GetInTouch = () => {
     emailBody += "Phone: " + data.mobileNumber + "\n\n";
     emailBody += "Message:\n" + data.message;
 
-    // Construct the request payload
-    var payload = {
-      to: companyDetails.email,
-      subject: "Mecfinity AI Customer Leads",
-      body: emailBody,
+    const formData = {
+      from_name: data.fullName,
+      message: emailBody,
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.json())
-      .then((res) => {
-        if (res.error) {
-          return toast.error(res.error);
-        }
+    emailjs
+      .send(
+        emailjsDetails.serviceId,
+        emailjsDetails.templateId,
+        formData,
+        emailjsDetails.publicKey
+      )
+      .then((response) => {
         toast.success("Email sent successfully");
         reset();
         navigate("/thank-you");
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error("Failed to send email");
       })
       .finally(() => setSpinner(false));
   };

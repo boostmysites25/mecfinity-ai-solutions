@@ -1,26 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
 import { useForm } from "react-hook-form";
-import { companyDetails } from "../../constant";
+import { companyDetails, emailjsDetails } from "../../constant";
 import toast from "react-hot-toast";
 import { ImSpinner3 } from "react-icons/im";
+import emailjs from "@emailjs/browser";
 
-const PopupForm = ({storageKey}) => {
+const PopupForm = ({ storageKey }) => {
   const [isOpen, setIsOpen] = React.useState(true);
   const [spinner, setSpinner] = useState(false);
 
-  
   const {
-      register,
-      handleSubmit,
-      formState: { errors },
-      reset,
-    } = useForm();
-
-
-    useEffect(()=>{
-
-    })
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
   const onSubmit = async (data) => {
     setSpinner(true);
@@ -29,40 +24,33 @@ const PopupForm = ({storageKey}) => {
     emailBody += "Email : " + data.email + "\n\n";
     emailBody += "Phone Number: " + data.phone + "\n\n";
 
-    // Construct the request payload
-    var payload = {
-        to: companyDetails.email,
-      subject: "Mecfinity AI Customer Leads",
-      body: emailBody,
+    const formData = {
+      from_name: data.fullName,
+      message: emailBody,
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.json())
-      .then((res) => {
-        if (res.error) {
-          return toast.error(res.error);
-        }
+    emailjs
+      .send(
+        emailjsDetails.serviceId,
+        emailjsDetails.templateId,
+        formData,
+        emailjsDetails.publicKey
+      )
+      .then((response) => {
         toast.success("Form submitted successfully");
         reset();
         closePopup();
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error("Failed to submit form");
       })
       .finally(() => setSpinner(false));
   };
 
-
-  const closePopup = ()=>{
+  const closePopup = () => {
     setIsOpen(false);
     localStorage.setItem(storageKey, true);
-  }
+  };
   return (
     <div className="p-4">
       <Modal

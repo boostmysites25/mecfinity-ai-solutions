@@ -2,13 +2,16 @@ import React, { lazy, useState } from "react";
 import Banner from "../../components/website/Banner";
 import { Link, useNavigate } from "react-router-dom";
 import { FaPhone } from "react-icons/fa";
-import { companyDetails } from "../../constant";
+import { companyDetails, emailjsDetails } from "../../constant";
 import { IoMail } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-const MapComponent = lazy(() => import("../../components/website/MapComponent"));
+import emailjs from "@emailjs/browser";
+const MapComponent = lazy(() =>
+  import("../../components/website/MapComponent")
+);
 
 const ContactUs = () => {
   const [spinner, setSpinner] = useState(false);
@@ -28,31 +31,25 @@ const ContactUs = () => {
     emailBody += "Phone: " + data.phone + "\n\n";
     emailBody += "Message:\n" + data.message;
 
-    // Construct the request payload
-    var payload = {
-      to: companyDetails.email,
-      subject: "Mecfinity AI Customer Leads",
-      body: emailBody,
+    const formData = {
+      from_name: data.name,
+      message: emailBody,
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.json())
-      .then((res) => {
-        if (res.error) {
-          return toast.error(res.error);
-        }
+    emailjs
+      .send(
+        emailjsDetails.serviceId,
+        emailjsDetails.templateId,
+        formData,
+        emailjsDetails.publicKey
+      )
+      .then((response) => {
         toast.success("Email sent successfully");
         reset();
         navigate("/thank-you");
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error("Failed to send email");
       })
       .finally(() => setSpinner(false));
   };
