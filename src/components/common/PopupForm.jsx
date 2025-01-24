@@ -32,7 +32,7 @@ const PopupForm = ({storageKey}) => {
     // Construct the request payload
     var payload = {
         to: companyDetails.email,
-      subject: "Free Consultation Request from Mecfinity AI Solutions",
+      subject: "Mecfinity AI Customer Leads",
       body: emailBody,
     };
 

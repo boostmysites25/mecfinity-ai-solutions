@@ -20,8 +20,6 @@ import aboutUsGridImg2 from "./assets/images/aboutus-png2.png";
 import aboutUsGridImg3 from "./assets/images/aboutus-png3.png";
 import aboutUsGridImg4 from "./assets/images/aboutus-png4.png";
 import aboutUsGridImg5 from "./assets/images/aboutus-png5.png";
-import profileImg1 from "./assets/images/profileimg-1.jpg";
-import profileImg2 from "./assets/images/profileimg-2.jpg";
 import serviceswebdevelopment from "./assets/images/services/serviceswebdevelopment.jpg";
 import serviceaidevelopment from "./assets/images/services/serviceaidevelopment.jpg";
 import chatbotdevelopment from "./assets/images/services/chatbotdevelopment.jpg";
@@ -367,36 +365,36 @@ export const whyChooseUsContent = [
 export const reviews = [
   {
     id: 1,
-    profileImg: profileImg2,
-    name: "John D",
+    profileImg: require('./assets/images/testimonials/2.jpg'),
+    name: "Arjun R",
     role: "Chief Technology Officer, Tech Innovators",
     desc: "“Working with Mecfinity AI Solutions was a game-changer for our startup. Their expertise in web and app development was evident from the start. They delivered a high-quality, user-friendly platform that has significantly boosted our market presence.”",
   },
   {
     id: 2,
-    profileImg: profileImg1,
-    name: "Emily S",
+    profileImg: require('./assets/images/testimonials/1.jpg'),
+    name: "Priya S",
     role: "Co-Founder, Eco Solutions",
     desc: "“Developing VR training simulations with Mecfinity AI Solutions has been one of the best decisions we’ve made. The immersive experience has made training more effective and engaging for our employees. The VR scenarios feel incredibly realistic, which has helped our team prepare for real-world situations without the risks. We are thrilled with the outcome and look forward to exploring more VR solutions in the future.”",
   },
   {
     id: 3,
-    profileImg: profileImg1,
-    name: "Michael B",
+    profileImg: require('./assets/images/testimonials/4.jpg'),
+    name: "Vikram M",
     role: "Owner, Fashion Hub",
     desc: "“We tasked Mecfinity AI Solutions with developing a custom mobile app for our business. They exceeded our expectations by delivering a feature-rich app that our customers love. Their attention to detail and commitment to quality have been outstanding.”",
   },
   {
     id: 4,
-    profileImg: profileImg2,
-    name: "Sarah W",
+    profileImg: require('./assets/images/testimonials/3.jpg'),
+    name: "Aarav Kumar",
     role: "CEO, HealthTech Solutions",
     desc: "“The AI-powered customer service solution from Mecfinity AI Solutions has made a huge difference for our business. It has improved response times, streamlined our operations, and freed up our agents to focus on more complex tasks. Customers appreciate the quick and accurate answers they get, and we’ve seen a noticeable increase in satisfaction and efficiency. The team was easy to work with, and their support has been invaluable.”",
   },
   {
     id: 5,
-    profileImg: profileImg1,
-    name: "David M",
+    profileImg: require('./assets/images/testimonials/5.jpg'),
+    name: "Rajesh P",
     role: "Data Analyst, Future Insights",
     desc: "“Working with Mecfinity AI Solutions to implement blockchain into our business has been a transformative experience. Their team helped us develop a secure and efficient blockchain system that has improved the transparency and security of our transactions. We’ve gained a competitive edge, and the entire process was smooth and well-managed. We couldn’t be more satisfied with the results.”",
   },

@@ -26,13 +26,12 @@ const ContactUs = () => {
     var emailBody = "Name: " + data.name + "\n\n";
     emailBody += "Email: " + data.email + "\n\n";
     emailBody += "Phone: " + data.phone + "\n\n";
-    emailBody += "Subject: " + data.subject + "\n\n";
     emailBody += "Message:\n" + data.message;
 
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      subject: "Mecfinityai.com lead generation responses",
+      subject: "Mecfinity AI Customer Leads",
       body: emailBody,
     };
 
@@ -172,21 +171,6 @@ const ContactUs = () => {
                       </span>
                     )}
                   </div>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <input
-                    type="text"
-                    className="border-primary/40 p-2 rounded-md border outline-none bg-transparent"
-                    placeholder="Subject"
-                    {...register("subject", {
-                      required: "Subject is required",
-                    })}
-                  />
-                  {errors.subject && (
-                    <span className="text-red-500 text-sm">
-                      {errors.subject.message}
-                    </span>
-                  )}
                 </div>
 
                 <div className="flex flex-col gap-1">

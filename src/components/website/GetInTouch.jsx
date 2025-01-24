@@ -1,6 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "../../assets/images/contactimage.jpg";
+import { companyDetails } from "../../constant";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+
 const GetInTouch = () => {
+  const [spinner, setSpinner] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+  const navigate = useNavigate();
+
+  const onSubmit = async (data) => {
+    setSpinner(true);
+
+    var emailBody = "Name: " + data.fullName + "\n\n";
+    emailBody += "Email: " + data.email + "\n\n";
+    emailBody += "Phone: " + data.mobileNumber + "\n\n";
+    emailBody += "Message:\n" + data.message;
+
+    // Construct the request payload
+    var payload = {
+      to: companyDetails.email,
+      subject: "Mecfinity AI Customer Leads",
+      body: emailBody,
+    };
+
+    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => response.json())
+      .then((res) => {
+        if (res.error) {
+          return toast.error(res.error);
+        }
+        toast.success("Email sent successfully");
+        reset();
+        navigate("/thank-you");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => setSpinner(false));
+  };
   return (
     <div id="contact" className="pb-[5rem] relative">
       {/* <div className="blurred-red-circle h-[25rem] w-[25rem] bottom-[2rem] right-3 -z-10"></div> */}
@@ -23,7 +74,7 @@ const GetInTouch = () => {
               Connect With Our Team to Get Started!
             </h2>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit(onSubmit)}
               className="grid grid-cols-1 gap-3 mt-3"
             >
               <div className="grid lg:grid-cols-2 gap-3">
@@ -35,7 +86,15 @@ const GetInTouch = () => {
                     required
                     autoComplete="off"
                     placeholder="Enter your name"
+                    {...register("fullName", {
+                      required: "Full name is required",
+                    })}
                   />
+                  {errors.fullName && (
+                    <span className="text-red-500 text-sm">
+                      {errors.fullName.message}
+                    </span>
+                  )}
                 </div>
                 <div className="">
                   <label htmlFor="">Email*</label>
@@ -45,20 +104,22 @@ const GetInTouch = () => {
                     required
                     autoComplete="off"
                     placeholder="Enter your email"
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                        message: "Invalid email address",
+                      },
+                    })}
                   />
+                  {errors.email && (
+                    <span className="text-red-500 text-sm">
+                      {errors.email.message}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="grid lg:grid-cols-2 gap-3">
-                <div className="">
-                  <label htmlFor="">Subject*</label>
-                  <input
-                    type="text"
-                    className="w-full outline-none p-3 rounded-lg text-black"
-                    required
-                    autoComplete="off"
-                    placeholder="Enter subject"
-                  />
-                </div>
                 <div className="">
                   <label htmlFor="">Phone Number</label>
                   <input
@@ -66,7 +127,19 @@ const GetInTouch = () => {
                     className="w-full outline-none p-3 rounded-lg text-black"
                     autoComplete="off"
                     placeholder="Enter your phone number"
+                    {...register("mobileNumber", {
+                      required: "Mobile number is required",
+                      pattern: {
+                        value: /^[0-9]{10}$/,
+                        message: "Invalid phone number",
+                      },
+                    })}
                   />
+                  {errors.mobileNumber && (
+                    <span className="text-red-500 text-sm">
+                      {errors.mobileNumber.message}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="">
@@ -78,10 +151,16 @@ const GetInTouch = () => {
                   className="w-full outline-none p-3 rounded-lg text-black"
                   required
                   autoComplete="off"
+                  {...register("message", { required: "Message is required" })}
                 />
+                {errors.message && (
+                  <span className="text-red-500 text-sm">
+                    {errors.message.message}
+                  </span>
+                )}
               </div>
               <button className="mt-4 bg-white text-black px-5 py-3 rounded-full   hover:text-primary hover:-translate-y-1 duration-300 transition-all">
-                Send Message
+                {"Send Message"}
               </button>
             </form>
           </div>

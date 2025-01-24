@@ -7,7 +7,7 @@ import WebsiteHeader from "../components/website/WebsiteHeader";
 import WebsiteFooter from "../components/website/WebsiteFooter";
 import { companyDetails, allServices } from "../constant";
 import ServiceDetailsBanner from "../components/common/ServiceBannerDetails";
-import GetInTouch from "../components/website/GetInTouch";
+// import GetInTouch from "../components/website/GetInTouch";
 
 const ServicePageLayout = () => {
   const { pathname } = useLocation();
@@ -46,7 +46,7 @@ const ServicePageLayout = () => {
       <WebsiteHeader />
       <ServiceDetailsBanner title={title}/>
       <div ref={wrapperRef} className="wrapper">
-        <div className="py-[5rem] grid md:grid-cols-[30%_65%] grid-cols-1 gap-10">
+        <div className="pt-[5rem] grid md:grid-cols-[30%_65%] grid-cols-1 gap-10">
           <div className="w-full flex flex-col gap-10">
             <div
               data-aos="fade-up"
@@ -130,7 +130,7 @@ const ServicePageLayout = () => {
           </Link>
         </div>
       </div>
-      <GetInTouch />
+      {/* <GetInTouch /> */}
       <WebsiteFooter />
     </>
   );

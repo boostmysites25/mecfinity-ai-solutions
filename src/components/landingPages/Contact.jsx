@@ -21,13 +21,12 @@ const Contact = () => {
     var emailBody = "Name: " + data.fullName + "\n\n";
     emailBody += "Email: " + data.email + "\n\n";
     emailBody += "Phone: " + data.mobileNumber + "\n\n";
-    // emailBody += "Subject: " + data.subject + "\n\n";
     emailBody += "Message:\n" + data.message;
 
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      subject: "Mecfinityai.com lead generation responses",
+      subject: "Mecfinity AI Customer Leads",
       body: emailBody,
     };
 
