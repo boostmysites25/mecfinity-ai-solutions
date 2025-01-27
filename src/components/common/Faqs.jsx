@@ -11,7 +11,7 @@ const Faqs = () => {
         <div className="lg:flex hidden items-end justify-end">
           <div className="hover:scale-105 transition-all duration-500 bg-gradient-to-r min-w-[13rem] flex flex-col items-center text-white w-fit from-secondary/80 to-primary/80 rounded-xl p-5">
             <div className="flex flex-col justify-center gap-3 relative w-fit">
-              <h1 className="heading-2">3</h1>
+              <h1 className="heading-2">2</h1>
               <span className="absolute top-1 -right-3 text-lg">+</span>
             </div>
             <p className="font-medium mt-3">Years of Experience</p>
