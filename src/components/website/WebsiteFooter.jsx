@@ -42,7 +42,6 @@ const WebsiteFooter = () => {
               <div className="flex flex-col">
                 <h6 className="text-[.9rem] mb-1">Email</h6>
                 <Link
-                  // to={`tel:${companyDetails.email}`}
                   className="text-black desc text-sm"
                 >
                   {companyDetails.email}

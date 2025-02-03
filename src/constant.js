@@ -42,22 +42,13 @@ import { GoFileMedia, GoGraph } from "react-icons/go";
 import { SlBadge } from "react-icons/sl";
 import {
   MdCloudQueue,
-  MdDeveloperMode,
-  MdOutlineAutoGraph,
   MdOutlineDashboardCustomize,
   MdOutlineDeveloperMode,
   MdOutlineSmartToy,
 } from "react-icons/md";
-import {
-  GiArtificialIntelligence,
-  GiRobotLeg,
-  GiVendingMachine,
-} from "react-icons/gi";
-import { HiChatBubbleBottomCenterText } from "react-icons/hi2";
-import { BsFillClipboard2DataFill } from "react-icons/bs";
-import { FaAppStoreIos, FaGamepad } from "react-icons/fa";
+import { FaAppStoreIos } from "react-icons/fa";
 import { SiFlutter, SiHiveBlockchain } from "react-icons/si";
-import { IoLogoAndroid, IoMdCloudDone } from "react-icons/io";
+import { IoLogoAndroid } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import { TfiLayoutMediaRightAlt } from "react-icons/tfi";
 import { TbDeviceMobileCode } from "react-icons/tb";
@@ -67,6 +58,7 @@ const Home = lazy(() => import("./pages/website/Home"));
 const Services = lazy(() => import("./pages/website/Services"));
 const ContactUs = lazy(() => import("./pages/website/ContactUs"));
 const AboutUs = lazy(() => import("./pages/website/AboutUs"));
+const Blogs = lazy(() => import("./pages/website/Blogs"));
 
 export {
   logoImg,
@@ -137,11 +129,11 @@ export const routes = [
     path: "/about-us",
     component: <AboutUs />,
   },
-  // {
-  //   name: "Blogs",
-  //   path: "",
-  //   component: "",
-  // },
+  {
+    name: "Blogs",
+    path: "/blogs",
+    component: <Blogs />,
+  },
   {
     name: "Contact Us",
     path: "/contact-us",

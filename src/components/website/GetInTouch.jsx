@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import image from "../../assets/images/contactimage.jpg";
-import { companyDetails, emailjsDetails } from "../../constant";
+import { emailjsDetails } from "../../constant";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";

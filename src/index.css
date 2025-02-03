@@ -30,6 +30,10 @@ body {
   padding: 0;
 }
 
+.scrollbar_4::-webkit-scrollbar{
+  height: 4px;
+}
+
 @layer utilities {
   .wrapper {
     @apply max-w-7xl mx-auto px-4;
