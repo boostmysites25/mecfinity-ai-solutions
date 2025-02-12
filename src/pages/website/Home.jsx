@@ -10,10 +10,23 @@ import Testimonials from "../../components/common/Testimonials";
 import Faqs from "../../components/common/Faqs";
 import Credibility from "../../components/common/Credibility";
 import CommonProject from "../../components/website/CommonProject";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Mecfinity AI Solutions | AI-Powered IT Services</title>
+        <meta
+          name="description"
+          content="Discover cutting-edge AI-driven IT solutions with Mecfinity AI Solutions. We specialize in web development, mobile apps, blockchain, cloud computing, and more."
+        />
+        <meta
+          name="keywords"
+          content="Mecfinity AI Solutions, software development, AI solutions, digital transformation, web development, mobile apps, ui/ux design, app development, e-commerce, social media websites, IoT, blockchain, AI, cloud computing, AR/VR, hybrid apps, custom websites, Flutter, React, Angular, Vue.js, Web Development Services, App Development for Businesses, IoT Development Solutions, Cloud Computing Services for Startups, AI Calling Agency, Blockchain App Development, Virtual and Augmented Reality Development, Affordable web development for small businesses, Custom app development solutions for startups, Best IoT developers in Mangalore"
+        />
+        <meta name="author" content="Mecfinity AI Solutions" />
+      </Helmet>
       <div
         id="banner"
         className="min-h-screen flex items-center py-[2rem] relative"
