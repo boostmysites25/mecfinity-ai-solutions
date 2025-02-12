@@ -14,6 +14,7 @@ import SpinnerContextProvider, {
 } from "./components/SpinnerContext";
 import WhatsAppIcon from "./components/common/Whatsapp.jsx";
 import { Toaster } from "react-hot-toast";
+import { HelmetProvider } from "react-helmet-async";
 
 const ServicePageLayout = lazy(() => import("./layout/ServicePageLayout"));
 const ServiceDetails = lazy(() => import("./pages/website/ServiceDetails"));
@@ -29,6 +30,7 @@ AOS.init({
 export default function App() {
   return (
     <SpinnerContextProvider>
+    <HelmetProvider>
       <LoadingSpinnerContext />
       <Suspense fallback={<LoadingSpinner />}>
         <WhatsAppIcon />
@@ -101,6 +103,7 @@ export default function App() {
           />
         </Routes>
       </Suspense>
+    </HelmetProvider>
     </SpinnerContextProvider>
   );
 }
