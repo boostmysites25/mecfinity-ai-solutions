@@ -1,8 +1,10 @@
 import React from "react";
 
-const WhoWeAreSection = React.memo(() => {
+const WhoWeAreSection = () => {
   return (
-    <section className="py-[3rem] bg-secondary/5">
+    <section
+      className="py-[3rem] bg-secondary/5"
+    >
       <div
         data-aos-offset={-400}
         // data-aos-anchor-placement="bottom-center"
@@ -27,6 +29,6 @@ const WhoWeAreSection = React.memo(() => {
       </div>
     </section>
   );
-});
+};
 
 export default WhoWeAreSection;

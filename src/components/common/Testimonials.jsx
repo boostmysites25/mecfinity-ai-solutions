@@ -6,7 +6,7 @@ import {
 } from "react-icons/io5";
 import { reviews } from "../../constant";
 
-const Testimonials = React.memo(() => {
+const Testimonials = () => {
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       loop: true,
@@ -138,6 +138,6 @@ const Testimonials = React.memo(() => {
       </div>
     </div>
   );
-})
+};
 
 export default Testimonials;

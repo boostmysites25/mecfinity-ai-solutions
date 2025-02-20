@@ -11,7 +11,7 @@ import {
 import { useKeenSlider } from "keen-slider/react";
 import { createUrlParam } from "../../utils/helper";
 
-const OurServices = React.memo(({ length }) => {
+const OurServices = ({ length }) => {
   const [isOpen, setIsOpen] = useState(false);
   const services = allServices;
   const [selectedService, setSelectedService] = useState(services[0]);
@@ -208,6 +208,6 @@ const OurServices = React.memo(({ length }) => {
       </Drawer>
     </div>
   );
-})
+};
 
 export default OurServices;
