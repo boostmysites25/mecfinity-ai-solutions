@@ -3,9 +3,6 @@ import React from "react";
 const WhoWeAreSection = () => {
   return (
     <section
-      // data-aos-offset={-400}
-      // data-aos-anchor-placement="top-bottom"
-      // data-aos-anchor="selector"
       className="py-[3rem] bg-secondary/5"
     >
       <div
