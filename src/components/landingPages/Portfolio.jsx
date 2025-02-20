@@ -85,7 +85,8 @@ const Portfolio = ({ page }) => {
                   w-full overflow-hidden `}
                 > */}
                 {/* ${obj.title === "House of Deliverance" && `2xl:min-h-[480px]`} */}
-                <img
+                <img 
+loading="lazy"
                   src={obj.img}
                   alt={obj.title}
                   className="rounded-t-xl hover:scale-105 transition-all duration-300 lg:max-h-[316px] w-full  2xl:max-h-[467px] object-cover"

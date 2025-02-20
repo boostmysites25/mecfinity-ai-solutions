@@ -17,7 +17,8 @@ const Faqs = () => {
             <p className="font-medium mt-3">Years of Experience</p>
           </div>
           <div className="h-full max-h-[32rem]">
-            <img
+            <img 
+loading="lazy"
               src={faqPng}
               className="h-full max-h-[32rem] object-contain hover:scale-105 transition-all duration-500"
               alt=""

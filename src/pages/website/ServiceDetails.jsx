@@ -2,10 +2,13 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Testimonials from "../../components/common/Testimonials";
 import { allServices } from "../../constant";
+import { createUrlParam } from "../../utils/helper";
 
 const ServiceDetails = () => {
   const { title } = useParams();
-  const details = allServices.find((service) => service.title === title);
+  const details = allServices.find(
+    (service) => createUrlParam(service.title) === title
+  );
 
   const splitIntoParagraphs = (text, numParagraphs = 3) => {
     const sentences = text.split(". ").map((sentence) => sentence + ".");
@@ -21,12 +24,13 @@ const ServiceDetails = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      <img
+      <img 
+loading="lazy"
         data-aos="fade-up"
         src={details.image}
-        loading="lazy"
+        
         className="h-[25rem] object-cover rounded-3xl object-center"
-        alt={title}
+        alt={details.title}
       />
       <div className="flex flex-col gap-4 md:px-5">
         {/* Service Title */}

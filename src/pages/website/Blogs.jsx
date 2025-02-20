@@ -5,6 +5,7 @@ import WebsiteHeader from "../../components/website/WebsiteHeader";
 import WebsiteFooter from "../../components/website/WebsiteFooter";
 import { IoIosArrowForward } from "react-icons/io";
 import blogsBanner from "../../assets/images/blogs.webp";
+import { createUrlParam } from "../../utils/helper";
 
 const Blogs = () => {
   return (
@@ -14,7 +15,8 @@ const Blogs = () => {
         data-aos="fade-down"
         className=" h-[40vh] sm:h-[55vh] md:h-[70vh] relative"
       >
-        <img
+        <img 
+loading="lazy"
           src={blogsBanner}
           className="object-cover object-[100%_35%] h-full w-full"
           alt=""
@@ -66,8 +68,9 @@ export const BlogItem = ({ blog }) => {
       data-aos="fade-up"
       className="bg-secondary/5 rounded-xl p-5 text-primary_text relative z-10 group"
     >
-      <Link to={`/blogs/${blog.title}`}>
-        <img
+      <Link to={`/blogs/${createUrlParam(blog.title)}`}>
+        <img 
+loading="lazy"
           src={blog.image}
           alt=""
           width="600"

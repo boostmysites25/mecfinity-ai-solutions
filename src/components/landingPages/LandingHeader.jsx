@@ -63,7 +63,8 @@ const LandingHeader = () => {
       <div className="wrapper flex justify-between items-center gap-10">
         <div className="flex justify-between items-center gap-20 w-full pl-[1rem] lg:pl-0">
           <Link smooth={true} to="banner" className="cursor-pointer">
-            <img
+            <img 
+loading="lazy"
               src={logoImg}
               className="h-[2rem] md:h-[3rem] scale-125"
               alt="logo"

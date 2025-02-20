@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Contact from "../../components/landingPages/Contact";
-import aboutUsImg from "../../assets/images/aboutuscontent.jpg";
+import aboutUsImg from "../../assets/images/aboutuscontent.webp";
 import WhyChooseUs from "../../components/common/WhyChooseUs";
 import ReactPlayer from "react-player";
 import { homeBannerVideo } from "../../constant";
@@ -117,7 +117,8 @@ const Home = () => {
             data-aos="fade-left"
             className="h-full max-h-[300px] max-w-[400px] lg:max-w-full  lg:max-h-[382px] "
           >
-            <img
+            <img 
+loading="lazy"
               src={aboutUsImg}
               className=" h-full rounded-lg w-full  mx-auto object-cover"
               alt=""

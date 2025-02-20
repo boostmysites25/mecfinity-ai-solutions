@@ -59,7 +59,8 @@ const LandingServices = ({ page }) => {
                 </div>
               </div>
               {/* <div className="flex h-full flex-col gap-2 items-center text-center text-primarytextcolor p-5 rounded-lg">
-                <img
+                <img 
+loading="lazy"
                   src={item.icon}
                   alt="icon"
                   className="w-[6rem] grayscale-[65%]"

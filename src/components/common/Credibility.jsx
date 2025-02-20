@@ -74,10 +74,11 @@ const Credibility = () => {
                 key={index}
                 className="keen-slider__slide w-full flex my-[2rem] justify-center px-3 rounded-3xl"
               >
-                <img
+                <img 
+loading="lazy"
                   width="200"
                   height="100"
-                  loading="lazy"
+                  
                   src={img}
                   alt="featured in"
                   className="object-contain w-full rounded-2xl"

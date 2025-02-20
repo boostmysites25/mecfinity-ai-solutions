@@ -6,8 +6,8 @@ import {
   whyChooseUsIcon3,
   whyChooseUsIcon4,
 } from "../../constant";
-import whyus1 from "../../assets/images/whyus1.jpg";
-import whyus2 from "../../assets/images/whyus2.jpg";
+import whyus1 from "../../assets/images/whyus1.webp";
+import whyus2 from "../../assets/images/whyus2.webp";
 const WhyChooseUs = () => {
   const totalYrs = 2;
   const totalOnTimeCompletionPercentage = 100;
@@ -94,7 +94,8 @@ const WhyChooseUs = () => {
                   <h5 className="text-xl font-semibold">
                     Technical Proficiency
                   </h5>
-                  <img
+                  <img 
+loading="lazy"
                     src={whyChooseUsIcon1}
                     className="h-[3rem] object-contain mb-3"
                     alt=""
@@ -115,7 +116,8 @@ const WhyChooseUs = () => {
                   <h5 className="text-xl font-semibold">
                     Innovation & Flexibility
                   </h5>
-                  <img
+                  <img 
+loading="lazy"
                     src={whyChooseUsIcon2}
                     className="h-[3rem] object-contain mb-3"
                     alt=""
@@ -132,7 +134,8 @@ const WhyChooseUs = () => {
               data-aos="fade-up"
               className="w-fit h-full mx-auto md:mx-0"
             >
-              <img
+              <img 
+loading="lazy"
                 src={whyus1}
                 alt="whyus1"
                 className="h-[365px] object-cover rounded-xl"
@@ -145,7 +148,8 @@ const WhyChooseUs = () => {
               data-aos="fade-up"
               className=" w-fit md:w-full  flex justify-end sm:mx-auto md:mx-0"
             >
-              <img
+              <img 
+loading="lazy"
                 src={whyus2}
                 alt="whyus1"
                 className="max-h-[438px] w-full min-h-[300px] rounded-xl object-cover"
@@ -160,7 +164,8 @@ const WhyChooseUs = () => {
               >
                 <div className="flex w-full text-start items-center justify-between gap-3">
                   <h5 className="text-xl font-semibold">Clear Communication</h5>
-                  <img
+                  <img 
+loading="lazy"
                     src={whyChooseUsIcon3}
                     className="h-[3rem] object-contain mb-3"
                     alt=""
@@ -180,7 +185,8 @@ const WhyChooseUs = () => {
                   <h5 className="text-xl font-semibold">
                     Security & Compliance
                   </h5>
-                  <img
+                  <img 
+loading="lazy"
                     src={whyChooseUsIcon4}
                     className="h-[3rem] object-contain mb-3"
                     alt=""

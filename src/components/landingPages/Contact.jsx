@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import image from "../../assets/images/contactimage.jpg";
+import image from "../../assets/images/contactimage.webp";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
@@ -63,7 +63,8 @@ const Contact = () => {
               solutions, and immersive experiences, we offer the expertise and
               innovation needed to drive your business forward.
             </p>
-            <img
+            <img 
+loading="lazy"
               src={image}
               alt=""
               className="max-h-[21rem] object-cover rounded-xl"

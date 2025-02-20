@@ -37,7 +37,8 @@ const Banner = ({ page, desc }) => {
           className="react-player left-0 top-0 absolute object-cover h-full w-full"
         />
       ) : (
-        <img
+        <img 
+loading="lazy"
           src={contactusbanner}
           className="object-cover object-[100%_35%] h-full w-full"
           alt=""

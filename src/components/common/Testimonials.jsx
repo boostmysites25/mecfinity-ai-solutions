@@ -100,7 +100,8 @@ const Testimonials = () => {
                 <div className="flex items-center gap-2">
                   {/* <div className="h-[3rem] min-w-[3rem] bg-gray-300 rounded-full object-cover" /> */}
 
-                  <img
+                  <img 
+loading="lazy"
                     src={item.profileImg}
                     alt={item.name}
                     className=" w-[3rem] h-[3rem] rounded-full object-cover"

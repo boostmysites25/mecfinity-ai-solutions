@@ -30,25 +30,48 @@
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
+    
     <url>
-        <loc>https://mecfinityai.com/blogs/Future-Proof%20Your%20Online%20Presence%20with%20Innovative%20Web%20Development</loc>
+        <loc>https://mecfinityai.com/services/web-development</loc>
     </url>
     <url>
-        <loc>https://mecfinityai.com/blogs/Revolutionizing%20Mobile%20Interactions:%20Our%20App%20Development%20Expertise</loc>
+        <loc>https://mecfinityai.com/services/app-development</loc>
     </url>
     <url>
-        <loc>https://mecfinityai.com/blogs/Building%20Smarter%20Ecosystems:%20The%20Power%20of%20IoT%20Development</loc>
+        <loc>https://mecfinityai.com/services/iot-development</loc>
     </url>
     <url>
-        <loc>https://mecfinityai.com/blogs/Elevate%20Your%20Business%20with%20Scalable%20Cloud%20Computing%20Solutions</loc>
+        <loc>https://mecfinityai.com/services/cloud-computing-services</loc>
     </url>
     <url>
-        <loc>https://mecfinityai.com/blogs/AI%20Calling:%20The%20Future%20of%20Business%20Communication</loc>
+        <loc>https://mecfinityai.com/services/ai-calling-agency</loc>
     </url>
     <url>
-        <loc>https://mecfinityai.com/blogs/Blockchain:%20Revolutionizing%20Trust%20in%20the%20Digital%20Era</loc>
+        <loc>https://mecfinityai.com/services/blockchain-development</loc>
     </url>
     <url>
-        <loc>https://mecfinityai.com/blogs/Shaping%20Realities%20with%20Innovative%20VR%20&%20AR%20Development</loc>
+        <loc>https://mecfinityai.com/services/vr-ar-development</loc>
+    </url>
+    
+    <url>
+        <loc>https://mecfinityai.com/blogs/future-proof-your-online-presence-with-innovative-web-development</loc>
+    </url>
+    <url>
+        <loc>https://mecfinityai.com/blogs/revolutionizing-mobile-interactions-our-app-development-expertise</loc>
+    </url>
+    <url>
+        <loc>https://mecfinityai.com/blogs/building-smarter-ecosystems-the-power-of-iot-development</loc>
+    </url>
+    <url>
+        <loc>https://mecfinityai.com/blogs/elevate-your-business-with-scalable-cloud-computing-solutions</loc>
+    </url>
+    <url>
+        <loc>https://mecfinityai.com/blogs/ai-calling-the-future-of-business-communication</loc>
+    </url>
+    <url>
+        <loc>https://mecfinityai.com/blogs/blockchain-revolutionizing-trust-in-the-digital-era</loc>
+    </url>
+    <url>
+        <loc>https://mecfinityai.com/blogs/shaping-realities-with-innovative-vr-ar-development</loc>
     </url>
 </urlset>

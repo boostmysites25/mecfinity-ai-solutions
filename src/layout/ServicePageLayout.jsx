@@ -1,5 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import { Link, Outlet, useLocation, useParams } from "react-router-dom";
+import {
+  Link,
+  Navigate,
+  Outlet,
+  useLocation,
+  useParams,
+} from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BsClock } from "react-icons/bs";
@@ -7,6 +13,7 @@ import WebsiteHeader from "../components/website/WebsiteHeader";
 import WebsiteFooter from "../components/website/WebsiteFooter";
 import { companyDetails, allServices } from "../constant";
 import ServiceDetailsBanner from "../components/common/ServiceBannerDetails";
+import { createUrlParam } from "../utils/helper";
 // import GetInTouch from "../components/website/GetInTouch";
 
 const ServicePageLayout = () => {
@@ -41,10 +48,18 @@ const ServicePageLayout = () => {
       prevPath.current = pathname;
     }
   }, [pathname]);
+
+  const service = allServices.find(
+    (service) => createUrlParam(service.title) === title
+  );
+
+  if (!service) {
+    return <Navigate to="/services" />;
+  }
   return (
     <>
       <WebsiteHeader />
-      <ServiceDetailsBanner title={title}/>
+      <ServiceDetailsBanner title={service.title} />
       <div ref={wrapperRef} className="wrapper">
         <div className="pt-[5rem] grid md:grid-cols-[30%_65%] grid-cols-1 gap-10">
           <div className="w-full flex flex-col gap-10">
@@ -58,11 +73,11 @@ const ServicePageLayout = () => {
                   <Link
                     key={item.title}
                     className={`${
-                      item.title === title
+                      createUrlParam(item.title) === title
                         ? "bg-primary text-white"
                         : "bg-white text-[#17012C]"
                     } flex items-center gap-2 justify-between p-3 rounded-md`}
-                    to={item.title}
+                    to={createUrlParam(item.title)}
                   >
                     {item.title} <IoIosArrowRoundForward className="text-xl" />
                   </Link>
@@ -121,11 +136,7 @@ const ServicePageLayout = () => {
                 <FaPhoneAlt className="text-3xl" />
               </div>
               <h4 className="text-xl font-semibold">Need Help? Call Here</h4>
-              <h4
-                className="font-semibold"
-              >
-                {companyDetails.phone}
-              </h4>
+              <h4 className="font-semibold">{companyDetails.phone}</h4>
             </div>
           </Link>
         </div>

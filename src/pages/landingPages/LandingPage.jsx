@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Contact from "../../components/landingPages/Contact";
 import {
   appLandingAbout,
-  companyDetails,
   emailjsDetails,
   webLandingAbout,
 } from "../../constant";
@@ -17,7 +16,7 @@ import landingpagevideo from "../../assets/videos/home-banner.mp4";
 import Faqs from "../../components/common/Faqs";
 import { useForm } from "react-hook-form";
 import Credibility from "../../components/common/Credibility";
-import image from "../../assets/images/contactimage.jpg";
+import image from "../../assets/images/contactimage.webp";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
@@ -175,7 +174,8 @@ export const LandingPage = ({ page }) => {
             </div>
           </div>
           <div data-aos="fade-left" className="h-full">
-            <img
+            <img 
+loading="lazy"
               src={isWebDevelopment ? webLandingAbout : appLandingAbout}
               className="object-contain max-h-[30rem] w-full rounded-lg"
               alt=""
@@ -211,7 +211,8 @@ export const LandingPage = ({ page }) => {
                 will not only meet but exceed your expectations, driving
                 engagement and growth for your business.
               </p>
-              <img
+              <img 
+loading="lazy"
                 src={image}
                 alt=""
                 className="max-h-[21rem] object-cover rounded-xl"

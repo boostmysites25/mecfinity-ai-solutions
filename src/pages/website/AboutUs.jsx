@@ -20,7 +20,8 @@ const AboutUs = () => {
         data-aos="fade-down"
         className=" h-[40vh] sm:h-[55vh] md:h-[70vh] relative"
       >
-        <img
+        <img 
+loading="lazy"
           src={aboutUsBanner}
           className="object-cover object-[100%_35%] h-full w-full"
           alt=""
@@ -88,7 +89,8 @@ const AboutUs = () => {
               <div className="relative max-w-[300px] sm:ml-20  sm:max-w-[400px] h-[300px]">
                 {/* Circuit Board Image */}
                 <div className="absolute top-0 right-0 max-w-[250px] sm:max-w-[300px]  overflow-hidden rounded-lg shadow-xl">
-                  <img
+                  <img 
+loading="lazy"
                     data-aos="fade-up"
                     src={aboutusintroone}
                     alt="Circuit board with glowing components"
@@ -98,7 +100,8 @@ const AboutUs = () => {
 
                 {/* People Image */}
                 <div className="absolute left-0 bottom-10 sm:bottom-0 max-h-[140px] sm:max-h-[180px] max-w-[200px] sm:max-w-[250px] overflow-hidden rounded-lg shadow-xl">
-                  <img
+                  <img 
+loading="lazy"
                     data-aos="fade-up"
                     src={aboutusintrotwo}
                     alt="Team members working together"
@@ -144,7 +147,8 @@ const AboutUs = () => {
                   data-aos-delay={index * 100}
                 >
                   <div className="">
-                    <img
+                    <img 
+loading="lazy"
                       src={item.image}
                       alt={item.title}
                       className="transition-all duration-300 hover:opacity-75 h-[270px] w-full object-cover"

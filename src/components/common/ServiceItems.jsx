@@ -2,6 +2,7 @@ import React from "react";
 import { allServices } from "../../constant";
 import { Link } from "react-router-dom";
 import { PiCaretDoubleRightBold } from "react-icons/pi";
+import { createUrlParam } from "../../utils/helper";
 
 const ServiceItems = () => {
   return (
@@ -32,7 +33,7 @@ const ServiceItems = () => {
             <Link
               // onClick={() => handleSelectServiceToShowDetail(service)}
               // data-aos="fade-up"
-              to={`/services/${service.title}`}
+              to={`/services/${createUrlParam(service.title)}`}
               key={service.id}
               data-aos="fade-up"
               className=" rounded-lg p-[1px] cursor-pointer"

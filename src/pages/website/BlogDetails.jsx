@@ -6,10 +6,11 @@ import WebsiteFooter from "../../components/website/WebsiteFooter";
 import { blogs } from "../../data/blogs";
 import { IoIosArrowForward } from "react-icons/io";
 import blogsBanner from "../../assets/images/blog-details.webp";
+import { createUrlParam } from "../../utils/helper";
 
 const BlogDetails = () => {
   const params = useParams();
-  const blog = blogs.find((item) => item.title === params.title);
+  const blog = blogs.find((item) => createUrlParam(item.title) === params.title);
   if (!blog) {
     return <Navigate to="/blogs" />;
   }
@@ -21,7 +22,8 @@ const BlogDetails = () => {
         data-aos="fade-down"
         className=" h-[40vh] sm:h-[55vh] md:h-[70vh] relative"
       >
-        <img
+        <img 
+loading="lazy"
           src={blogsBanner}
           className="object-cover object-[100%_35%] h-full w-full"
           alt=""
@@ -47,7 +49,8 @@ const BlogDetails = () => {
       <div className="relative text-primary_text">
         <div className="wrapper pt-8 pb-[2rem] relative z-10">
           <div className="flex flex-col gap-2 pb-[3rem] p-3 sm:p-5 rounded-xl mb-[3rem]">
-            <img
+            <img 
+loading="lazy"
               data-aos="fade-up"
               src={blog.image}
               alt=""

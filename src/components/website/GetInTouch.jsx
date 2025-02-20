@@ -56,7 +56,8 @@ const GetInTouch = () => {
           <h1 className="text-center heading-2 lg:text-start">
             Ready to Lead with Innovation? <br /> Let’s Start Your Project
           </h1>
-          <img
+          <img 
+loading="lazy"
             src={image}
             alt=""
             className="max-h-[25rem] object-cover rounded-xl"

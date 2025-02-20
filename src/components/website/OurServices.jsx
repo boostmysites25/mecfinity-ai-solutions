@@ -9,6 +9,7 @@ import {
   IoArrowForwardCircleOutline,
 } from "react-icons/io5";
 import { useKeenSlider } from "keen-slider/react";
+import { createUrlParam } from "../../utils/helper";
 
 const OurServices = ({ length }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -125,7 +126,7 @@ const OurServices = ({ length }) => {
               <Link
                 onClick={() => handleSelectServiceToShowDetail(service)}
                 // data-aos="fade-up"
-                to={`/services/${service.title}`}
+                to={`/services/${createUrlParam(service.title)}`}
                 key={service.id}
                 className=" rounded-lg p-[1px]  cursor-pointer h-full "
               >

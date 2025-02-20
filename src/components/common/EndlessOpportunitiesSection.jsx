@@ -74,22 +74,26 @@ const EndlessOpportunitiesSection = () => {
               id="from-right"
               className="flex items-center gap-2 translate-x-[10%] md:translate-x-[25vw]"
             >
-              <img
+              <img 
+loading="lazy"
                 src={endlessOpportunitiesImg1}
                 className="h-[4rem] md:h-[7rem] object-cover rounded-full"
                 alt=""
               />
-              <img
+              <img 
+loading="lazy"
                 src={endlessOpportunitiesImg2}
                 className="h-[4rem] md:h-[7rem] object-cover rounded-full"
                 alt=""
               />
-              <img
+              <img 
+loading="lazy"
                 src={endlessOpportunitiesImg3}
                 className="h-[4rem] md:h-[7rem] object-cover rounded-full"
                 alt=""
               />
-              <img
+              <img 
+loading="lazy"
                 src={endlessOpportunitiesImg2}
                 className="h-[4rem] md:h-[7rem] object-cover rounded-full"
                 alt=""
@@ -100,22 +104,26 @@ const EndlessOpportunitiesSection = () => {
               id="from-left"
               className="flex items-center gap-2 -translate-x-[100%] md:-translate-x-[25vw]"
             >
-              <img
+              <img 
+loading="lazy"
                 src={endlessOpportunitiesImg3}
                 className="h-[4rem] md:h-[7rem] object-cover rounded-full"
                 alt=""
               />
-              <img
+              <img 
+loading="lazy"
                 src={endlessOpportunitiesImg2}
                 className="h-[4rem] md:h-[7rem] object-cover rounded-full"
                 alt=""
               />
-              <img
+              <img 
+loading="lazy"
                 src={endlessOpportunitiesImg3}
                 className="h-[4rem] md:h-[7rem] object-cover rounded-full"
                 alt=""
               />
-              <img
+              <img 
+loading="lazy"
                 src={endlessOpportunitiesImg1}
                 className="h-[4rem] md:h-[7rem] object-cover rounded-full"
                 alt=""
