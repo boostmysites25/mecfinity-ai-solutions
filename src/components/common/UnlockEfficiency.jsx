@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const UnlockEfficiency = () => {
+const UnlockEfficiency = React.memo(() => {
   return (
     <section className="py-[3rem] text-primarytextcolor bg-backgroundcolor">
       <div
@@ -22,6 +22,6 @@ const UnlockEfficiency = () => {
       </div>
     </section>
   );
-};
+})
 
 export default UnlockEfficiency;

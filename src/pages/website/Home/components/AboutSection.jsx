@@ -2,14 +2,20 @@ import React from "react";
 import aboutUsImg from "../../../../assets/images/aboutuscontent.webp";
 import { Link } from "react-router-dom";
 
-const AboutSection = () => {
+const AboutSection = React.memo(() => {
   return (
     <section className="py-12 bg-backgroundcolor text-primarytextcolor wrapper">
-      <div data-aos="fade-right" className="gradient-rounded-text-box mx-auto lg:mx-0">
+      <div
+        data-aos="fade-right"
+        className="gradient-rounded-text-box mx-auto lg:mx-0"
+      >
         About Us
       </div>
       <div className="flex flex-col lg:grid grid-cols-2 gap-10 mt-7 items-center">
-        <div data-aos="fade-right" className="flex flex-col space-y-6 text-center lg:text-left">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col space-y-6 text-center lg:text-left"
+        >
           <h2 className="heading-2">
             Revolutionizing Operations with AI-Powered Innovation
           </h2>
@@ -41,6 +47,6 @@ const AboutSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default AboutSection;

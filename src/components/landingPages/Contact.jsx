@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { emailjsDetails } from "../../constant";
 
-const Contact = () => {
+const Contact = React.memo(() => {
   const [spinner, setSpinner] = useState(false);
 
   const {
@@ -163,6 +163,6 @@ loading="lazy"
       </div>
     </div>
   );
-};
+})
 
 export default Contact;

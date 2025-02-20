@@ -3,7 +3,7 @@ import { appPortfolioHomepage, webPortfolioHomepage } from "../../constant";
 import { useKeenSlider } from "keen-slider/react";
 const animation = { duration: 60000, easing: (t) => t };
 
-const CommonProject = () => {
+const CommonProject = React.memo(() => {
   const [sliderRef] = useKeenSlider({
     loop: true,
     renderMode: "performance",
@@ -174,6 +174,6 @@ const CommonProject = () => {
       </div>
     </div>
   );
-};
+})
 
 export default CommonProject;
