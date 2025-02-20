@@ -2,9 +2,7 @@ import React from "react";
 
 const WhoWeAreSection = () => {
   return (
-    <section
-      className="py-[3rem] bg-secondary/5"
-    >
+    <section className="py-[3rem] bg-secondary/5">
       <div
         data-aos-offset={-400}
         // data-aos-anchor-placement="bottom-center"

@@ -110,20 +110,18 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Suspense fallback={<LoadingSpinner />}>
-        <AboutSection />
-        <OurServices length={3} />
-        <WhoWeAreSection />
-        <CommonProject />
-        <WhyChooseUs />
-        <UnlockEfficiency />
-        <Testimonials />
-        <Credibility />
-        <Faqs />
-        <div>
-          <Contact />
-        </div>
-      </Suspense>
+      <AboutSection />
+      <OurServices length={3} />
+      <WhoWeAreSection />
+      <CommonProject />
+      <WhyChooseUs />
+      <UnlockEfficiency />
+      <Testimonials />
+      <Credibility />
+      <Faqs />
+      <div>
+        <Contact />
+      </div>
     </>
   );
 };
