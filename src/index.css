@@ -45,7 +45,7 @@ body {
     @apply font-raleway text-4xl md:text-5xl font-semibold leading-tight;
   }
   .desc {
-    @apply font-inter font-light;
+    @apply font-inter font-normal;
   }
   .active-link {
     @apply text-headertexthoverandactive font-semibold;
