@@ -14,7 +14,6 @@ import WebsiteFooter from "../components/website/WebsiteFooter";
 import { companyDetails, allServices } from "../constant";
 import ServiceDetailsBanner from "../components/common/ServiceBannerDetails";
 import { createUrlParam } from "../utils/helper";
-// import GetInTouch from "../components/website/GetInTouch";
 
 const ServicePageLayout = () => {
   const { pathname } = useLocation();
