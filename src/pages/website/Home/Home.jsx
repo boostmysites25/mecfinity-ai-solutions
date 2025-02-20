@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import ReactPlayer from "react-player";
 import { homeBannerVideo } from "../../../constant";
 import { LoadingSpinner } from "../../../components/common/LoadingSpinner";
+import bannerThumb from "../../../assets/videos/banner-thumb.webp";
 
 // Lazy load non-critical components
 const Contact = lazy(() => import("../../../components/landingPages/Contact"));
@@ -30,6 +31,7 @@ const AboutSection = lazy(() => import("./components/AboutSection"));
 const WhoWeAreSection = lazy(() => import("./components/WhoWeAreSection"));
 
 const Home = () => {
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
   return (
     <>
       <Helmet>
@@ -48,6 +50,13 @@ const Home = () => {
         id="banner"
         className="min-h-screen flex items-center py-[2rem] relative"
       >
+        {isVideoLoading && (
+          <img
+            src={bannerThumb}
+            alt="Banner Thumbnail"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
         <ReactPlayer
           url={homeBannerVideo}
           loop
@@ -57,6 +66,7 @@ const Home = () => {
           playsinline
           playing
           className="absolute"
+          style={isVideoLoading ? { opacity: "0" } : { opacity: "1" }}
           pip={false}
           config={{
             file: {
@@ -72,6 +82,7 @@ const Home = () => {
               },
             },
           }}
+          onReady={() => setIsVideoLoading(false)}
         />
         <div className="bg-gradient-to-r to-black/50 from-transparent absolute w-full h-full"></div>
         <div className="pt-[3rem] wrapper flex items-center h-full">
