@@ -45,7 +45,7 @@ const WebsiteHeader = () => {
               src={logoImg}
               alt="logo"
               className="h-[2rem] md:h-[3rem] ml-5 scale-125"
-              width={100}
+              width={80}
               height={80}
               loading="eager"
             />
