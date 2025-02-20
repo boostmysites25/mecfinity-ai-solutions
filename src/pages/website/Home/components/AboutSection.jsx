@@ -1,5 +1,5 @@
 import React from "react";
-import aboutUsImg from "../../assets/images/aboutuscontent.webp";
+import aboutUsImg from "../../../../assets/images/aboutuscontent.webp";
 import { Link } from "react-router-dom";
 
 const AboutSection = () => {
