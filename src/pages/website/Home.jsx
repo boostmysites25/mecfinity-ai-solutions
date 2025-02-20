@@ -9,8 +9,10 @@ import UnlockEfficiency from "../../components/common/UnlockEfficiency";
 import Testimonials from "../../components/common/Testimonials";
 import Faqs from "../../components/common/Faqs";
 import Credibility from "../../components/common/Credibility";
-import CommonProject from "../../components/website/CommonProject";
 import { Helmet } from "react-helmet-async";
+import { lazy } from "react";
+
+const CommonProject = lazy(()=>import('../../components/website/CommonProject'))
 
 const Home = () => {
   return (
@@ -117,8 +119,8 @@ const Home = () => {
             data-aos="fade-left"
             className="h-full max-h-[300px] max-w-[400px] lg:max-w-full  lg:max-h-[382px] "
           >
-            <img 
-loading="lazy"
+            <img
+              loading="lazy"
               src={aboutUsImg}
               className=" h-full rounded-lg w-full  mx-auto object-cover"
               alt=""
