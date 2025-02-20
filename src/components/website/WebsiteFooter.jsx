@@ -9,8 +9,7 @@ const WebsiteFooter = () => {
       <div className="wrapper text-black">
         <div className="flex md:flex-row flex-col justify-between gap-10">
           <div className="flex flex-col items-center">
-            <img 
-loading="lazy" src={logoImg} className="h-[4rem]" alt="" />
+            <img loading="lazy" src={logoImg} className="h-[4rem]" alt="" />
             <p className="desc md:max-w-[15rem] text-sm text-center mt-5">
               We have rapidly grown into a trusted partner for organizations
               seeking digital transformation, enhanced operational efficiency.
@@ -42,9 +41,7 @@ loading="lazy" src={logoImg} className="h-[4rem]" alt="" />
               </div>
               <div className="flex flex-col">
                 <h6 className="text-[.9rem] mb-1">Email</h6>
-                <Link
-                  className="text-black desc text-sm"
-                >
+                <Link className="text-black desc text-sm">
                   {companyDetails.email}
                 </Link>
               </div>

@@ -54,7 +54,7 @@ import { TfiLayoutMediaRightAlt } from "react-icons/tfi";
 import { TbDeviceMobileCode } from "react-icons/tb";
 import { FaMobileScreen } from "react-icons/fa6";
 
-const Home = lazy(() => import("./pages/website/Home"));
+const Home = lazy(() => import("./pages/website/Home/Home"));
 const Services = lazy(() => import("./pages/website/Services"));
 const ContactUs = lazy(() => import("./pages/website/ContactUs"));
 const AboutUs = lazy(() => import("./pages/website/AboutUs"));
