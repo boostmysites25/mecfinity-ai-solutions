@@ -1,21 +1,33 @@
 import { Link } from "react-router-dom";
-import Contact from "../../../components/landingPages/Contact";
-import WhyChooseUs from "../../../components/common/WhyChooseUs";
+import { lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
 import ReactPlayer from "react-player";
 import { homeBannerVideo } from "../../../constant";
-import OurServices from "../../../components/website/OurServices";
-import UnlockEfficiency from "../../../components/common/UnlockEfficiency";
-import Testimonials from "../../../components/common/Testimonials";
-import Faqs from "../../../components/common/Faqs";
-import Credibility from "../../../components/common/Credibility";
-import { Helmet } from "react-helmet-async";
-import { lazy } from "react";
-import AboutSection from "./components/AboutSection";
-import WhoWeAreSection from "./components/WhoWeAreSection";
+import { LoadingSpinner } from "../../../components/common/LoadingSpinner";
 
+// Lazy load non-critical components
+const Contact = lazy(() => import("../../../components/landingPages/Contact"));
+const WhyChooseUs = lazy(() =>
+  import("../../../components/common/WhyChooseUs")
+);
+const OurServices = lazy(() =>
+  import("../../../components/website/OurServices")
+);
+const UnlockEfficiency = lazy(() =>
+  import("../../../components/common/UnlockEfficiency")
+);
+const Testimonials = lazy(() =>
+  import("../../../components/common/Testimonials")
+);
+const Faqs = lazy(() => import("../../../components/common/Faqs"));
+const Credibility = lazy(() =>
+  import("../../../components/common/Credibility")
+);
 const CommonProject = lazy(() =>
   import("../../../components/website/CommonProject")
 );
+const AboutSection = lazy(() => import("./components/AboutSection"));
+const WhoWeAreSection = lazy(() => import("./components/WhoWeAreSection"));
 
 const Home = () => {
   return (
@@ -87,19 +99,20 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <AboutSection />
-      <OurServices length={3} />
-      <WhoWeAreSection/>
-      <CommonProject />
-      <WhyChooseUs />
-      <UnlockEfficiency />
-      <Testimonials />
-      <Credibility />
-      <Faqs />
-      {/* <EndlessOpportunitiesSection /> */}
-      <div>
-        <Contact />
-      </div>
+      <Suspense fallback={<LoadingSpinner />}>
+        <AboutSection />
+        <OurServices length={3} />
+        <WhoWeAreSection />
+        <CommonProject />
+        <WhyChooseUs />
+        <UnlockEfficiency />
+        <Testimonials />
+        <Credibility />
+        <Faqs />
+        <div>
+          <Contact />
+        </div>
+      </Suspense>
     </>
   );
 };

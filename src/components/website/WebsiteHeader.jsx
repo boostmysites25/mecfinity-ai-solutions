@@ -41,10 +41,10 @@ const WebsiteHeader = () => {
       <div className="wrapper flex justify-between items-center gap-10">
         <div className="flex justify-between items-center gap-20 w-full pl-[1rem] lg:pl-0">
           <Link to="/">
-            <img 
+            <img
               src={logoImg}
-              className="h-[2rem] md:h-[3rem] ml-5 scale-125"
               alt="logo"
+              className="h-[2rem] md:h-[3rem] ml-5 scale-125"
             />
           </Link>
           <div className="lg:flex mt-7 items-center gap-10 hidden">
@@ -68,10 +68,7 @@ const WebsiteHeader = () => {
           className="py-4 px-10 z-10"
         >
           <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem]">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-[2.2rem]"
-            >
+            <button onClick={() => setIsOpen(false)} className="text-[2.2rem]">
               <IoMdClose />
             </button>
           </div>
