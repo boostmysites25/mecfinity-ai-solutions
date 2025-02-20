@@ -67,9 +67,6 @@ const LandingHeader = () => {
               src={logoImg}
               className="h-[2rem] md:h-[3rem] scale-125"
               alt="logo"
-              width={80}
-              height={80}
-              loading="eager"
             />
           </Link>
           <div className="lg:flex items-center mt-7 gap-10 hidden">
