@@ -17,6 +17,50 @@ const LandingFooter = () => {
             </p>
           </div>
           <div className="flex md:flex-row flex-col gap-10">
+            {/* <div className="flex flex-col gap-2">
+              <h6 className="font-medium mb-1">Quick Links</h6>
+              <ScrollLink
+                smooth
+                to="banner"
+                offset={-60}
+                className="text-black desc text-sm cursor-pointer"
+              >
+                Home
+              </ScrollLink>
+              <ScrollLink
+                smooth
+                to="about"
+                offset={-60}
+                className="text-black desc text-sm cursor-pointer"
+              >
+                About Us
+              </ScrollLink>
+              <ScrollLink
+                smooth
+                to="services"
+                offset={-60}
+                className="text-black desc text-sm cursor-pointer"
+              >
+                Services
+              </ScrollLink>
+             
+              <ScrollLink
+                smooth
+                to="contact"
+                offset={-60}
+                className="text-black desc text-sm cursor-pointer"
+              >
+                Contact Us
+              </ScrollLink>
+              <ScrollLink
+                smooth
+                to="banner"
+                offset={-60}
+                className="text-black desc text-sm cursor-pointer"
+              >
+                Blogs
+              </ScrollLink>
+            </div> */}
             <div className="flex flex-col gap-2">
               <h6 className="font-medium mb-1">Contact Us</h6>
               <div className="flex flex-col">
