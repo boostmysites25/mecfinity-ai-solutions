@@ -13,7 +13,6 @@ const Thankyou = () => {
           <div className="flex justify-between items-center gap-20 w-full pl-[1rem] lg:pl-0">
             <Link to="/" className="cursor-pointer relative">
               <img
-                loading="lazy"
                 src={logoImg}
                 className="h-[2rem] md:h-[3rem] scale-125"
                 alt="logo"
