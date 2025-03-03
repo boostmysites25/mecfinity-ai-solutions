@@ -30,6 +30,12 @@
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://mecfinityai.com/thank-you</loc>
+        <lastmod>2025-02-12T00:00:00.000Z</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
     
     <url>
         <loc>https://mecfinityai.com/services/web-development</loc>
