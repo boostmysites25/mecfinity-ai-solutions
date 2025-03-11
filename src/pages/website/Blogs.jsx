@@ -15,8 +15,8 @@ const Blogs = () => {
         data-aos="fade-down"
         className=" h-[40vh] sm:h-[55vh] md:h-[70vh] relative"
       >
-        <img 
-loading="lazy"
+        <img
+          loading="lazy"
           src={blogsBanner}
           className="object-cover object-[100%_35%] h-full w-full"
           alt=""
@@ -69,8 +69,8 @@ export const BlogItem = ({ blog }) => {
       className="bg-secondary/5 rounded-xl p-5 text-primary_text relative z-10 group"
     >
       <Link to={`/blogs/${createUrlParam(blog.title)}`}>
-        <img 
-loading="lazy"
+        <img
+          loading="lazy"
           src={blog.image}
           alt=""
           width="600"
@@ -80,18 +80,18 @@ loading="lazy"
       </Link>
       <div className="flex flex-col gap-2 mt-[1rem]">
         <Link
-          to={`/blogs/${blog.title}`}
+          to={`/blogs/${createUrlParam(blog.title)}`}
           className="text-xl hyphen-auto font-medium leading-tight line-clamp-2 text-ellipsis hover:text-secondary transition-all duration-200"
         >
           {blog.title}
         </Link>
-        {/* <p className="desc leading-tight text-gray-800 line-clamp-3 text-ellipsis hyphen-auto">
-          {blog.shortDesc}
-        </p> */}
       </div>
 
       <div className="mt-6 w-full flex justify-center">
-        <Link to={`/blogs/${blog.title}`} className="secondary-btn w-full">
+        <Link
+          to={`/blogs/${createUrlParam(blog.title)}`}
+          className="secondary-btn w-full"
+        >
           Read More
         </Link>
       </div>
