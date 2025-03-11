@@ -205,7 +205,11 @@ const ContactUs = () => {
             <Link className="group w-[2.5rem] h-[2.5rem] rounded-full border-primary border flex justify-center items-center">
               <BsTwitter className="text-xl text-primarytextcolor group-hover:text-primary transition-all duration-300" />
             </Link>
-            <Link className="group w-[2.5rem] h-[2.5rem] rounded-full border-primary border flex justify-center items-center">
+            <Link
+              to={companyDetails.linkedin}
+              target="_blank"
+              className="group w-[2.5rem] h-[2.5rem] rounded-full border-primary border flex justify-center items-center"
+            >
               <BsLinkedin className="text-xl text-primarytextcolor group-hover:text-primary transition-all duration-300" />
             </Link>
             <Link className="group w-[2.5rem] h-[2.5rem] rounded-full border-primary border flex justify-center items-center">

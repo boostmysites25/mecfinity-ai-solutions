@@ -83,7 +83,7 @@ loading="lazy" src={logoImg} className="h-[4rem] md:h-[5rem]" alt="" />
                 <Link>
                   <BsTwitter className="text-xl text-gray-500 hover:text-primary transition-all duration-300" />
                 </Link>
-                <Link>
+                <Link to={companyDetails.linkedin} target="_blank">
                   <BsLinkedin className="text-xl text-gray-500 hover:text-primary transition-all duration-300" />
                 </Link>
                 <Link>
