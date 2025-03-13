@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import { companyDetails, logoImg, routes } from "../constant";
-import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { companyDetails, logoImg, routes } from "../../constant";
 
 const Thankyou = () => {
@@ -11,11 +11,12 @@ const Thankyou = () => {
         <div className="wrapper flex justify-between items-center gap-10">
           <div className="flex justify-between items-center gap-20 w-full pl-[1rem] lg:pl-0">
             <Link to="/" className="cursor-pointer relative">
-              <img 
-loading="lazy" src={logoImg} className="h-[4rem] md:h-[5rem] " alt="logo" />
-              {/* <small className="text-sm font-light text-[#CAA562] absolute bottom-0 left-1/2 -translate-x-1/2">
-                Parvesha
-              </small> */}
+              <img
+                loading="lazy"
+                src={logoImg}
+                className="h-[4rem] md:h-[5rem] "
+                alt="logo"
+              />
             </Link>
           </div>
         </div>
@@ -34,8 +35,12 @@ loading="lazy" src={logoImg} className="h-[4rem] md:h-[5rem] " alt="logo" />
         <div className="wrapper text-white">
           <div className="flex md:flex-row flex-col justify-between gap-10">
             <div className="flex flex-col items-center">
-              <img 
-loading="lazy" src={logoImg} className="h-[4rem] md:h-[5rem]" alt="" />
+              <img
+                loading="lazy"
+                src={logoImg}
+                className="h-[4rem] md:h-[5rem]"
+                alt=""
+              />
               <p className="desc md:max-w-[15rem] text-sm text-center mt-5">
                 We have rapidly grown into a trusted partner for organizations
                 seeking digital transformation, enhanced operational efficiency.
@@ -86,8 +91,8 @@ loading="lazy" src={logoImg} className="h-[4rem] md:h-[5rem]" alt="" />
                 <Link to={companyDetails.linkedin} target="_blank">
                   <BsLinkedin className="text-xl text-gray-500 hover:text-primary transition-all duration-300" />
                 </Link>
-                <Link>
-                  <BsYoutube className="text-xl text-gray-500 hover:text-primary transition-all duration-300" />
+                <Link to={companyDetails.instagram} target="_blank">
+                  <BsInstagram className="text-xl text-gray-500 hover:text-primary transition-all duration-300" />
                 </Link>
               </div>
             </div>

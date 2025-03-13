@@ -104,7 +104,8 @@ export const companyDetails = {
   whatsappbox: "+917483139873",
   email: "info@mecfinityai.com",
   address: "Mangalore, India",
-  linkedin:"https://www.linkedin.com/in/bilal-meccai-a3b6a7168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  linkedin:"https://www.linkedin.com/company/mecfinity-ai/",
+  instagram:'https://www.instagram.com/mecfinityai?igsh=MTQ3MW92a3ZrZGo1Zg=='
 };
 
 export const emailjsDetails = {

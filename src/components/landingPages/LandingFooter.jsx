@@ -1,6 +1,5 @@
 import React from "react";
-import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
-import { Link as ScrollLink } from "react-scroll";
+import { BsFacebook, BsLinkedin, BsTwitter, BsInstagram } from "react-icons/bs";
 import { companyDetails, logoImg } from "../../constant";
 import { Link } from "react-router-dom";
 
@@ -102,8 +101,8 @@ const LandingFooter = () => {
               <Link to={companyDetails.linkedin} target="_blank">
                 <BsLinkedin className="text-xl text-black hover:text-primary transition-all duration-300" />
               </Link>
-              <Link>
-                <BsYoutube className="text-xl text-black hover:text-primary transition-all duration-300" />
+              <Link to={companyDetails.instagram} target="_blank">
+                <BsInstagram className="text-xl text-black hover:text-primary transition-all duration-300" />
               </Link>
             </div>
           </div>

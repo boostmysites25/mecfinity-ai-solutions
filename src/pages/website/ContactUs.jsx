@@ -5,7 +5,7 @@ import { FaPhone } from "react-icons/fa";
 import { companyDetails, emailjsDetails } from "../../constant";
 import { IoMail } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
-import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsLinkedin, BsTwitter, BsInstagram } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
@@ -212,8 +212,12 @@ const ContactUs = () => {
             >
               <BsLinkedin className="text-xl text-primarytextcolor group-hover:text-primary transition-all duration-300" />
             </Link>
-            <Link className="group w-[2.5rem] h-[2.5rem] rounded-full border-primary border flex justify-center items-center">
-              <BsYoutube className="text-xl text-primarytextcolor group-hover:text-primary transition-all duration-300" />
+            <Link
+              to={companyDetails.instagram}
+              target="_blank"
+              className="group w-[2.5rem] h-[2.5rem] rounded-full border-primary border flex justify-center items-center"
+            >
+              <BsInstagram className="text-xl text-primarytextcolor group-hover:text-primary transition-all duration-300" />
             </Link>
           </div>
         </div>
