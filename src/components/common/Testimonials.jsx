@@ -4,9 +4,8 @@ import {
   IoArrowBackCircleOutline,
   IoArrowForwardCircleOutline,
 } from "react-icons/io5";
-import { reviews } from "../../constant";
 
-const Testimonials = () => {
+const Testimonials = ({ reviews }) => {
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       loop: true,
@@ -100,12 +99,14 @@ const Testimonials = () => {
                 <div className="flex items-center gap-2">
                   {/* <div className="h-[3rem] min-w-[3rem] bg-gray-300 rounded-full object-cover" /> */}
 
-                  <img
-                    loading="lazy"
-                    src={item.profileImg}
-                    alt={item.name}
-                    className=" w-[3rem] h-[3rem] rounded-full object-cover"
-                  />
+                  {item.profileImg && (
+                    <img
+                      loading="lazy"
+                      src={item.profileImg}
+                      alt={item.name}
+                      className="w-[3rem] h-[3rem] rounded-full object-cover"
+                    />
+                  )}
                   <div className="flex flex-col h-full">
                     <p className="font-medium">{item.name}</p>
                     <p className="text-sm">{item.role}</p>

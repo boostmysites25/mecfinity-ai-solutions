@@ -195,76 +195,137 @@ export const faqs = [
 ];
 
 // web development services
+// export const webDevelopmentServices = [
+//   {
+//     id: 1,
+//     title: "E-commerce Websites",
+//     icon: require("./assets/images/icons/online-shopping.png"),
+//     img: <CgWebsite />,
+//     description:
+//       "Boost your online business with custom e-commerce solutions. Our platforms enhance customer engagement, streamline operations, and drive revenue growth through personalized shopping experiences and intelligent recommendations.",
+//   },
+//   {
+//     id: 2,
+//     title: "Social Media Websites",
+//     img: <GoFileMedia />,
+//     icon: require("./assets/images/icons/socialmedia.png"),
+//     description:
+//       "Develop custom social media websites that captivate audiences with AI-driven content recommendations and engagement strategies, fostering brand loyalty and growth.",
+//   },
+//   {
+//     id: 3,
+//     title: "Landing Websites",
+//     img: <TfiLayoutMediaRightAlt />,
+//     icon: require("./assets/images/icons/landing-page.png"),
+//     description:
+//       "Create high-converting landing pages with AI-enhanced design and user behavior tracking. Our designs grab attention, inspire action, and maximize conversions through personalized experiences.",
+//   },
+//   {
+//     id: 4,
+//     title: "Custom Websites",
+//     img: <MdOutlineDashboardCustomize />,
+//     icon: require("./assets/images/icons/software-development.png"),
+//     description:
+//       "Deliver bespoke websites tailored to your business needs. Our solutions combine creativity, functionality, and AI-driven features for an exceptional online presence.",
+//   },
+// ];
 export const webDevelopmentServices = [
   {
     id: 1,
-    title: "E-commerce Websites",
+    title: "Custom Web Development",
     icon: require("./assets/images/icons/online-shopping.png"),
-    img: <CgWebsite />,
+    img: <TfiLayoutMediaRightAlt />,
     description:
-      "Boost your online business with custom e-commerce solutions. Our platforms enhance customer engagement, streamline operations, and drive revenue growth through personalized shopping experiences and intelligent recommendations.",
+      "Tailored solutions built to match your unique brand identity. Our custom web development services ensure that your website is designed and developed to reflect your brand's values and meet your specific business needs.",
   },
   {
     id: 2,
-    title: "Social Media Websites",
-    img: <GoFileMedia />,
-    icon: require("./assets/images/icons/socialmedia.png"),
+    title: "E-commerce Solutions",
+    img: <CgWebsite />,
+    icon: require("./assets/images/icons/online-shopping.png"),
     description:
-      "Develop custom social media websites that captivate audiences with AI-driven content recommendations and engagement strategies, fostering brand loyalty and growth.",
+      "Seamless, secure platforms designed to drive online sales. Our e-commerce solutions provide a robust and user-friendly platform for your online store, ensuring a smooth shopping experience for your customers.",
   },
   {
     id: 3,
-    title: "Landing Websites",
-    img: <TfiLayoutMediaRightAlt />,
-    icon: require("./assets/images/icons/landing-page.png"),
-    description:
-      "Create high-converting landing pages with AI-enhanced design and user behavior tracking. Our designs grab attention, inspire action, and maximize conversions through personalized experiences.",
-  },
-  {
-    id: 4,
-    title: "Custom Websites",
+    title: "Mobile Optimization",
     img: <MdOutlineDashboardCustomize />,
     icon: require("./assets/images/icons/software-development.png"),
     description:
-      "Deliver bespoke websites tailored to your business needs. Our solutions combine creativity, functionality, and AI-driven features for an exceptional online presence.",
+      "Responsive designs that deliver a stellar user experience on any device. Our mobile optimization services ensure that your website is fully responsive and performs excellently across all devices, enhancing user engagement and satisfaction.",
+  },
+];
+
+export const appDevelopmentServices = [
+  {
+    id: 1,
+    title: "Custom App Development",
+    img: <FaAppStoreIos />,
+    icon: require("./assets/images/icons/ios-development.png"),
+    description:
+      "Bespoke solutions for your unique needs. Our custom app development services ensure that your application is tailored to meet your specific business requirements, providing a seamless user experience and robust functionality.",
+  },
+  {
+    id: 2,
+    title: "Enterprise Solutions",
+    img: <IoLogoAndroid />,
+    icon: require("./assets/images/icons/android-development.png"),
+    description:
+      "Scalable, robust platforms for business growth. Our enterprise solutions are designed to handle the complexities of large-scale operations, ensuring reliability, security, and efficiency for your business processes.",
+  },
+  {
+    id: 3,
+    title: "Mobile Optimization",
+    img: <SiFlutter />,
+    icon: require("./assets/images/icons/flutter-development.png"),
+    description:
+      "Flawless performance on every device. Our mobile optimization services ensure that your application runs smoothly across all devices and platforms, providing a consistent and high-quality user experience.",
+  },
+  {
+    id: 4,
+    title: "UI/UX Design",
+    img: <TbDeviceMobileCode />,
+    icon: require("./assets/images/icons/hybrid-app-development.png"),
+    description:
+      "Engaging, intuitive user experiences. Our UI/UX design services focus on creating visually appealing and user-friendly interfaces that enhance user engagement and satisfaction.",
   },
 ];
 
 // app development services
-export const appDevelopmentServices = [
-  {
-    id: 1,
-    title: "iOS App Development",
-    img: <FaAppStoreIos />,
-    icon: require("./assets/images/icons/ios-development.png"),
-    description:
-      "We specialize in iOS app development using Swift and Objective-C, delivering high-performance apps with AI-powered features like predictive analytics and personalized user experiences.",
-  },
-  {
-    id: 2,
-    title: "Android App Development",
-    img: <IoLogoAndroid />,
-    icon: require("./assets/images/icons/android-development.png"),
-    description:
-      "Our team designs and develops Android apps tailored to your business goals, leveraging Java and Kotlin alongside AI technologies to create robust, efficient applications with intelligent automation.",
-  },
-  {
-    id: 3,
-    title: "Flutter App Development",
-    img: <SiFlutter />,
-    icon: require("./assets/images/icons/flutter-development.png"),
-    description:
-      "Using Flutter, we create apps for both iOS and Android with a single codebase, integrating AI-driven solutions to enhance performance and deliver feature-rich applications.",
-  },
-  {
-    id: 4,
-    title: "Hybrid App Development",
-    img: <TbDeviceMobileCode />,
-    icon: require("./assets/images/icons/hybrid-app-development.png"),
-    description:
-      "We develop feature-rich hybrid apps tailored to your business needs, incorporating AI-powered tools to create mobile-friendly apps that work seamlessly across iOS and Android platforms.",
-  },
-];
+// export const appDevelopmentServices = [
+//   {
+//     id: 1,
+//     title: "iOS App Development",
+//     img: <FaAppStoreIos />,
+//     icon: require("./assets/images/icons/ios-development.png"),
+//     description:
+//       "We specialize in iOS app development using Swift and Objective-C, delivering high-performance apps with AI-powered features like predictive analytics and personalized user experiences.",
+//   },
+//   {
+//     id: 2,
+//     title: "Android App Development",
+//     img: <IoLogoAndroid />,
+//     icon: require("./assets/images/icons/android-development.png"),
+//     description:
+//       "Our team designs and develops Android apps tailored to your business goals, leveraging Java and Kotlin alongside AI technologies to create robust, efficient applications with intelligent automation.",
+//   },
+//   {
+//     id: 3,
+//     title: "Flutter App Development",
+//     img: <SiFlutter />,
+//     icon: require("./assets/images/icons/flutter-development.png"),
+//     description:
+//       "Using Flutter, we create apps for both iOS and Android with a single codebase, integrating AI-driven solutions to enhance performance and deliver feature-rich applications.",
+//   },
+//   {
+//     id: 4,
+//     title: "Hybrid App Development",
+//     img: <TbDeviceMobileCode />,
+//     icon: require("./assets/images/icons/hybrid-app-development.png"),
+//     description:
+//       "We develop feature-rich hybrid apps tailored to your business needs, incorporating AI-powered tools to create mobile-friendly apps that work seamlessly across iOS and Android platforms.",
+//   },
+// ];
 
 // all services
 export const allServices = [

@@ -27,53 +27,40 @@ const LandingServices = ({ page }) => {
         </p>
         <div
           data-aos="fade-up"
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 py-[2rem] mx-auto max-w-6xl"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 py-[2rem] mx-auto max-w-6xl"
         >
-          {services.map((item) => (
-            <div
-              key={item.id}
-              className="shadow-2xl transition-all  bg-primary/15 hover:-translate-y-1 hover:bg-primary/25 duration-300 rounded-lg"
-            >
-              <div className="   group rounded-lg bg-backgro-gradient  hover:scale-105 shadow-2xl hover:shadow-primary/10 p-[1px] transition-all h-full duration-500 overflow-hidden">
-                <div className="rounded-lg bg-white hover:bg-custom-gradient p-5 flex flex-col justify-between items-start text-start h-full gap-4">
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-orange-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                        {/* <BiBrain className="w-6 h-6" /> */}
-                        {item.img}
+          {services.map((item) => {
+            const isLastItem = item.id === services.length;
+            const isLastItemOdd = isLastItem && item.id % 2 !== 0;
+
+            return (
+              <div
+                key={item.id}
+                className={`${
+                  isLastItemOdd && "sm:col-span-2 sm:w-1/2"
+                } mx-auto shadow-2xl transition-all  bg-primary/15 hover:-translate-y-1 hover:bg-primary/25 duration-300 rounded-lg`}
+              >
+                <div className="   group rounded-lg bg-backgro-gradient  hover:scale-105 shadow-2xl hover:shadow-primary/10 p-[1px] transition-all h-full duration-500 overflow-hidden">
+                  <div className="rounded-lg bg-white hover:bg-custom-gradient p-5 flex flex-col justify-between items-start text-start h-full gap-4">
+                    <div className="flex flex-col gap-3">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-orange-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                          {/* <BiBrain className="w-6 h-6" /> */}
+                          {item.img}
+                        </div>
                       </div>
+                      <h5 className="font-semibold text-2xl font-raleway transition-colors duration-300 text-primary">
+                        {item.title}
+                      </h5>
+                      <p className="desc text-primarytextcolor">
+                        {item.description}
+                      </p>
                     </div>
-                    <h5 className="font-semibold text-2xl font-raleway transition-colors duration-300 text-primary">
-                      {item.title}
-                    </h5>
-                    <p className="desc text-primarytextcolor">
-                      {item.description}
-                    </p>
                   </div>
-                  {/* <button
-                    // onClick={() => handleSelectServiceToShowDetail(service)}
-                    className="font-inter mt-1 flex items-center gap-3 text-primary hover:text-gray-700 transition-all duration-300 underline underline-offset-4"
-                  >
-                    Learn More <PiCaretDoubleRightBold />
-                  </button> */}
                 </div>
               </div>
-              {/* <div className="flex h-full flex-col gap-2 items-center text-center text-primarytextcolor p-5 rounded-lg">
-                <img 
-loading="lazy"
-                  src={item.icon}
-                  alt="icon"
-                  className="w-[6rem] grayscale-[65%]"
-                />
-                <h6 className="font-semibold text-2xl font-raleway">
-                  {item.title}
-                </h6>
-                <p className="text-md text-primarytextcolor/70 desc">
-                  {item.description}
-                </p>
-              </div> */}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

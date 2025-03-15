@@ -22,10 +22,6 @@ const options = [
   //   name: "FAQs",
   //   path: "faqs",
   // },
-  {
-    name: "Contact Us",
-    path: "contacts",
-  },
 ];
 
 const LandingHeader = () => {
@@ -54,7 +50,7 @@ const LandingHeader = () => {
 
   return (
     <div
-      className={`pt-3 pb-6 fixed top-0 w-full   z-50  ${
+      className={`py-6 fixed top-0 w-full   z-50  ${
         isScrolled
           ? "bg-[#e2f5fb] backdrop-blur-md text-black"
           : "bg-[#e2f5fb] text-black"
@@ -69,7 +65,7 @@ const LandingHeader = () => {
               alt="logo"
             />
           </Link>
-          <div className="lg:flex items-center mt-7 gap-10 hidden">
+          <div className="lg:flex items-center gap-10 hidden">
             {options.map((option) =>
               option.name === "Home" ? (
                 <CustomLink key={option.path} to={`/`} className="link text-sm">
@@ -90,6 +86,17 @@ const LandingHeader = () => {
                 </Link>
               )
             )}
+            <Link
+              onClick={() => setIsOpen(false)}
+              to="contact"
+              className="primary-btn"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={1000}
+            >
+              Book Your Free Strategy Call
+            </Link>
           </div>
         </div>
         <Drawer
@@ -132,6 +139,17 @@ const LandingHeader = () => {
                 </Link>
               )
             )}
+            <Link
+              onClick={() => setIsOpen(false)}
+              to="contact"
+              className="text-3xl font-medium transition-colors duration-300 link"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={1000}
+            >
+              Contact Us
+            </Link>
           </div>
         </Drawer>
         <div

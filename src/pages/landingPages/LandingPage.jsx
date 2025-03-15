@@ -8,11 +8,10 @@ import {
 import { Link as ScrollLink } from "react-scroll";
 import WhyChooseUs from "../../components/common/WhyChooseUs";
 import LandingServices from "../../components/landingPages/LandingServices";
-import UnlockEfficiency from "../../components/common/UnlockEfficiency";
 import Testimonials from "../../components/common/Testimonials";
 import Portfolio from "../../components/landingPages/Portfolio";
 import ReactPlayer from "react-player";
-import landingpagevideo from "../../assets/videos/home-banner.mp4";
+import landingpagevideo from "../../assets/videos/web2.mp4";
 import Faqs from "../../components/common/Faqs";
 import { useForm } from "react-hook-form";
 import Credibility from "../../components/common/Credibility";
@@ -20,11 +19,67 @@ import image from "../../assets/images/contactimage.webp";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import ProcessFlowchart from "../../components/landingPages/ProcessFlowChart";
+import KeyBenefits from "../../components/landingPages/KeyBenefits";
+import CTA from "../../components/landingPages/CTA";
+
+const webDevReviews = [
+  {
+    id: 1,
+    name: "Suraj",
+    role: "CEO, Leading Retail Brand",
+    desc: "“MecfinityAI transformed our digital presence, driving a 40% increase in website speed and a noticeable boost in conversions.”",
+  },
+  {
+    id: 2,
+    name: "Ananya",
+    role: "Founder, Tech Startup",
+    desc: "“Their expertise in web development helped us build a scalable, high-performance platform that exceeded our expectations.”",
+  },
+  {
+    id: 3,
+    name: "Ravi Kumar",
+    role: "Marketing Head, E-commerce Company",
+    desc: "“Thanks to MecfinityAI, our website is now faster, more user-friendly, and optimized for SEO, leading to a 25% increase in organic traffic.”",
+  },
+  {
+    id: 4,
+    name: "Meera Patel",
+    role: "COO, Fintech Firm",
+    desc: "“MecfinityAI’s innovative solutions gave our website a modern, responsive design that significantly improved customer engagement.”",
+  },
+];
+
+const appDevReviews = [
+  {
+    id: 1,
+    name: "Amit Sharma",
+    role: "CEO, HealthTech Startup",
+    desc: "“MecfinityAI built a seamless mobile app that improved user engagement by 60%. Their expertise in app development is outstanding!”",
+  },
+  {
+    id: 2,
+    name: "Priya Verma",
+    role: "Founder, E-learning Platform",
+    desc: "“Our app now runs flawlessly on both iOS and Android, thanks to the team’s dedication and skill. Highly recommended!”",
+  },
+  {
+    id: 3,
+    name: "Rahul Nair",
+    role: "Product Manager, Fintech Company",
+    desc: "“MecfinityAI delivered a secure and feature-rich app that helped us scale our user base by 40% within months.”",
+  },
+  {
+    id: 4,
+    name: "Neha Kapoor",
+    role: "COO, On-Demand Service Startup",
+    desc: "“From design to development, the team executed our vision perfectly, creating a smooth and intuitive app experience.”",
+  },
+];
 
 export const LandingPage = ({ page }) => {
   const isWebDevelopment = Boolean(page === "web-development");
   const [spinner, setSpinner] = useState(false);
-
   const {
     register,
     handleSubmit,
@@ -41,7 +96,6 @@ export const LandingPage = ({ page }) => {
     emailBody += "Phone: " + data.mobileNumber + "\n\n";
     emailBody += "Message:\n" + data.message;
 
-   
     const formData = {
       from_name: data.fullName,
       message: emailBody,
@@ -66,12 +120,12 @@ export const LandingPage = ({ page }) => {
   };
   return (
     <>
-      <div id="banner" className="h-screen relative">
+      <div id="banner" className="landing-page h-screen relative">
         <ReactPlayer
           url={landingpagevideo}
           loop
           muted
-          width="100vw"
+          width="100%"
           height="100%"
           playsinline
           playing
@@ -92,7 +146,7 @@ export const LandingPage = ({ page }) => {
           }}
           className="react-player left-0 top-0 absolute object-cover h-full w-full"
         />
-        <div className="bg-black/50 absolute w-full h-full"></div>
+        <div className="bg-black/30 absolute w-full h-full"></div>
         <div
           data-aos="fade-up"
           className="pt-[3rem] wrapper flex items-center h-full"
@@ -103,7 +157,7 @@ export const LandingPage = ({ page }) => {
             </div>
             {isWebDevelopment ? (
               <h1 className="heading-1 text-white leading-tight">
-                Crafting Websites That Drive Success
+                Elevate Your Digital World with AI-Powered Web Solutions
               </h1>
             ) : (
               <h1 className="heading-1 text-white leading-tight">
@@ -111,8 +165,9 @@ export const LandingPage = ({ page }) => {
               </h1>
             )}
             <p className="text-white desc font-medium">
-              We focus on creating innovative IT solutions tailored to the
-              evolving needs of modern businesses.
+              {isWebDevelopment
+                ? "Transform your online presence with innovative, scalable, and performance-driven web development tailored for modern businesses."
+                : "Transform your online presence with innovative, scalable, and performance-driven app development tailored for modern businesses."}
             </p>
             <ScrollLink
               to="contact"
@@ -120,7 +175,7 @@ export const LandingPage = ({ page }) => {
               offset={-90}
               className="primary-btn mt-2"
             >
-              Get Started
+              Book Your Free Strategy Call
             </ScrollLink>
           </div>
         </div>
@@ -174,8 +229,8 @@ export const LandingPage = ({ page }) => {
             </div>
           </div>
           <div data-aos="fade-left" className="h-full">
-            <img 
-loading="lazy"
+            <img
+              loading="lazy"
               src={isWebDevelopment ? webLandingAbout : appLandingAbout}
               className="object-contain max-h-[30rem] w-full rounded-lg"
               alt=""
@@ -183,14 +238,41 @@ loading="lazy"
           </div>
         </div>
       </section>
-
       <Contact />
+      <KeyBenefits />
       <LandingServices page={page} />
+      <div className="py-14 text-center space-y-5 flex flex-col items-center">
+        <h6 className="heading-2">
+          Slots filling fast – secure your free call now!
+        </h6>
+        <ScrollLink
+          to="contact"
+          smooth
+          offset={-90}
+          className="primary-btn w-fit mt-4"
+        >
+          Get Started Today
+        </ScrollLink>
+      </div>
+      <ProcessFlowchart />
       <WhyChooseUs />
-      <UnlockEfficiency />
       <Portfolio page={page} />
-      <Testimonials />
+      <Testimonials
+        reviews={isWebDevelopment ? webDevReviews : appDevReviews}
+      />
       <Credibility />
+      <CTA
+        title={
+          isWebDevelopment
+            ? "Transform Your Future Today – Book Your Free Strategy Call"
+            : "Struggling with slow app performance?"
+        }
+        desc={
+          isWebDevelopment
+            ? ""
+            : "Our AI-enhanced development process can boost speed by up to 40%—so you never miss a beat."
+        }
+      />
       <Faqs />
       <div
         data-aos="fade-up"
@@ -211,8 +293,8 @@ loading="lazy"
                 will not only meet but exceed your expectations, driving
                 engagement and growth for your business.
               </p>
-              <img 
-loading="lazy"
+              <img
+                loading="lazy"
                 src={image}
                 alt=""
                 className="max-h-[21rem] object-cover rounded-xl"

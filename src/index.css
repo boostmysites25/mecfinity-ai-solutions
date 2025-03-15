@@ -151,5 +151,5 @@ body {
 }
 
 .react-player video {
-  object-fit: fill !important;
+  object-fit: cover !important;
 }

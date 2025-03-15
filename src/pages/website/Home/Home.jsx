@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { lazy, Suspense, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import ReactPlayer from "react-player";
-import { homeBannerVideo } from "../../../constant";
+import { homeBannerVideo, reviews } from "../../../constant";
 import { LoadingSpinner } from "../../../components/common/LoadingSpinner";
 import bannerThumb from "../../../assets/videos/banner-thumb.webp";
 
@@ -117,7 +117,7 @@ const Home = () => {
         <CommonProject />
         <WhyChooseUs />
         <UnlockEfficiency />
-        <Testimonials />
+        <Testimonials reviews={reviews} />
         <Credibility />
         <Faqs />
         <div>

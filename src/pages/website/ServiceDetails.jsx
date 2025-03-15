@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Testimonials from "../../components/common/Testimonials";
-import { allServices } from "../../constant";
+import { allServices, reviews } from "../../constant";
 import { createUrlParam } from "../../utils/helper";
 
 const ServiceDetails = () => {
@@ -48,7 +48,7 @@ loading="lazy"
             )
           )}
         </p>
-        <Testimonials />
+        <Testimonials reviews={reviews} />
       </div>
     </div>
   );

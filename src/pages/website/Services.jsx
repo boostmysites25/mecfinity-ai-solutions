@@ -6,6 +6,7 @@ import Banner from "../../components/website/Banner";
 import CommonProject from "../../components/website/CommonProject";
 import ServiceItems from "../../components/common/ServiceItems";
 import PopupForm from "../../components/common/PopupForm";
+import { reviews } from "../../constant";
 
 const Services = () => {
   return (
@@ -16,7 +17,7 @@ const Services = () => {
       {/* <OurServices /> */}
       <CommonProject />
       <UnlockEfficiency />
-      <Testimonials />
+      <Testimonials reviews={reviews} />
     </>
   );
 };
