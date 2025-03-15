@@ -11,7 +11,8 @@ import LandingServices from "../../components/landingPages/LandingServices";
 import Testimonials from "../../components/common/Testimonials";
 import Portfolio from "../../components/landingPages/Portfolio";
 import ReactPlayer from "react-player";
-import landingpagevideo from "../../assets/videos/web2.mp4";
+import webBanner from "../../assets/videos/web.mp4";
+import appBanner from "../../assets/videos/app.mp4";
 import Faqs from "../../components/common/Faqs";
 import { useForm } from "react-hook-form";
 import Credibility from "../../components/common/Credibility";
@@ -122,7 +123,7 @@ export const LandingPage = ({ page }) => {
     <>
       <div id="banner" className="landing-page h-screen relative">
         <ReactPlayer
-          url={landingpagevideo}
+          url={isWebDevelopment ? webBanner : appBanner}
           loop
           muted
           width="100%"
