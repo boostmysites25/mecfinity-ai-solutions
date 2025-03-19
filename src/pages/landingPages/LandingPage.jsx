@@ -23,6 +23,7 @@ import emailjs from "@emailjs/browser";
 import ProcessFlowchart from "../../components/landingPages/ProcessFlowChart";
 import KeyBenefits from "../../components/landingPages/KeyBenefits";
 import CTA from "../../components/landingPages/CTA";
+import { Helmet } from "react-helmet-async";
 
 const webDevReviews = [
   {
@@ -121,6 +122,20 @@ export const LandingPage = ({ page }) => {
   };
   return (
     <>
+      <Helmet>
+        {!isWebDevelopment && (
+          <meta
+            name="keywords"
+            content="mobile app agency, app development, mobile app company, mobile app development, app making company, react development services, custom app development, mobile app firm, ecom app development, hybrid app development, web app development agency, cross platform app development, app development company, Best App Development Company, Redefine Mobile App Development, Having an App Idea?, Expert App Developers, Custom App Development, Launch Your App, Web & Mobile Apps, App Development for Startups, #1 Web App Development Agency, Custom App Development, Ecommerce App Development, Enterprise App Development, iOS & Android App Development, Prices to Suit All Budgets, Get A Free Quote"
+          />
+        )}
+        {!isWebDevelopment && (
+          <meta
+            name="description"
+            content="With 10+ years of experience, we offer full-stack app development services. Our expert developers create innovative iOS, Android, e-commerce, gaming, blockchain, and enterprise apps to help you succeed in the mobile-first world."
+          />
+        )}
+      </Helmet>
       <div id="banner" className="landing-page h-screen relative">
         <ReactPlayer
           url={isWebDevelopment ? webBanner : appBanner}
