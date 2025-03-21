@@ -8,8 +8,9 @@ import {
 } from "../../constant";
 import whyus1 from "../../assets/images/whyus1.webp";
 import whyus2 from "../../assets/images/whyus2.webp";
+
 const WhyChooseUs = () => {
-  const totalYrs = 5;
+  const totalYrs = 10;
   const totalOnTimeCompletionPercentage = 100;
   const totalExperts = 15;
   const totalClients = 50;
