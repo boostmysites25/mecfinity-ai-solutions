@@ -20,6 +20,21 @@ const ServicePageLayout = lazy(() => import("./layout/ServicePageLayout"));
 const ServiceDetails = lazy(() => import("./pages/website/ServiceDetails"));
 const Thankyou = lazy(() => import("./pages/ThankYou"));
 const BlogDetails = lazy(() => import("./pages/website/BlogDetails.jsx"));
+const IotDevelopment = lazy(() =>
+  import("./pages/landingPages/IotDevelopment")
+);
+const CloudComputing = lazy(() =>
+  import("./pages/landingPages/CloudComputing")
+);
+const AiCallingAgency = lazy(() =>
+  import("./pages/landingPages/AiCallingAgency")
+);
+const BlockchainDevelopment = lazy(() =>
+  import("./pages/landingPages/BlockchainDevelopment")
+);
+const VRARDevelopment = lazy(() =>
+  import("./pages/landingPages/VRARDevelopment")
+);
 
 AOS.init({
   once: true,
@@ -30,80 +45,130 @@ AOS.init({
 export default function App() {
   return (
     <SpinnerContextProvider>
-    <HelmetProvider>
-      <LoadingSpinnerContext />
-      <Suspense fallback={<LoadingSpinner />}>
-        <WhatsAppIcon />
-        <Toaster
-          position="top-center"
-          toastOptions={{
-            style: {
-              background: "#010C2A",
-              color: "#ffffff",
-            },
-          }}
-        />
-        <ScrollToTop />
-        <Routes>
-          {/* Website Pages */}
-          {routes.map(({ component, name, path }, index) => (
+      <HelmetProvider>
+        <LoadingSpinnerContext />
+        <Suspense fallback={<LoadingSpinner />}>
+          <WhatsAppIcon />
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              style: {
+                background: "#010C2A",
+                color: "#ffffff",
+              },
+            }}
+          />
+          <ScrollToTop />
+          <Routes>
+            {/* Website Pages */}
+            {routes.map(({ component, name, path }, index) => (
+              <Route
+                key={index}
+                path={path}
+                element={
+                  <>
+                    <WebsiteHeader name={name} />
+                    {component}
+                    <WebsiteFooter />
+                  </>
+                }
+              />
+            ))}
+
             <Route
-              key={index}
-              path={path}
+              path="/blogs/:title"
               element={
                 <>
-                  <WebsiteHeader name={name} />
-                  {component}
+                  <WebsiteHeader />
+                  <BlogDetails />
                   <WebsiteFooter />
                 </>
               }
             />
-          ))}
+            <Route path="/thank-you" element={<Thankyou />} />
 
-          <Route
-            path="/blogs/:title"
-            element={
-              <>
-                <WebsiteHeader />
-                <BlogDetails />
-                <WebsiteFooter />
-              </>
-            }
-          />
-          <Route path="/thank-you" element={<Thankyou />} />
+            <Route path="/services" element={<ServicePageLayout />}>
+              <Route path=":title" element={<ServiceDetails />} />
+              <Route
+                path="*"
+                element={<Navigate to="/services/Web Development" />}
+              />
+            </Route>
 
-          <Route path="/services" element={<ServicePageLayout />}>
-            <Route path=":title" element={<ServiceDetails />} />
+            {/* Landing Pages */}
             <Route
-              path="*"
-              element={<Navigate to="/services/Web Development" />}
+              path="/web-development"
+              element={
+                <>
+                  <LandingHeader />
+                  <LandingPage page={"web-development"} />
+                  <LandingFooter />
+                </>
+              }
             />
-          </Route>
-
-          {/* Landing Pages */}
-          <Route
-            path="/web-development"
-            element={
-              <>
-                <LandingHeader />
-                <LandingPage page={"web-development"} />
-                <LandingFooter />
-              </>
-            }
-          />
-          <Route
-            path="/app-development"
-            element={
-              <>
-                <LandingHeader />
-                <LandingPage page={"app-development"} />
-                <LandingFooter />
-              </>
-            }
-          />
-        </Routes>
-      </Suspense>
-    </HelmetProvider>
+            <Route
+              path="/app-development"
+              element={
+                <>
+                  <LandingHeader />
+                  <LandingPage page={"app-development"} />
+                  <LandingFooter />
+                </>
+              }
+            />
+            <Route
+              path="/iot-development"
+              element={
+                <>
+                  <LandingHeader />
+                  <IotDevelopment />
+                  <LandingFooter />
+                </>
+              }
+            />
+            <Route
+              path="/cloud-computing"
+              element={
+                <>
+                  <LandingHeader />
+                  <CloudComputing />
+                  <LandingFooter />
+                </>
+              }
+            />
+            <Route
+              path="/ai-calling-agency"
+              element={
+                <>
+                  <LandingHeader />
+                  <AiCallingAgency />
+                  <LandingFooter />
+                </>
+              }
+            />
+            <Route
+              path="/blockchain"
+              element={
+                <>
+                  <LandingHeader />
+                  <BlockchainDevelopment />
+                  <LandingFooter />
+                </>
+              }
+            />
+            <Route
+              path="/vr-ar-development"
+              element={
+                <>
+                  <LandingHeader />
+                  <VRARDevelopment />
+                  <LandingFooter />
+                </>
+              }
+            />
+          </Routes>
+        </Suspense>
+      </HelmetProvider>
     </SpinnerContextProvider>
   );
 }

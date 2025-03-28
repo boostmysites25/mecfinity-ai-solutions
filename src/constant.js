@@ -37,7 +37,7 @@ import aboutusintroone from "./assets/images/aboutusintroone.webp";
 import aboutusintrotwo from "./assets/images/aboutusintrotwo.webp";
 import allbgimage from "./assets/images/allbgimage.webp";
 import { lazy } from "react";
-import { BiBrain, BiBulb, BiRocket } from "react-icons/bi";
+import { BiBrain, BiBulb, BiCustomize, BiRocket } from "react-icons/bi";
 import { GoFileMedia, GoGraph } from "react-icons/go";
 import { SlBadge } from "react-icons/sl";
 import {
@@ -45,14 +45,39 @@ import {
   MdOutlineDashboardCustomize,
   MdOutlineDeveloperMode,
   MdOutlineSmartToy,
+  MdSupportAgent,
 } from "react-icons/md";
-import { FaAppStoreIos } from "react-icons/fa";
+import {
+  FaAppStoreIos,
+  FaCalendarAlt,
+  FaChartLine,
+  FaClipboardList,
+  FaCloudUploadAlt,
+  FaCogs,
+  FaCoins,
+  FaCube,
+  FaFileContract,
+  FaGlobeAmericas,
+  FaGraduationCap,
+  FaHeadset,
+  FaLink,
+  FaMobileAlt,
+  FaNetworkWired,
+  FaPhoneVolume,
+  FaPlug,
+  FaProjectDiagram,
+  FaShieldAlt,
+  FaStore,
+  FaTools,
+} from "react-icons/fa";
 import { SiFlutter, SiHiveBlockchain } from "react-icons/si";
 import { IoLogoAndroid } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import { TfiLayoutMediaRightAlt } from "react-icons/tfi";
 import { TbDeviceMobileCode } from "react-icons/tb";
 import { FaMobileScreen } from "react-icons/fa6";
+import { AiOutlineBarChart } from "react-icons/ai";
+import { RiShieldKeyholeLine } from "react-icons/ri";
 
 const Home = lazy(() => import("./pages/website/Home/Home"));
 const Services = lazy(() => import("./pages/website/Services"));
@@ -104,8 +129,8 @@ export const companyDetails = {
   whatsappbox: "+917483139873",
   email: "info@mecfinityai.com",
   address: "Mangalore, India",
-  linkedin:"https://www.linkedin.com/company/mecfinity-ai/",
-  instagram:'https://www.instagram.com/mecfinityai?igsh=MTQ3MW92a3ZrZGo1Zg=='
+  linkedin: "https://www.linkedin.com/company/mecfinity-ai/",
+  instagram: "https://www.instagram.com/mecfinityai?igsh=MTQ3MW92a3ZrZGo1Zg==",
 };
 
 export const emailjsDetails = {
@@ -291,41 +316,195 @@ export const appDevelopmentServices = [
   },
 ];
 
-// app development services
-// export const appDevelopmentServices = [
-//   {
-//     id: 1,
-//     title: "iOS App Development",
-//     img: <FaAppStoreIos />,
-//     icon: require("./assets/images/icons/ios-development.png"),
-//     description:
-//       "We specialize in iOS app development using Swift and Objective-C, delivering high-performance apps with AI-powered features like predictive analytics and personalized user experiences.",
-//   },
-//   {
-//     id: 2,
-//     title: "Android App Development",
-//     img: <IoLogoAndroid />,
-//     icon: require("./assets/images/icons/android-development.png"),
-//     description:
-//       "Our team designs and develops Android apps tailored to your business goals, leveraging Java and Kotlin alongside AI technologies to create robust, efficient applications with intelligent automation.",
-//   },
-//   {
-//     id: 3,
-//     title: "Flutter App Development",
-//     img: <SiFlutter />,
-//     icon: require("./assets/images/icons/flutter-development.png"),
-//     description:
-//       "Using Flutter, we create apps for both iOS and Android with a single codebase, integrating AI-driven solutions to enhance performance and deliver feature-rich applications.",
-//   },
-//   {
-//     id: 4,
-//     title: "Hybrid App Development",
-//     img: <TbDeviceMobileCode />,
-//     icon: require("./assets/images/icons/hybrid-app-development.png"),
-//     description:
-//       "We develop feature-rich hybrid apps tailored to your business needs, incorporating AI-powered tools to create mobile-friendly apps that work seamlessly across iOS and Android platforms.",
-//   },
-// ];
+export const iotDevelopmentServices = [
+  {
+    id: 1,
+    title: "Device Integration",
+    img: <FaPlug />,
+    description:
+      "Seamlessly connect diverse smart devices. Our device integration services ensure all your IoT components work together harmoniously, enabling smooth communication and interoperability across your entire ecosystem.",
+  },
+  {
+    id: 2,
+    title: "Data Analytics & AI",
+    img: <AiOutlineBarChart />,
+    description:
+      "Transform raw data into actionable insights. Leverage our advanced analytics and AI capabilities to extract valuable business intelligence from your IoT data, driving smarter decisions and operational efficiency.",
+  },
+  {
+    id: 3,
+    title: "Security Solutions",
+    img: <RiShieldKeyholeLine />,
+    description:
+      "Protect your network with advanced cybersecurity measures. Our comprehensive IoT security solutions safeguard your devices, data, and infrastructure against evolving threats in an increasingly connected world.",
+  },
+  {
+    id: 4,
+    title: "Custom IoT Platforms",
+    img: <BiCustomize />,
+    description:
+      "Tailor-made systems to meet your specific business needs. We design and develop customized IoT platforms that align perfectly with your operational requirements and strategic objectives.",
+  },
+  {
+    id: 5,
+    title: "Enterprise Support",
+    img: <MdSupportAgent />,
+    description:
+      "Ongoing support to ensure your system evolves with you. Our enterprise support services provide continuous maintenance, updates, and enhancements to keep your IoT infrastructure performing at its best.",
+  },
+];
+
+export const cloudComputingServices = [
+  {
+    id: 1,
+    title: "Cloud Migration",
+    img: <FaCloudUploadAlt />,
+    description:
+      "Seamless transition to the cloud with minimal disruption. Our migration services ensure your applications and data move safely to optimized cloud environments with proper security and architecture.",
+  },
+  {
+    id: 2,
+    title: "Cloud Architecture",
+    img: <FaNetworkWired />,
+    description:
+      "Designing scalable, secure, and cost-effective cloud infrastructures. We create future-proof architectures tailored to your workload requirements and business objectives.",
+  },
+  {
+    id: 3,
+    title: "Cloud Security",
+    img: <FaShieldAlt />,
+    description:
+      "End-to-end protection for your cloud environments. Our security solutions cover identity management, data protection, network security, and compliance with industry standards.",
+  },
+  {
+    id: 4,
+    title: "Cloud Optimization",
+    img: <FaChartLine />,
+    description:
+      "Maximize performance while minimizing costs. We analyze your cloud usage and implement FinOps practices to right-size resources and eliminate waste.",
+  },
+  {
+    id: 5,
+    title: "Managed Cloud Services",
+    img: <FaCogs />,
+    description:
+      "24/7 monitoring, management, and support for your cloud environment. Our experts handle the complexity so you can focus on your business.",
+  },
+];
+
+export const aiCallingServices = [
+  {
+    id: 1,
+    title: "AI Sales Calls",
+    img: <FaPhoneVolume />,
+    description:
+      "Boost conversion rates with AI agents that qualify leads, schedule appointments, and close deals with human-like persuasion and 24/7 availability.",
+  },
+  {
+    id: 2,
+    title: "Customer Support Calls",
+    img: <FaHeadset />,
+    description:
+      "Handle common customer inquiries, troubleshoot issues, and provide account information with our always-available AI support agents.",
+  },
+  {
+    id: 3,
+    title: "Appointment Reminders",
+    img: <FaCalendarAlt />,
+    description:
+      "Reduce no-shows by up to 60% with personalized, conversational reminders that confirm, reschedule, or cancel appointments.",
+  },
+  {
+    id: 4,
+    title: "Market Research Surveys",
+    img: <FaClipboardList />,
+    description:
+      "Conduct thousands of research calls with natural conversations that yield higher completion rates than traditional IVR surveys.",
+  },
+  {
+    id: 5,
+    title: "Custom AI Call Flows",
+    img: <FaProjectDiagram />,
+    description:
+      "Tailored calling solutions designed for your specific business processes, industry requirements, and integration needs.",
+  },
+];
+
+export const blockchainServices = [
+  {
+    id: 1,
+    title: "Smart Contract Development",
+    img: <FaFileContract />,
+    description:
+      "Secure, self-executing contracts that automate business processes. We develop audited smart contracts for various use cases including payments, supply chain, and legal agreements.",
+  },
+  {
+    id: 2,
+    title: "DApp Development",
+    img: <FaMobileAlt />,
+    description:
+      "Decentralized applications that run on blockchain networks. We build user-friendly DApps with seamless wallet integration and responsive interfaces.",
+  },
+  {
+    id: 3,
+    title: "Blockchain Integration",
+    img: <FaLink />,
+    description:
+      "Connect your existing systems with blockchain networks. Our solutions bridge traditional databases and applications with decentralized ledgers.",
+  },
+  {
+    id: 4,
+    title: "Tokenization Solutions",
+    img: <FaCoins />,
+    description:
+      "Create and manage digital assets with our token development services. We support fungible tokens, NFTs, and security tokens compliant with regulations.",
+  },
+  {
+    id: 5,
+    title: "Blockchain Consulting",
+    img: <FaChartLine />,
+    description:
+      "Strategic guidance for blockchain adoption. We help assess feasibility, select platforms, and develop roadmaps tailored to your business objectives.",
+  },
+];
+
+export const vrArServices = [
+  {
+    id: 1,
+    title: "VR Training Simulations",
+    img: <FaGraduationCap />,
+    description:
+      "Immersive training environments that improve knowledge retention by up to 75%. We create realistic simulations for equipment operation, safety procedures, and complex tasks.",
+  },
+  {
+    id: 2,
+    title: "AR Product Visualization",
+    img: <FaCube />,
+    description:
+      "Let customers visualize products in their space before buying. Our AR solutions enable virtual try-ons, 3D product previews, and interactive demonstrations.",
+  },
+  {
+    id: 3,
+    title: "Virtual Showrooms",
+    img: <FaStore />,
+    description:
+      "360° immersive environments that showcase your products beyond physical limitations. Perfect for real estate, automotive, and retail applications.",
+  },
+  {
+    id: 4,
+    title: "AR Maintenance Guides",
+    img: <FaTools />,
+    description:
+      "Interactive, step-by-step repair instructions overlaid on equipment. Reduce service times by 40% and improve first-time fix rates.",
+  },
+  {
+    id: 5,
+    title: "Metaverse Development",
+    img: <FaGlobeAmericas />,
+    description:
+      "Build your presence in the metaverse with custom 3D spaces, avatars, and interactive experiences that engage customers and employees.",
+  },
+];
 
 // all services
 export const allServices = [
