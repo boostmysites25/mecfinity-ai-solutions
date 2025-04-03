@@ -123,7 +123,7 @@ const PopupForm = ({ storageKey }) => {
                 {...register("phone", {
                   required: "Phone number is required",
                   pattern: {
-                    value: /^[0-9]{10}$/,
+                    value: /^\+?[\d\s\-()]{6,14}\d$/,
                     message: "Invalid phone number",
                   },
                 })}

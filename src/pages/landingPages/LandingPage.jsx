@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Contact from "../../components/landingPages/Contact";
+import Contact from "../../components/common/Contact";
 import {
   appLandingAbout,
   emailjsDetails,
@@ -290,125 +290,7 @@ export const LandingPage = ({ page }) => {
         }
       />
       <Faqs />
-      <div
-        data-aos="fade-up"
-        id="contacts"
-        className=" py-[2rem] sm:py-[5rem]  mt-[2rem] text-primarytextcolor bg-backgro-gradient-revert"
-      >
-        <div className="wrapper">
-          <div className="h-full grid md:grid-cols-2 gap-10 py-5">
-            <div className="flex flex-col gap-4">
-              <h2 className="heading-2">Ready to Get Started?</h2>
-              <p className="desc">
-                At Mecfinity AI Solutions, we are passionate about helping you
-                achieve your business goals with our innovative and customized
-                digital solutions. Whether you’re looking to develop a
-                cutting-edge website or build a high-impact mobile app, we’re
-                here to guide you through every step of the process. Our
-                expertise in web and app development ensures that your project
-                will not only meet but exceed your expectations, driving
-                engagement and growth for your business.
-              </p>
-              <img
-                loading="lazy"
-                src={image}
-                alt=""
-                className="max-h-[21rem] object-cover rounded-xl"
-              />
-            </div>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-4 md:px-[1rem] text-black"
-            >
-              <div className="hover:scale-105 transition-all duration-500">
-                <label htmlFor="" className="mb-6 font-medium">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  className="mt-1 w-full bg-[#faf3ef] placeholder-slate-800  outline-none border-2 rounded-sm font-light border-primary/60 px-2 py-3"
-                  placeholder="Enter Full Name"
-                  {...register("fullName", {
-                    required: "Full name is required",
-                  })}
-                />
-                {errors.fullName && (
-                  <span className="text-red-500 text-sm">
-                    {errors.fullName.message}
-                  </span>
-                )}
-              </div>
-
-              <div className="hover:scale-105 transition-all duration-500">
-                <label htmlFor="" className="mb-6 font-medium">
-                  Mobile Number
-                </label>
-                <input
-                  type="text"
-                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary/60 px-2 py-3"
-                  placeholder="Enter Mobile Number"
-                  {...register("mobileNumber", {
-                    required: "Mobile number is required",
-                    pattern: {
-                      value: /^[0-9]{10}$/,
-                      message: "Invalid phone number",
-                    },
-                  })}
-                />
-                {errors.mobileNumber && (
-                  <span className="text-red-500 text-sm">
-                    {errors.mobileNumber.message}
-                  </span>
-                )}
-              </div>
-
-              <div className="hover:scale-105 transition-all duration-500">
-                <label htmlFor="" className="mb-6 font-medium">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary/60 px-2 py-3"
-                  placeholder="Enter Email"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                      message: "Invalid email address",
-                    },
-                  })}
-                />
-                {errors.email && (
-                  <span className="text-red-500 text-sm">
-                    {errors.email.message}
-                  </span>
-                )}
-              </div>
-
-              <div className="hover:scale-105 transition-all duration-500">
-                <label htmlFor="" className="mb-6 font-medium">
-                  Message
-                </label>
-                <textarea
-                  rows="4"
-                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary/60 px-2 py-3"
-                  placeholder="Enter Message"
-                  {...register("message", { required: "Message is required" })}
-                />
-                {errors.message && (
-                  <span className="text-red-500 text-sm">
-                    {errors.message.message}
-                  </span>
-                )}
-              </div>
-
-              <button className="primary-btn" type="submit">
-                {spinner ? "Sending..." : "Submit"}
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+      <Contact/>
     </>
   );
 };

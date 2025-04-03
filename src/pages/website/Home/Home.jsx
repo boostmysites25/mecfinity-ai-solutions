@@ -7,7 +7,7 @@ import { LoadingSpinner } from "../../../components/common/LoadingSpinner";
 import bannerThumb from "../../../assets/videos/banner-thumb.webp";
 
 // Lazy load non-critical components
-const Contact = lazy(() => import("../../../components/landingPages/Contact"));
+const Contact = lazy(() => import("../../../components/common/Contact"));
 const WhyChooseUs = lazy(() =>
   import("../../../components/common/WhyChooseUs")
 );

@@ -1,18 +1,12 @@
-import React, { useState } from "react";
-import Contact from "../../components/landingPages/Contact";
-import { vrArServices, emailjsDetails } from "../../constant";
+import Contact from "../../components/common/Contact";
+import { vrArServices } from "../../constant";
 import { Link as ScrollLink } from "react-scroll";
 import WhyChooseUs from "../../components/common/WhyChooseUs";
 import Testimonials from "../../components/common/Testimonials";
 import ReactPlayer from "react-player";
 import vrArBanner from "../../assets/videos/vrar.mp4";
 import Faqs from "../../components/common/Faqs";
-import { useForm } from "react-hook-form";
 import Credibility from "../../components/common/Credibility";
-import image from "../../assets/images/contactimage.webp";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import emailjs from "@emailjs/browser";
 import ProcessFlowchart from "../../components/landingPages/ProcessFlowChart";
 import KeyBenefits from "../../components/landingPages/KeyBenefits";
 import CTA from "../../components/landingPages/CTA";
@@ -46,49 +40,9 @@ const vrArReviews = [
 ];
 
 const VRARDevelopment = () => {
-  const [spinner, setSpinner] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
-  const navigate = useNavigate();
-
-  const onSubmit = async (data) => {
-    setSpinner(true);
-
-    var emailBody = "Name: " + data.fullName + "\n\n";
-    emailBody += "Email: " + data.email + "\n\n";
-    emailBody += "Phone: " + data.mobileNumber + "\n\n";
-    emailBody += "Message:\n" + data.message;
-
-    const formData = {
-      from_name: data.fullName,
-      message: emailBody,
-    };
-
-    emailjs
-      .send(
-        emailjsDetails.serviceId,
-        emailjsDetails.templateId,
-        formData,
-        emailjsDetails.publicKey
-      )
-      .then((response) => {
-        toast.success("Email sent successfully");
-        reset();
-        navigate("/thank-you");
-      })
-      .catch((error) => {
-        toast.error("Failed to send email");
-      })
-      .finally(() => setSpinner(false));
-  };
-
   return (
     <>
-      <div id="banner" className="landing-page h-screen relative">
+      <div id="banner" className="landing-page min-h-screen relative">
         <ReactPlayer
           url={vrArBanner}
           loop
@@ -117,7 +71,7 @@ const VRARDevelopment = () => {
         <div className="bg-black/30 absolute w-full h-full"></div>
         <div
           data-aos="fade-up"
-          className="pt-[3rem] wrapper flex items-center h-full"
+          className="pt-[8rem] sm:pt-[3rem] pb-[3rem] wrapper flex items-center min-h-screen"
         >
           <div className="relative z-10 px-6 justify-center h-full flex flex-col items-center gap-5 text-center md:max-w-[60rem] mx-auto">
             <div className="rounded-text-box border-white/70 font-medium text-white">
@@ -333,125 +287,15 @@ const VRARDevelopment = () => {
           },
         ]}
       />
-      <div
-        data-aos="fade-up"
-        id="contacts"
-        className=" py-[2rem] sm:py-[5rem]  mt-[2rem] text-primarytextcolor bg-backgro-gradient-revert"
-      >
-        <div className="wrapper">
-          <div className="h-full grid md:grid-cols-2 gap-10 py-5">
-            <div className="flex flex-col gap-4">
-              <h2 className="heading-2">
-                Ready to Explore Immersive Technology?
-              </h2>
-              <p className="desc">
-                At Mecfinity AI Solutions, we're passionate about helping
+      <Contact
+        heading="Ready to Explore Immersive Technology?"
+        desc="At Mecfinity AI Solutions, we're passionate about helping
                 businesses harness the power of VR and AR. Whether you're
                 looking to revolutionize training, enhance customer experiences,
                 or visualize complex data, our team of immersive technology
                 experts is ready to bring your vision to life. Let's discuss how
-                extended reality can transform your business.
-              </p>
-              <img
-                loading="lazy"
-                src={image}
-                alt="VR/AR consultation"
-                className="max-h-[21rem] object-cover rounded-xl"
-              />
-            </div>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-4 md:px-[1rem] text-black"
-            >
-              <div className="hover:scale-105 transition-all duration-500">
-                <label htmlFor="" className="mb-6 font-medium">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  className="mt-1 w-full bg-[#faf3ef] placeholder-slate-800  outline-none border-2 rounded-sm font-light border-primary/60 px-2 py-3"
-                  placeholder="Enter Full Name"
-                  {...register("fullName", {
-                    required: "Full name is required",
-                  })}
-                />
-                {errors.fullName && (
-                  <span className="text-red-500 text-sm">
-                    {errors.fullName.message}
-                  </span>
-                )}
-              </div>
-
-              <div className="hover:scale-105 transition-all duration-500">
-                <label htmlFor="" className="mb-6 font-medium">
-                  Mobile Number
-                </label>
-                <input
-                  type="text"
-                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary/60 px-2 py-3"
-                  placeholder="Enter Mobile Number"
-                  {...register("mobileNumber", {
-                    required: "Mobile number is required",
-                    pattern: {
-                      value: /^[0-9]{10}$/,
-                      message: "Invalid phone number",
-                    },
-                  })}
-                />
-                {errors.mobileNumber && (
-                  <span className="text-red-500 text-sm">
-                    {errors.mobileNumber.message}
-                  </span>
-                )}
-              </div>
-
-              <div className="hover:scale-105 transition-all duration-500">
-                <label htmlFor="" className="mb-6 font-medium">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary/60 px-2 py-3"
-                  placeholder="Enter Email"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                      message: "Invalid email address",
-                    },
-                  })}
-                />
-                {errors.email && (
-                  <span className="text-red-500 text-sm">
-                    {errors.email.message}
-                  </span>
-                )}
-              </div>
-
-              <div className="hover:scale-105 transition-all duration-500">
-                <label htmlFor="" className="mb-6 font-medium">
-                  Message
-                </label>
-                <textarea
-                  rows="4"
-                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary/60 px-2 py-3"
-                  placeholder="Tell us about your VR/AR project needs"
-                  {...register("message", { required: "Message is required" })}
-                />
-                {errors.message && (
-                  <span className="text-red-500 text-sm">
-                    {errors.message.message}
-                  </span>
-                )}
-              </div>
-
-              <button className="primary-btn" type="submit">
-                {spinner ? "Sending..." : "Get VR/AR Consultation"}
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+                extended reality can transform your business."
+      />
     </>
   );
 };

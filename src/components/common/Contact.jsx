@@ -5,8 +5,9 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { emailjsDetails } from "../../constant";
+import { doWhatsappMsg } from "../../utils/helper";
 
-const Contact = () => {
+const Contact = ({ heading, desc, asWhatsappMsg }) => {
   const [spinner, setSpinner] = useState(false);
 
   const {
@@ -18,6 +19,15 @@ const Contact = () => {
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
+    if (asWhatsappMsg) {
+      doWhatsappMsg(data);
+    } else {
+      sendEmail(data);
+    }
+  };
+
+  // send email
+  const sendEmail = (data) => {
     setSpinner(true);
 
     var emailBody = "Name: " + data.fullName + "\n\n";
@@ -54,17 +64,20 @@ const Contact = () => {
     >
       <div className="wrapper  rounded-lg ">
         <div className="h-full grid md:grid-cols-2 gap-10 py-10">
-          {/* data-aos="fade-right" */}
           <div className="flex flex-col gap-4">
-            <h2 className="heading-2">Let’s Build the Future Together!</h2>
-            <p className="">
-              The digital landscape is constantly changing, and we are here to
-              help you stay ahead. From custom websites to mobile apps, cloud
-              solutions, and immersive experiences, we offer the expertise and
-              innovation needed to drive your business forward.
+            <h2 className="heading-2">
+              {heading ? heading : "Let’s Build the Future Together!"}
+            </h2>
+            <p className="desc">
+              {desc
+                ? desc
+                : `The digital landscape is constantly changing, and we are here to
+                help you stay ahead. From custom websites to mobile apps, cloud
+                solutions, and immersive experiences, we offer the expertise and
+                innovation needed to drive your business forward.`}
             </p>
-            <img 
-loading="lazy"
+            <img
+              loading="lazy"
               src={image}
               alt=""
               className="max-h-[21rem] object-cover rounded-xl"
@@ -102,7 +115,7 @@ loading="lazy"
                 {...register("mobileNumber", {
                   required: "Mobile number is required",
                   pattern: {
-                    value: /^[0-9]{10}$/,
+                    value: /^\+?[\d\s\-()]{6,14}\d$/,
                     message: "Invalid phone number",
                   },
                 })}

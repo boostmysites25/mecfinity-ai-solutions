@@ -1046,4 +1046,68 @@ export const blogs = [
     </p>
     `,
   },
+  {
+    id: 10,
+    title:
+      "From 'Make in India' to 'Make AI in India': A Wake-Up Call for Our Digital Future",
+    image: require("../assets/images/blogs/10.webp"),
+    shortDesc:
+      "India's AI potential remains untapped despite global advancements. AAP MP Raghav Chadha's call for indigenous AI innovation highlights the urgent need for policy shifts, investment, and talent retention to secure India's digital future.",
+    html: `
+    <p class="mb-4">
+        In a bold address in the Rajya Sabha, AAP MP Raghav Chadha recently sparked a conversation that could reshape India’s destiny in the global tech arena. While the United States dazzles with AI marvels like ChatGPT, Gemini, and Grok—and China pushes boundaries with innovations like DeepSeek—India’s position in artificial intelligence remains dishearteningly passive. The question that now looms large is: Can India afford to remain an AI consumer in a world that is rapidly pivoting towards AI production?
+    </p>
+
+    <h3 class="text-lg font-semibold mb-1">
+        The Stark Numbers Speak for Themselves
+    </h3>
+    <p class="mb-4">
+        Chadha’s remarks brought unsettling statistics to light. Between 2010 and 2022, a staggering 60% of global AI patents were registered by the US and another 20% by China. India, despite being the world’s fifth-largest economy, captured a mere 0.5% of these patents. This glaring disparity isn’t just a number—it’s a wake-up call. With 15% of the global AI workforce comprised of Indians and around 450,000 Indian AI professionals working overseas, the talent is undeniably here. Yet, this wealth of brainpower is not being harnessed on home soil. Instead, India finds itself on the losing side of a talent drain, importing the very innovations it has the potential to create.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-1">
+        A Controversial Comparison: Investment in AI Research
+    </h3>
+    <p class="mb-4">
+        Perhaps the most contentious part of Chadha’s argument is his comparison of national investments in AI research. While the US dedicates 3.5% of its GDP to AI, and China commits 2.5%, India lags significantly at just 0.7%. Critics may argue that these figures reflect different economic realities, but they also underscore a hard truth: our current level of investment is insufficient if we aspire to lead rather than follow in the AI revolution.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-1">
+        Talent, Technology, and the Ticking Clock
+    </h3>
+    <p class="mb-4">
+        India boasts over 90 crore internet users and a rapidly expanding digital economy. Yet, our country is primarily a consumer of AI technologies rather than a creator. Even Sam Altman’s recent remarks, calling India’s AI potential “disappointing,” hint at a systemic issue. We have the talent, the market, and a growing digital ecosystem—but where is the will to transform these assets into groundbreaking indigenous technologies?
+    </p>
+
+    <h3 class="text-lg font-semibold mb-1">
+        Policy Proposals That Could Change the Game
+    </h3>
+    <p class="mb-4">
+        Chadha’s suggestions aren’t merely complaints; they are actionable proposals that deserve serious consideration:
+    </p>
+    <ul class="mb-4 list-disc pl-6">
+        <li><strong>Indigenous AI Chip Production:</strong> Establishing manufacturing units for AI chips could reduce our dependence on foreign technology and stimulate homegrown innovation.</li>
+        <li><strong>AI Infrastructure Fund:</strong> A dedicated fund for AI research and development would encourage startups and established companies alike to push the envelope.</li>
+        <li><strong>Research Grants and Tax Incentives:</strong> By offering better financial support and incentives, the government could retain top-tier talent and fuel a vibrant AI ecosystem.</li>
+        <li><strong>Stopping Talent Migration:</strong> Creating an environment where Indian AI professionals see opportunities at home is essential if we are to stop losing our best minds to overseas markets.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-1">
+        A Controversial Call to Action
+    </h3>
+    <p class="mb-4">
+        There’s a provocative edge to this debate—a call for India to radically reorient its “Make in India” ethos. In a world where AI supremacy is becoming synonymous with global leadership, the old slogan must evolve into “Make AI in India.” This isn’t just about technological pride; it’s about securing economic and strategic autonomy for a nation with vast potential.
+    </p>
+    <p class="mb-4">
+        The controversy is real: while some policymakers might argue that our focus should remain on traditional industries, the digital revolution waits for no one. As AI begins to reshape every facet of our lives—from healthcare and education to agriculture and defense—our delay in embracing indigenous innovation could have lasting repercussions.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-1">
+        In Conclusion
+    </h3>
+    <p class="mb-4">
+        Raghav Chadha’s remarks resonate with a mix of urgency and challenge. India stands at a crossroads. With abundant talent and a massive digital consumer base, the time has come for a decisive shift from being an AI consumer to becoming a global AI producer. The world is watching—and the future of India’s digital landscape depends on the choices we make today.
+    </p>
+    `,
+  },
 ];

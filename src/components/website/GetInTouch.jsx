@@ -56,8 +56,8 @@ const GetInTouch = () => {
           <h1 className="text-center heading-2 lg:text-start">
             Ready to Lead with Innovation? <br /> Let’s Start Your Project
           </h1>
-          <img 
-loading="lazy"
+          <img
+            loading="lazy"
             src={image}
             alt=""
             className="max-h-[25rem] object-cover rounded-xl"
@@ -126,7 +126,7 @@ loading="lazy"
                     {...register("mobileNumber", {
                       required: "Mobile number is required",
                       pattern: {
-                        value: /^[0-9]{10}$/,
+                        value: /^\+?[\d\s\-()]{6,14}\d$/,
                         message: "Invalid phone number",
                       },
                     })}

@@ -48,7 +48,7 @@ const Blogs = () => {
             AI, Tech & Beyond – Stay Ahead of the Curve
           </h4>
           <div className="mt-[2rem] grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7">
-            {blogs.map((blog) => (
+            {blogs.sort((a, b) => b.id - a.id).map((blog) => (
               <BlogItem key={blog.id} blog={blog} />
             ))}
           </div>
@@ -75,7 +75,7 @@ export const BlogItem = ({ blog }) => {
           alt=""
           width="600"
           height="400"
-          className="bg-cover aspect-video w-full rounded-xl group-hover:opacity-85 transition-all duration-200"
+          className="object-cover aspect-video w-full rounded-xl group-hover:opacity-85 transition-all duration-200"
         />
       </Link>
       <div className="flex flex-col gap-2 mt-[1rem]">

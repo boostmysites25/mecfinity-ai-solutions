@@ -125,8 +125,8 @@ export {
 // company details
 export const companyDetails = {
   phone: "+917483139873",
-  whatsapp: "+917483139873",
-  whatsappbox: "+917483139873",
+  whatsapp: "917483139873",
+  whatsappbox: "917483139873",
   email: "info@mecfinityai.com",
   address: "Mangalore, India",
   linkedin: "https://www.linkedin.com/company/mecfinity-ai/",

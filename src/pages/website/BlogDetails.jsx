@@ -10,7 +10,9 @@ import { createUrlParam } from "../../utils/helper";
 
 const BlogDetails = () => {
   const params = useParams();
-  const blog = blogs.find((item) => createUrlParam(item.title) === params.title);
+  const blog = blogs.find(
+    (item) => createUrlParam(item.title) === params.title
+  );
   if (!blog) {
     return <Navigate to="/blogs" />;
   }
@@ -22,8 +24,8 @@ const BlogDetails = () => {
         data-aos="fade-down"
         className=" h-[40vh] sm:h-[55vh] md:h-[70vh] relative"
       >
-        <img 
-loading="lazy"
+        <img
+          loading="lazy"
           src={blogsBanner}
           className="object-cover object-[100%_35%] h-full w-full"
           alt=""
@@ -49,13 +51,19 @@ loading="lazy"
       <div className="relative text-primary_text">
         <div className="wrapper pt-8 pb-[2rem] relative z-10">
           <div className="flex flex-col gap-2 pb-[3rem] p-3 sm:p-5 rounded-xl mb-[3rem]">
-            <img 
-loading="lazy"
-              data-aos="fade-up"
-              src={blog.image}
-              alt=""
-              className="w-full rounded-xl object-cover aspect-[4/3] max-h-[70vh]"
-            />
+            <div
+              className="relative rounded-xl overflow-hidden bg-cover before:absolute before:inset-0 before:bg-black/30 before:backdrop-blur-md"
+              style={{ backgroundImage: `url(${blog.image})` }}
+            >
+              <img
+                loading="lazy"
+                data-aos="fade-up"
+                src={blog.image}
+                alt=""
+                className="relative w-full object-cover aspect-[4/3] max-h-[70vh] max-w-4xl mx-auto"
+              />
+            </div>
+
             <div className="flex flex-col gap-2">
               <h4
                 data-aos="fade-up"
@@ -77,6 +85,7 @@ loading="lazy"
                 {blogs
                   .filter((item) => item.id !== blog.id)
                   .slice(0, 3)
+                  .sort((a, b) => b.id - a.id)
                   .map((item) => (
                     <BlogItem key={item.id} blog={item} />
                   ))}
