@@ -9,7 +9,7 @@ const ProcessFlowchart = () => {
           data-aos="fade-up"
           className="gradient-rounded-text-box mx-auto lg:mx-0"
         >
-          Key Benefits
+          Our Process
         </div>
         <div
           data-aos="fade-up"

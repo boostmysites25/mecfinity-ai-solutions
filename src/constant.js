@@ -78,6 +78,7 @@ import { TbDeviceMobileCode } from "react-icons/tb";
 import { FaMobileScreen } from "react-icons/fa6";
 import { AiOutlineBarChart } from "react-icons/ai";
 import { RiShieldKeyholeLine } from "react-icons/ri";
+import { FiDatabase, FiLayout, FiSettings, FiUser } from "react-icons/fi";
 
 const Home = lazy(() => import("./pages/website/Home/Home"));
 const Services = lazy(() => import("./pages/website/Services"));
@@ -219,46 +220,149 @@ export const faqs = [
   },
 ];
 
-// web development services
-// export const webDevelopmentServices = [
-//   {
-//     id: 1,
-//     title: "E-commerce Websites",
-//     icon: require("./assets/images/icons/online-shopping.png"),
-//     img: <CgWebsite />,
-//     description:
-//       "Boost your online business with custom e-commerce solutions. Our platforms enhance customer engagement, streamline operations, and drive revenue growth through personalized shopping experiences and intelligent recommendations.",
-//   },
-//   {
-//     id: 2,
-//     title: "Social Media Websites",
-//     img: <GoFileMedia />,
-//     icon: require("./assets/images/icons/socialmedia.png"),
-//     description:
-//       "Develop custom social media websites that captivate audiences with AI-driven content recommendations and engagement strategies, fostering brand loyalty and growth.",
-//   },
-//   {
-//     id: 3,
-//     title: "Landing Websites",
-//     img: <TfiLayoutMediaRightAlt />,
-//     icon: require("./assets/images/icons/landing-page.png"),
-//     description:
-//       "Create high-converting landing pages with AI-enhanced design and user behavior tracking. Our designs grab attention, inspire action, and maximize conversions through personalized experiences.",
-//   },
-//   {
-//     id: 4,
-//     title: "Custom Websites",
-//     img: <MdOutlineDashboardCustomize />,
-//     icon: require("./assets/images/icons/software-development.png"),
-//     description:
-//       "Deliver bespoke websites tailored to your business needs. Our solutions combine creativity, functionality, and AI-driven features for an exceptional online presence.",
-//   },
-// ];
+export const webDevelopmentFAQs = [
+  {
+    id: 1,
+    question: "What technologies do you use for web development?",
+    answer:
+      "We work with modern stacks including React, Next.js, Angular, Vue.js (frontend), Node.js, Django, Laravel (backend), and headless CMS like WordPress or Strapi.",
+  },
+  {
+    id: 2,
+    question: "Do you develop responsive and mobile-friendly websites?",
+    answer:
+      "Yes, all our websites are fully responsive, optimized for mobile/tablet/desktop, and follow Google’s Core Web Vitals for performance.",
+  },
+  {
+    id: 3,
+    question:
+      "Can you migrate my old website to a new platform without downtime?",
+    answer:
+      "Absolutely! We handle seamless migrations (e.g., WordPress to Shopify, legacy systems to modern frameworks) with zero downtime.",
+  },
+  {
+    id: 4,
+    question: "Do you offer SEO-optimized websites?",
+    answer:
+      "Yes, we bake SEO into development (semantic HTML, fast loading, meta tags, sitemaps) and can integrate tools like Ahrefs or SEMrush.",
+  },
+  {
+    id: 5,
+    question: "What about website security?",
+    answer:
+      "We implement HTTPS, firewalls, regular backups, and security audits to protect against SQLi, XSS, and DDoS attacks.",
+  },
+  {
+    id: 6,
+    question: "How long does a custom website take to build?",
+    answer:
+      "Timelines vary: 2–4 weeks for a basic site, 8–12 weeks for complex platforms (e-commerce, SaaS). We provide a roadmap after discovery.",
+  },
+  {
+    id: 7,
+    question: "Do you provide hosting and domain setup?",
+    answer:
+      "Yes! We offer hosting solutions (AWS, Vercel, Netlify) and handle domain registration, SSL, and DNS configuration.",
+  },
+  {
+    id: 8,
+    question: "Can you integrate third-party APIs?",
+    answer:
+      "We integrate payment gateways (Stripe, PayPal), CRM (HubSpot), analytics (Google Tag Manager), and custom APIs.",
+  },
+  {
+    id: 9,
+    question: "Do you redesign existing websites?",
+    answer:
+      "Yes! We audit your current site, suggest UX/UI improvements, and rebuild with modern tech while preserving SEO rankings.",
+  },
+  {
+    id: 10,
+    question: "What’s your pricing model for web projects?",
+    answer:
+      "Fixed-price (for defined scope) or time-and-materials (for agile projects). We provide transparent quotes upfront.",
+  },
+  {
+    id: 11,
+    question: "Do you offer post-launch support?",
+    answer:
+      "Yes! We provide bug fixes, updates, and 24/7 monitoring via monthly retainer plans.",
+  },
+];
+
+export const appDevelopmentFAQs = [
+  {
+    id: 1,
+    question: "Do you build native, hybrid, or cross-platform apps?",
+    answer:
+      "We develop native apps (Swift/Kotlin) for high performance and cross-platform (Flutter/React Native) for cost efficiency.",
+  },
+  {
+    id: 2,
+    question: "How do you ensure my app idea is feasible?",
+    answer:
+      "We start with a discovery phase: market research, prototyping, and tech feasibility analysis to validate your concept.",
+  },
+  {
+    id: 3,
+    question: "What’s included in your app development process?",
+    answer:
+      "UI/UX design → MVP development → testing (QA) → App Store/Play Store deployment → post-launch updates.",
+  },
+  {
+    id: 4,
+    question: "Can you integrate AI/ML features into apps?",
+    answer:
+      "Yes! We add chatbots, recommendation engines, image recognition (TensorFlow), and predictive analytics.",
+  },
+  {
+    id: 5,
+    question: "How do you handle app security?",
+    answer:
+      "We use OAuth for auth, data encryption, secure APIs, and penetration testing to meet GDPR/HIPAA compliance.",
+  },
+  {
+    id: 6,
+    question: "What’s the cost range for app development?",
+    answer:
+      "$20K–$50K for MVP, $50K–$150K+ for full-featured apps. Exact cost depends on features, platforms, and complexity.",
+  },
+  {
+    id: 7,
+    question: "Do you publish apps on the App Store and Google Play?",
+    answer:
+      "Yes! We handle developer accounts, store submissions, screenshots, and ASO (App Store Optimization).",
+  },
+  {
+    id: 8,
+    question: "Can you add real-time features (chat, notifications)?",
+    answer:
+      "We integrate Firebase, WebSockets, or Pusher for real-time messaging, alerts, and live updates.",
+  },
+  {
+    id: 9,
+    question: "How do you test apps before launch?",
+    answer:
+      "Manual + automated testing (Unit/UI tests, device labs, beta testing via TestFlight/Play Console).",
+  },
+  {
+    id: 10,
+    question: "Do you provide app maintenance after launch?",
+    answer:
+      "Yes! We offer bug fixes, OS updates, feature additions, and performance tuning via monthly plans.",
+  },
+  {
+    id: 11,
+    question: "Can you build apps for wearables (Apple Watch/Android Wear)?",
+    answer:
+      "Absolutely! We develop companion apps for wearables with health data sync and notifications.",
+  },
+];
+
 export const webDevelopmentServices = [
   {
     id: 1,
     title: "Custom Web Development",
-    icon: require("./assets/images/icons/online-shopping.png"),
     img: <TfiLayoutMediaRightAlt />,
     description:
       "Tailored solutions built to match your unique brand identity. Our custom web development services ensure that your website is designed and developed to reflect your brand's values and meet your specific business needs.",
@@ -267,7 +371,6 @@ export const webDevelopmentServices = [
     id: 2,
     title: "E-commerce Solutions",
     img: <CgWebsite />,
-    icon: require("./assets/images/icons/online-shopping.png"),
     description:
       "Seamless, secure platforms designed to drive online sales. Our e-commerce solutions provide a robust and user-friendly platform for your online store, ensuring a smooth shopping experience for your customers.",
   },
@@ -275,10 +378,37 @@ export const webDevelopmentServices = [
     id: 3,
     title: "Mobile Optimization",
     img: <MdOutlineDashboardCustomize />,
-    icon: require("./assets/images/icons/software-development.png"),
     description:
       "Responsive designs that deliver a stellar user experience on any device. Our mobile optimization services ensure that your website is fully responsive and performs excellently across all devices, enhancing user engagement and satisfaction.",
   },
+  {
+    id: 4,
+    title: "SaaS Platforms & Dashboards",
+    img: <FiDatabase />,
+    description:
+      "We design clean, data-intuitive SaaS products that simplify complexity and keep users engaged. From analytics to admin panels, every click makes sense.",
+  },
+  {
+    id: 5,
+    title: "Landing Pages & Microsites",
+    img: <FiLayout />,
+    description:
+      "Launch faster and convert better with targeted, action-driven landing pages designed to sell, capture, or validate — beautifully.",
+  },
+  {
+    id: 6,
+    title: "Web Apps & Internal Tools",
+    img: <FiSettings />,
+    description:
+      "We design smart, scalable platforms that make internal workflows smoother and external experiences effortless — without compromising on usability.",
+  },
+  {
+    id: 7,
+    title: "Personal Portfolios & Brand Sites",
+    img: <FiUser />,
+    description:
+      "Your personal brand deserves more than a template. We craft bold, memorable digital identities that help creators, founders, and freelancers stand out.",
+  }
 ];
 
 export const appDevelopmentServices = [
@@ -286,7 +416,6 @@ export const appDevelopmentServices = [
     id: 1,
     title: "Custom App Development",
     img: <FaAppStoreIos />,
-    icon: require("./assets/images/icons/ios-development.png"),
     description:
       "Bespoke solutions for your unique needs. Our custom app development services ensure that your application is tailored to meet your specific business requirements, providing a seamless user experience and robust functionality.",
   },
@@ -294,7 +423,6 @@ export const appDevelopmentServices = [
     id: 2,
     title: "Enterprise Solutions",
     img: <IoLogoAndroid />,
-    icon: require("./assets/images/icons/android-development.png"),
     description:
       "Scalable, robust platforms for business growth. Our enterprise solutions are designed to handle the complexities of large-scale operations, ensuring reliability, security, and efficiency for your business processes.",
   },
@@ -302,7 +430,6 @@ export const appDevelopmentServices = [
     id: 3,
     title: "Mobile Optimization",
     img: <SiFlutter />,
-    icon: require("./assets/images/icons/flutter-development.png"),
     description:
       "Flawless performance on every device. Our mobile optimization services ensure that your application runs smoothly across all devices and platforms, providing a consistent and high-quality user experience.",
   },
@@ -310,7 +437,6 @@ export const appDevelopmentServices = [
     id: 4,
     title: "UI/UX Design",
     img: <TbDeviceMobileCode />,
-    icon: require("./assets/images/icons/hybrid-app-development.png"),
     description:
       "Engaging, intuitive user experiences. Our UI/UX design services focus on creating visually appealing and user-friendly interfaces that enhance user engagement and satisfaction.",
   },

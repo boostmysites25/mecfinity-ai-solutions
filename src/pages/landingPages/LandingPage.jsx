@@ -1,10 +1,5 @@
-import React, { useState } from "react";
 import Contact from "../../components/common/Contact";
-import {
-  appLandingAbout,
-  emailjsDetails,
-  webLandingAbout,
-} from "../../constant";
+import { appLandingAbout, webLandingAbout } from "../../constant";
 import { Link as ScrollLink } from "react-scroll";
 import WhyChooseUs from "../../components/common/WhyChooseUs";
 import LandingServices from "../../components/landingPages/LandingServices";
@@ -14,16 +9,14 @@ import ReactPlayer from "react-player";
 import webBanner from "../../assets/videos/web.mp4";
 import appBanner from "../../assets/videos/app.mp4";
 import Faqs from "../../components/common/Faqs";
-import { useForm } from "react-hook-form";
 import Credibility from "../../components/common/Credibility";
-import image from "../../assets/images/contactimage.webp";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import emailjs from "@emailjs/browser";
 import ProcessFlowchart from "../../components/landingPages/ProcessFlowChart";
 import KeyBenefits from "../../components/landingPages/KeyBenefits";
 import CTA from "../../components/landingPages/CTA";
 import { Helmet } from "react-helmet-async";
+import FeatureSection from "../../components/landingPages/FeatureSection";
+import TechStackSection from "../../components/landingPages/TechStackSection";
+import WhyHireUs from "../../components/common/WhyHireUs";
 
 const webDevReviews = [
   {
@@ -81,45 +74,6 @@ const appDevReviews = [
 
 export const LandingPage = ({ page }) => {
   const isWebDevelopment = Boolean(page === "web-development");
-  const [spinner, setSpinner] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
-  const navigate = useNavigate();
-
-  const onSubmit = async (data) => {
-    setSpinner(true);
-
-    var emailBody = "Name: " + data.fullName + "\n\n";
-    emailBody += "Email: " + data.email + "\n\n";
-    emailBody += "Phone: " + data.mobileNumber + "\n\n";
-    emailBody += "Message:\n" + data.message;
-
-    const formData = {
-      from_name: data.fullName,
-      message: emailBody,
-    };
-
-    emailjs
-      .send(
-        emailjsDetails.serviceId,
-        emailjsDetails.templateId,
-        formData,
-        emailjsDetails.publicKey
-      )
-      .then((response) => {
-        toast.success("Email sent successfully");
-        reset();
-        navigate("/thank-you");
-      })
-      .catch((error) => {
-        toast.error("Failed to send email");
-      })
-      .finally(() => setSpinner(false));
-  };
   return (
     <>
       <Helmet>
@@ -254,10 +208,13 @@ export const LandingPage = ({ page }) => {
           </div>
         </div>
       </section>
-      <Contact />
-      <KeyBenefits />
+      <FeatureSection />
+      <Contact
+        service={isWebDevelopment ? "Web Development" : "App Development"}
+      />
       <LandingServices page={page} />
-      <div className="py-14 text-center space-y-5 flex flex-col items-center">
+      <KeyBenefits page={page} />
+      <div className="py-14 text-center space-y-5 flex flex-col items-center bg-white">
         <h6 className="heading-2">
           Slots filling fast – secure your free call now!
         </h6>
@@ -273,6 +230,7 @@ export const LandingPage = ({ page }) => {
       <ProcessFlowchart />
       <WhyChooseUs />
       <Portfolio page={page} />
+      <TechStackSection page={page} />
       <Testimonials
         reviews={isWebDevelopment ? webDevReviews : appDevReviews}
       />
@@ -289,8 +247,11 @@ export const LandingPage = ({ page }) => {
             : "Our AI-enhanced development process can boost speed by up to 40%—so you never miss a beat."
         }
       />
-      <Faqs />
-      <Contact/>
+      <Faqs page={page} />
+      {isWebDevelopment && <WhyHireUs />}
+      <Contact
+        service={isWebDevelopment ? "Web Development" : "App Development"}
+      />
     </>
   );
 };

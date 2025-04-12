@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser";
 import { emailjsDetails } from "../../constant";
 import { doWhatsappMsg } from "../../utils/helper";
 
-const Contact = ({ heading, desc, asWhatsappMsg }) => {
+const Contact = ({ heading, desc, asWhatsappMsg, service }) => {
   const [spinner, setSpinner] = useState(false);
 
   const {
@@ -33,6 +33,7 @@ const Contact = ({ heading, desc, asWhatsappMsg }) => {
     var emailBody = "Name: " + data.fullName + "\n\n";
     emailBody += "Email: " + data.email + "\n\n";
     emailBody += "Phone: " + data.mobileNumber + "\n\n";
+    service && (emailBody += "Service: " + service + "\n\n");
     emailBody += "Message:\n" + data.message;
 
     const formData = {

@@ -1,14 +1,22 @@
 import React, { useState } from "react";
-import { faqPng, faqs } from "../../constant";
-import { BiCaretDown, BiCaretRight } from "react-icons/bi";
+import { faqPng, faqs, webDevelopmentFAQs } from "../../constant";
+import { BiCaretDown } from "react-icons/bi";
 
-const Faqs = () => {
+const Faqs = ({ page }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  let faqList;
+
+  if (page === "web-development") {
+    faqList = webDevelopmentFAQs;
+  } else if (page === "app-development") {
+  } else {
+    faqList = faqs;
+  }
   return (
     <div className="sm:py-[5rem] bg-backgroundcolor">
-      <div className="wrapper grid lg:grid-cols-2 gap-10 lg:gap-0 items-center">
-        <div className="lg:flex hidden items-end justify-end">
+      <div className="wrapper grid lg:grid-cols-1 gap-10 lg:gap-0 items-center">
+        {/* <div className="lg:flex hidden items-end justify-end">
           <div className="hover:scale-105 transition-all duration-500 bg-gradient-to-r min-w-[13rem] flex flex-col items-center text-white w-fit from-secondary/80 to-primary/80 rounded-xl p-5">
             <div className="flex flex-col justify-center gap-3 relative w-fit">
               <h1 className="heading-2">5</h1>
@@ -24,12 +32,12 @@ const Faqs = () => {
               alt=""
             />
           </div>
-        </div>
+        </div> */}
         <div className="flex flex-col items-center gap-7 text-primarytextcolor">
           <div className="gradient-rounded-text-box">FAQs</div>
           <h2 className="heading-2">Frequently Asked Questions</h2>
-          <div className="flex flex-col gap-3 mt-3 w-full">
-            {faqs.map((faq, i) => (
+          <div className="flex flex-col gap-2 mt-3 w-full">
+            {faqList.map((faq, i) => (
               <FaqItem
                 key={faq.id}
                 {...faq}
@@ -49,27 +57,33 @@ export default Faqs;
 
 const FaqItem = ({ question, answer, i, isOpen, setIsOpen }) => {
   return (
-    <div className="flex flex-col w-full text-white hover:scale-105   transition-all duration-500">
+    <div className="flex flex-col w-full text-white">
       <div
-        className={`${
-          isOpen === i && "bg-gradient-to-r from-secondary/10 to-primary/80"
-        } p-[1px] rounded-md bg-gradient-to-r from-secondary/10 to-primary/80`}
+        // className={`${
+        //   isOpen === i && "bg-gradient-to-r from-secondary/10 to-primary/80"
+        // } rounded-md bg-gradient-to-r from-secondary/10 to-primary/80`}
+        className="bg-secondary/5"
       >
         <div
           onClick={() => setIsOpen((prev) => (prev === i ? "" : i))}
-          className="cursor-pointer rounded-md p-3 bg-backgroundcolor text-primarytextcolor flex justify-between gap-4"
+          className="cursor-pointer rounded-md p-3 text-primarytextcolor flex justify-between gap-4"
         >
           <p className="font-inter">{question}</p>
-          {isOpen === i ? <BiCaretDown /> : <BiCaretRight />}
+          <BiCaretDown
+            className={`${
+              isOpen === i && "rotate-180"
+            } transition-all duration-200`}
+          />
         </div>
       </div>
-      {isOpen === i ? (
-        <p className="px-5 py-3 desc text-[.9rem] text-primarytextcolor">
-          {answer}
-        </p>
-      ) : (
-        ""
-      )}
+
+      <p
+        className={`${
+          isOpen === i ? "max-h-64 opacity-100 py-3" : "max-h-0 opacity-0"
+        } transition-all duration-200 px-5 desc text-[.9rem] text-primarytextcolor`}
+      >
+        {answer}
+      </p>
     </div>
   );
 };

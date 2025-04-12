@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRocket, FaShieldAlt, FaPlug, FaRobot } from "react-icons/fa"; // Import icons from React Icons
 
-const KeyBenefits = () => {
+const KeyBenefits = ({ page }) => {
   return (
     <div className="bg-white">
       <div className="wrapper flex flex-col gap-10 items-center justify-center py-14">
@@ -9,7 +9,7 @@ const KeyBenefits = () => {
           data-aos="fade-up"
           className="gradient-rounded-text-box mx-auto lg:mx-0"
         >
-          Our Process
+          Key Benefits
         </div>
         <div
           data-aos="fade-up"
@@ -22,7 +22,8 @@ const KeyBenefits = () => {
               Rapid Development
             </h2>
             <p className="text-sm text-gray-600">
-              Launch apps up to 50% faster with our streamlined processes.
+              Launch {page === "web-development" ? "websites" : "apps"} up to
+              50% faster with our streamlined processes.
             </p>
           </div>
 

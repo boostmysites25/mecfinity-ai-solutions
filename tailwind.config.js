@@ -7,7 +7,7 @@ module.exports = {
         headerbackgroundcolor: "#f4f4f4",
         headertextcolor: "#272727",
         headertexthoverandactive: "#098DBA",
-        backgroundcolor: "#f1f1f1",
+        backgroundcolor: "#f8f8f8",
         primarytextcolor: "#111111",
         footerbackgrouncolor: "#cccccc",
         primary: "#098DBA",
