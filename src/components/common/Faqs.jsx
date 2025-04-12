@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { faqPng, faqs, webDevelopmentFAQs } from "../../constant";
+import { appDevelopmentFAQs, faqPng, faqs, webDevelopmentFAQs } from "../../constant";
 import { BiCaretDown } from "react-icons/bi";
 
 const Faqs = ({ page }) => {
@@ -10,6 +10,7 @@ const Faqs = ({ page }) => {
   if (page === "web-development") {
     faqList = webDevelopmentFAQs;
   } else if (page === "app-development") {
+    faqList = appDevelopmentFAQs;
   } else {
     faqList = faqs;
   }
