@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { appDevelopmentFAQs, faqPng, faqs, webDevelopmentFAQs } from "../../constant";
+import { appDevelopmentFAQs, faqs, webDevelopmentFAQs } from "../../constant";
 import { BiCaretDown } from "react-icons/bi";
 
 const Faqs = ({ page }) => {
@@ -17,23 +17,6 @@ const Faqs = ({ page }) => {
   return (
     <div className="sm:py-[5rem] bg-backgroundcolor">
       <div className="wrapper grid lg:grid-cols-1 gap-10 lg:gap-0 items-center">
-        {/* <div className="lg:flex hidden items-end justify-end">
-          <div className="hover:scale-105 transition-all duration-500 bg-gradient-to-r min-w-[13rem] flex flex-col items-center text-white w-fit from-secondary/80 to-primary/80 rounded-xl p-5">
-            <div className="flex flex-col justify-center gap-3 relative w-fit">
-              <h1 className="heading-2">5</h1>
-              <span className="absolute top-1 -right-3 text-lg">+</span>
-            </div>
-            <p className="font-medium mt-3">Years of Experience</p>
-          </div>
-          <div className="h-full max-h-[32rem]">
-            <img
-              loading="lazy"
-              src={faqPng}
-              className="h-full max-h-[32rem] object-contain hover:scale-105 transition-all duration-500"
-              alt=""
-            />
-          </div>
-        </div> */}
         <div className="flex flex-col items-center gap-7 text-primarytextcolor">
           <div className="gradient-rounded-text-box">FAQs</div>
           <h2 className="heading-2">Frequently Asked Questions</h2>
