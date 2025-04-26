@@ -15,6 +15,7 @@ import SpinnerContextProvider, {
 import WhatsAppIcon from "./components/common/Whatsapp.jsx";
 import { Toaster } from "react-hot-toast";
 import { HelmetProvider } from "react-helmet-async";
+import PageTracker from "./components/common/PageTracker.js";
 
 const ServicePageLayout = lazy(() => import("./layout/ServicePageLayout"));
 const ServiceDetails = lazy(() => import("./pages/website/ServiceDetails"));
@@ -59,6 +60,7 @@ export default function App() {
             }}
           />
           <ScrollToTop />
+          <PageTracker />
           <Routes>
             {/* Website Pages */}
             {routes.map(({ component, name, path }, index) => (
