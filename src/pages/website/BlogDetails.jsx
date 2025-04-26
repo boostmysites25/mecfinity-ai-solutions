@@ -1,8 +1,6 @@
 import React from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { BlogItem } from "./Blogs";
-import WebsiteHeader from "../../components/website/WebsiteHeader";
-import WebsiteFooter from "../../components/website/WebsiteFooter";
 import { blogs } from "../../data/blogs";
 import { IoIosArrowForward } from "react-icons/io";
 import blogsBanner from "../../assets/images/blog-details.webp";
@@ -19,7 +17,6 @@ const BlogDetails = () => {
   const recentBlogs = blogs.filter((item) => item.title !== blog.title) || [];
   return (
     <>
-      <WebsiteHeader />
       <div
         data-aos="fade-down"
         className=" h-[40vh] sm:h-[55vh] md:h-[70vh] relative"
@@ -94,7 +91,6 @@ const BlogDetails = () => {
           )}
         </div>
       </div>
-      <WebsiteFooter />
     </>
   );
 };

@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { blogs } from "../../data/blogs";
-import WebsiteHeader from "../../components/website/WebsiteHeader";
-import WebsiteFooter from "../../components/website/WebsiteFooter";
 import { IoIosArrowForward } from "react-icons/io";
 import blogsBanner from "../../assets/images/blogs.webp";
 import { createUrlParam } from "../../utils/helper";
@@ -10,7 +8,6 @@ import { createUrlParam } from "../../utils/helper";
 const Blogs = () => {
   return (
     <>
-      <WebsiteHeader />
       <div
         data-aos="fade-down"
         className=" h-[40vh] sm:h-[55vh] md:h-[70vh] relative"
@@ -48,13 +45,14 @@ const Blogs = () => {
             AI, Tech & Beyond – Stay Ahead of the Curve
           </h4>
           <div className="mt-[2rem] grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7">
-            {blogs.sort((a, b) => b.id - a.id).map((blog) => (
-              <BlogItem key={blog.id} blog={blog} />
-            ))}
+            {blogs
+              .sort((a, b) => b.id - a.id)
+              .map((blog) => (
+                <BlogItem key={blog.id} blog={blog} />
+              ))}
           </div>
         </div>
       </div>
-      <WebsiteFooter />
     </>
   );
 };
