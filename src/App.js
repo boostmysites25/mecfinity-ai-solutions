@@ -16,6 +16,8 @@ import WhatsAppIcon from "./components/common/Whatsapp.jsx";
 import { Toaster } from "react-hot-toast";
 import { HelmetProvider } from "react-helmet-async";
 import PageTracker from "./components/common/PageTracker.js";
+import TermsAndConditions from "./pages/website/TermsAndConditions.jsx";
+import PrivacyPolicy from "./pages/website/PrivacyPolicy.jsx";
 
 const ServicePageLayout = lazy(() => import("./layout/ServicePageLayout"));
 const ServiceDetails = lazy(() => import("./pages/website/ServiceDetails"));
@@ -165,6 +167,24 @@ export default function App() {
                   <LandingHeader />
                   <VRARDevelopment />
                   <LandingFooter />
+                </>
+              }
+            />
+            <Route
+              path="/terms-and-conditions"
+              element={
+                <>
+                  <WebsiteHeader />
+                  <TermsAndConditions />
+                </>
+              }
+            />
+            <Route
+              path="/Privacy-Policy"
+              element={
+                <>
+                  <WebsiteHeader />
+                  <PrivacyPolicy />
                 </>
               }
             />

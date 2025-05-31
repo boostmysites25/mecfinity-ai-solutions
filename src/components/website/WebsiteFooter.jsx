@@ -71,6 +71,23 @@ const WebsiteFooter = () => {
               </Link>
             </div>
           </div>
+          <div className="flex justify-center flex-wrap gap-3 mt-5 text-sm text-black text-center">
+            <p>© 2025 EventPro. All rights reserved.</p>
+            <span>|</span>
+            <Link
+              to="/terms-and-conditions"
+              className="hover:text-primary transition-all duration-300"
+            >
+              Terms & Conditions
+            </Link>
+            <span>|</span>
+            <Link
+              to="/privacy-policy"
+              className="hover:text-primary transition-all duration-300"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </div>
