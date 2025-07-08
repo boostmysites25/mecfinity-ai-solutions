@@ -1,4 +1,5 @@
 import logoImg from "./assets/images/logo/logo.png";
+import logofooter from "./assets/images/logo/logo-footer.png";
 import whyChooseUsIcon1 from "./assets/images/ph_target-light.png";
 import whyChooseUsIcon2 from "./assets/images/mage_light-bulb.png";
 import whyChooseUsIcon3 from "./assets/images/tdesign_user-talk.png";
@@ -88,6 +89,7 @@ const Blogs = lazy(() => import("./pages/website/Blogs"));
 
 export {
   logoImg,
+  logofooter,
   whyChooseUsPng,
   whyChooseUsIcon1,
   whyChooseUsIcon2,
@@ -408,7 +410,7 @@ export const webDevelopmentServices = [
     img: <FiUser />,
     description:
       "Your personal brand deserves more than a template. We craft bold, memorable digital identities that help creators, founders, and freelancers stand out.",
-  }
+  },
 ];
 
 export const appDevelopmentServices = [

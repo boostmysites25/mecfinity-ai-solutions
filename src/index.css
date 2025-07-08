@@ -1,4 +1,47 @@
+/* Import Google Fonts (keeping as fallback) */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Import Astera font */
+@font-face {
+  font-family: "Astera";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/astera-webfont/ASTERA v2.woff") format("woff");
+  font-display: swap;
+}
+
+/* Import Satoshi fonts */
+@font-face {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 400; /* Regular */
+  src: url("../public/satoshi-webfont/Satoshi-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 900; /* Black */
+  src: url("../public/satoshi-webfont/Satoshi-Black.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../public/satoshi-webfont/Satoshi-Italic.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../public/satoshi-webfont/Satoshi-BlackItalic.woff") format("woff");
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -15,7 +58,11 @@
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Satoshi", sans-serif;
+  letter-spacing: 0.035em; /* 70pt tracking for body text */
+  line-height: 23px; /* 23pt leading for body text */
+  font-size: 15px; /* 15pt size for body text */
+  font-weight: 400; /* Regular weight for body text */
 }
 
 html {
@@ -30,7 +77,7 @@ body {
   padding: 0;
 }
 
-.scrollbar_4::-webkit-scrollbar{
+.scrollbar_4::-webkit-scrollbar {
   height: 4px;
 }
 
@@ -38,37 +85,40 @@ body {
   .wrapper {
     @apply max-w-7xl mx-auto px-4;
   }
+  .heading {
+    @apply font-astera;
+  }
   .heading-1 {
-    @apply font-raleway text-[2.2rem] sm:text-[2.5rem] md:text-7xl font-bold leading-tight;
+    @apply font-astera text-[36px] sm:text-[45px] md:text-[60px] leading-[40px] sm:leading-[45px] md:leading-[50px] tracking-[0.039em] font-normal;
   }
   .heading-2 {
-    @apply font-raleway text-4xl md:text-5xl font-semibold leading-tight;
+    @apply font-satoshi text-[28px] sm:text-[32px] md:text-[39px] leading-tight tracking-[0.07em] font-black;
   }
   .desc {
-    @apply font-inter font-normal;
+    @apply font-satoshi text-[15px] leading-[23px] tracking-[0.07em] font-normal;
   }
   .active-link {
     @apply text-headertexthoverandactive font-semibold;
   }
   .primary-btn {
-    @apply text-white hover:text-primary cursor-pointer font-light border border-primary  tracking-wide bg-primary hover:bg-transparent text-sm hover:shadow-black hover:-translate-y-1  shadow-transparent rounded-[.3rem] px-4 py-2 min-w-[7rem] flex justify-center text-center transition-all duration-300;
+    @apply text-white hover:text-primary cursor-pointer !font-satoshi font-normal border border-primary tracking-[0.07em] bg-primary hover:bg-transparent text-[15px] hover:shadow-black hover:-translate-y-1 shadow-transparent rounded-[.3rem] px-4 py-2 min-w-[7rem] flex justify-center text-center transition-all duration-300;
   }
   .secondary-btn {
-    @apply text-primary hover:text-white cursor-pointer font-light tracking-wide bg-transparent border border-primary hover:bg-primary text-sm  hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-4 py-2 min-w-[7rem] flex justify-center text-center transition-all duration-300;
+    @apply text-primary hover:text-white cursor-pointer !font-satoshi font-normal tracking-[0.07em] bg-transparent border border-primary hover:bg-primary text-[15px] hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-4 py-2 min-w-[7rem] flex justify-center text-center transition-all duration-300;
   }
   /* 600018 */
   /* #e2f5fb */
   .tertiary-btn {
-    @apply text-white cursor-pointer font-light tracking-wide bg-primary border border-primary hover:bg-black text-sm hover:shadow-primary hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-4 py-2 min-w-[7rem] flex justify-center text-center transition-all duration-300;
+    @apply text-white cursor-pointer !font-satoshi font-normal tracking-[0.07em] bg-primary border border-primary hover:bg-black text-[15px] hover:shadow-primary hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-4 py-2 min-w-[7rem] flex justify-center text-center transition-all duration-300;
   }
   .btn-styles {
-    @apply hover:shadow-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-4 py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-sm;
+    @apply hover:shadow-white cursor-pointer !font-satoshi tracking-[0.07em] hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-4 py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-normal text-[15px];
   }
   .rounded-text-box {
-    @apply px-4 py-3 rounded-full font-raleway min-w-[10rem] flex justify-center border text-[.9rem] w-fit font-bold;
+    @apply px-4 py-3 rounded-full font-satoshi min-w-[10rem] flex justify-center border text-[.9rem] w-fit font-black tracking-[0.07em];
   }
   .gradient-rounded-text-box {
-    @apply px-4 py-3 rounded-full font-raleway min-w-[10rem] flex justify-center border text-[.9rem] w-fit bg-gradient-to-r from-secondary to-primary font-bold border-primary bg-clip-text text-transparent;
+    @apply px-4 py-3 rounded-full font-satoshi min-w-[10rem] flex justify-center border text-[.9rem] w-fit bg-gradient-to-r from-secondary to-primary font-black border-primary bg-clip-text text-transparent tracking-[0.07em];
   }
   .link {
     @apply cursor-pointer hover:text-headertexthoverandactive transition-colors duration-200;
@@ -124,7 +174,7 @@ body {
   bottom: 0;
   margin: auto;
   border: 3px solid;
-  border-color: transparent #098DBA #098DBA;
+  border-color: transparent #098dba #098dba;
   width: 24px;
   height: 24px;
   border-radius: 50%;

@@ -95,7 +95,7 @@ const Home = () => {
             </div>
             <h1 className="heading-1">
               Shaping the
-              <span className="text-secondary"> Digital </span> Future Together
+              <span className="text-secondary heading-1"> Digital </span> Future Together
             </h1>
             <p className="desc">
               At Mecfinity AI Solutions, we deliver cutting-edge AI-driven IT

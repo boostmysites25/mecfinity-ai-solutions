@@ -34,8 +34,8 @@ const WebsiteHeader = () => {
     <div
       className={`py-6 fixed top-0 w-full z-50 text-headertextcolor transition-all duration-300 ${
         isScrolled
-          ? "bg-[#e2f5fb] backdrop-blur-md text-black"
-          : "bg-[#e2f5fb] text-black"
+          ? "bg-backgroundcolor backdrop-blur-md text-black"
+          : "bg-backgroundcolor text-black"
       }`}
     >
       <div className="wrapper flex justify-between items-center gap-10">
@@ -44,7 +44,7 @@ const WebsiteHeader = () => {
             <img
               src={logoImg}
               alt="logo"
-              className="h-[2rem] md:h-[3rem] ml-5 scale-125"
+              className="w-[7.5rem] sm:w-[9rem] ml-2 scale-125"
             />
           </Link>
           <div className="lg:flex items-center gap-10 hidden">

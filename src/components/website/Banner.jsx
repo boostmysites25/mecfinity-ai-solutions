@@ -54,11 +54,11 @@ loading="lazy"
         </h1>
         <div
           data-aos="fade-up"
-          className="mt-5 text-base sm:text-xl font-medium px-3 py-2 w-fit rounded-full  flex flex-wrap justify-center text-white items-center gap-1 sm:gap-2"
+          className="mt-2 text-base sm:text-xl font-medium px-3 py-2 w-fit rounded-full  flex flex-wrap justify-center text-white items-center gap-1 sm:gap-2"
         >
           <Link to="/">Home</Link>
           <IoIosArrowForward />
-          <h4>{page}</h4>
+          <span>{page}</span>
         </div>
       </div>
     </div>

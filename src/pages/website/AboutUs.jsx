@@ -31,17 +31,17 @@ const AboutUs = () => {
         <div className="absolute py-2  top-[40%] left-1/2 -translate-x-1/2 w-full flex flex-col items-center px-3">
           <h1
             data-aos="fade-up"
-            className="heading text-white text-center font-raleway text-[2.18rem] md:text-7xl font-bold leading-tight"
+            className="heading text-white text-center text-[2.18rem] md:text-7xl font-bold leading-tight"
           >
             About Us
           </h1>
           <div
             data-aos="fade-up"
-            className="mt-5 text-base sm:text-xl font-medium px-3 py-2 w-fit rounded-full  flex flex-wrap justify-center text-white items-center gap-1 sm:gap-2"
+            className="mt-2 text-base sm:text-xl font-medium px-3 py-2 w-fit rounded-full  flex flex-wrap justify-center text-white items-center gap-1 sm:gap-2"
           >
             <Link to="/">Home</Link>
             <IoIosArrowForward />
-            <h4 className="text-white">About us</h4>
+            <p className="text-white">About us</p>
           </div>
         </div>
       </div>
@@ -168,6 +168,76 @@ const AboutUs = () => {
         </section>
 
         <UnlockEfficiency />
+        
+        {/* Mission and Vision Section */}
+        <section className="py-12 sm:py-20 bg-gradient-to-b from-white to-gray-50">
+          <div className="wrapper mx-auto">
+            <div className="text-center mb-12">
+              <div
+                data-aos="fade-up"
+                className="gradient-rounded-text-box mx-auto mb-6"
+              >
+                Our Purpose
+              </div>
+              <h3
+                className="heading-2 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                Mission & Vision
+              </h3>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              {/* Mission Card */}
+              <div 
+                data-aos="fade-up"
+                data-aos-delay="200"
+                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-semibold text-primary">Our Mission</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  At Mecfinity AI, our mission is to build responsible, accessible, and
+                  intelligent technologies that elevate human potential and transform data into real-world
+                  impact. We automate the mundane, unlock deeper insights, and drive sustainable growth,
+                  empowering individuals, organizations, and communities to work smarter, faster, and more
+                  meaningfully. Guided by transparency, inclusivity, and ethical innovation.
+                </p>
+              </div>
+              
+              {/* Vision Card */}
+              <div 
+                data-aos="fade-up"
+                data-aos-delay="300"
+                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-semibold text-primary">Our Vision</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  We envision a future where AI is not just technology, but a trusted companion, enhancing
+                  industries, accelerating equitable progress, and enabling every individual to thrive.
+                  Mecfinity AI strives to make intelligent solutions universally accessible, culturally adaptable,
+                  and fundamentally human, creating a smarter, more connected, and compassionate world.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         <section className="relative py-6 sm:py-16 px-4 md:py-12 ">
           <div className="max-w-7xl mx-auto">
             <h2

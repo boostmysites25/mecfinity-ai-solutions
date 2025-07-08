@@ -52,18 +52,14 @@ const LandingHeader = () => {
     <div
       className={`py-6 fixed top-0 w-full   z-50  ${
         isScrolled
-          ? "bg-[#e2f5fb] backdrop-blur-md text-black"
-          : "bg-[#e2f5fb] text-black"
+          ? "bg-backgroundcolor backdrop-blur-md text-black"
+          : "bg-backgroundcolor text-black"
       }`}
     >
       <div className="wrapper flex justify-between items-center gap-10">
         <div className="flex justify-between items-center gap-20 w-full pl-[1rem] lg:pl-0">
           <Link smooth={true} to="banner" className="cursor-pointer">
-            <img
-              src={logoImg}
-              className="h-[2rem] md:h-[3rem] scale-125"
-              alt="logo"
-            />
+            <img src={logoImg} className="w-[7.5rem] sm:w-[9rem] ml-2 scale-125" alt="logo" />
           </Link>
           <div className="lg:flex items-center gap-10 hidden">
             {options.map((option) =>

@@ -126,14 +126,14 @@ const Testimonials = ({ reviews }) => {
             onClick={handlePrevClick}
             aria-label="Previous slide"
           >
-            <IoArrowBackCircleOutline />
+            <IoArrowBackCircleOutline size={40} />
           </button>
           <button
             className="text-primary text-5xl hover:text-primary/70 transition-all duration-200"
             onClick={handleNextClick}
             aria-label="Next slide"
           >
-            <IoArrowForwardCircleOutline />
+            <IoArrowForwardCircleOutline size={40} />
           </button>
         </div>
       </div>
