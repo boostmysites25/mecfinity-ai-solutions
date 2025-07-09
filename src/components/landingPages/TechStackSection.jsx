@@ -78,8 +78,14 @@ const TechStackSection = ({ page }) => {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative"
+      style={{
+        backgroundImage: `url(${require("../../assets/images/pattern1.png")})`,
+      }}
+    >
+      <div className="bg-backgroundcolor/85 absolute inset-0 h-full w-full" />
+      <div className="max-w-7xl mx-auto relative z-[1]">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,9 +96,7 @@ const TechStackSection = ({ page }) => {
           <h2 className="heading-2 mb-4 text-gray-900">
             Masters of Cutting-Edge Technology
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-           
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">

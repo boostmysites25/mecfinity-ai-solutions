@@ -97,7 +97,7 @@ const OurServices = ({ length }) => {
     }
   };
   return (
-    <div className="py-[2rem] sm:py-[5rem] bg-backgroundcolor text-primarytextcolor">
+    <div className="py-[2rem] sm:py-[5rem] text-primarytextcolor">
       <div
         data-aos="fade-up"
         className="wrapper flex flex-col text-center gap-5 items-center"

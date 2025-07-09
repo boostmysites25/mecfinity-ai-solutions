@@ -45,7 +45,13 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="py-[2rem] sm:py-[2rem] text-primarytextcolor text-center">
+      <div
+        className="py-[2rem] sm:py-[2rem] text-primarytextcolor text-center relative"
+        style={{
+          backgroundImage: `url(${require("../../assets/images/pattern2.png")})`,
+        }}
+      >
+        <div className="bg-backgroundcolor/80 absolute inset-0 h-full w-full" />
         <section className=" px-4 py-6 sm:py-12 md:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-8 lg:grid-cols-2">
@@ -168,7 +174,7 @@ const AboutUs = () => {
         </section>
 
         <UnlockEfficiency />
-        
+
         {/* Mission and Vision Section */}
         <section className="py-12 sm:py-20 bg-gradient-to-b from-white to-gray-50">
           <div className="wrapper mx-auto">
@@ -187,58 +193,99 @@ const AboutUs = () => {
                 Mission & Vision
               </h3>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Mission Card */}
-              <div 
+              <div
                 data-aos="fade-up"
                 data-aos-delay="200"
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 text-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-semibold text-primary">Our Mission</h3>
+                  <h3 className="text-2xl font-semibold text-primary">
+                    Our Mission
+                  </h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  At Mecfinity AI, our mission is to build responsible, accessible, and
-                  intelligent technologies that elevate human potential and transform data into real-world
-                  impact. We automate the mundane, unlock deeper insights, and drive sustainable growth,
-                  empowering individuals, organizations, and communities to work smarter, faster, and more
-                  meaningfully. Guided by transparency, inclusivity, and ethical innovation.
+                  At Mecfinity AI, our mission is to build responsible,
+                  accessible, and intelligent technologies that elevate human
+                  potential and transform data into real-world impact. We
+                  automate the mundane, unlock deeper insights, and drive
+                  sustainable growth, empowering individuals, organizations, and
+                  communities to work smarter, faster, and more meaningfully.
+                  Guided by transparency, inclusivity, and ethical innovation.
                 </p>
               </div>
-              
+
               {/* Vision Card */}
-              <div 
+              <div
                 data-aos="fade-up"
                 data-aos-delay="300"
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 text-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-semibold text-primary">Our Vision</h3>
+                  <h3 className="text-2xl font-semibold text-primary">
+                    Our Vision
+                  </h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  We envision a future where AI is not just technology, but a trusted companion, enhancing
-                  industries, accelerating equitable progress, and enabling every individual to thrive.
-                  Mecfinity AI strives to make intelligent solutions universally accessible, culturally adaptable,
-                  and fundamentally human, creating a smarter, more connected, and compassionate world.
+                  We envision a future where AI is not just technology, but a
+                  trusted companion, enhancing industries, accelerating
+                  equitable progress, and enabling every individual to thrive.
+                  Mecfinity AI strives to make intelligent solutions universally
+                  accessible, culturally adaptable, and fundamentally human,
+                  creating a smarter, more connected, and compassionate world.
                 </p>
               </div>
             </div>
           </div>
         </section>
-        
-        <section className="relative py-6 sm:py-16 px-4 md:py-12 ">
+
+        <section
+          className="py-6 sm:py-16 px-4 md:py-12 relative"
+          style={{
+            backgroundImage: `url(${require("../../assets/images/pattern2.png")})`,
+          }}
+        >
+          <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
           <div className="max-w-7xl mx-auto">
             <h2
               data-aos="fade-up"

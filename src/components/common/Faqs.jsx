@@ -15,8 +15,14 @@ const Faqs = ({ page }) => {
     faqList = faqs;
   }
   return (
-    <div className="sm:py-[5rem] bg-backgroundcolor">
-      <div className="wrapper grid lg:grid-cols-1 gap-10 lg:gap-0 items-center">
+    <div
+      className="sm:py-[5rem] bg-backgroundcolor relative"
+      style={{
+        backgroundImage: `url(${require("../../assets/images/pattern2.png")})`,
+      }}
+    >
+      <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
+      <div className="wrapper grid lg:grid-cols-1 gap-10 lg:gap-0 items-center relative z-[1]">
         <div className="flex flex-col items-center gap-7 text-primarytextcolor">
           <div className="gradient-rounded-text-box">FAQs</div>
           <h2 className="heading-2">Frequently Asked Questions</h2>
@@ -46,7 +52,7 @@ const FaqItem = ({ question, answer, i, isOpen, setIsOpen }) => {
         // className={`${
         //   isOpen === i && "bg-gradient-to-r from-secondary/10 to-primary/80"
         // } rounded-md bg-gradient-to-r from-secondary/10 to-primary/80`}
-        className="bg-secondary/5"
+        className="bg-backgroundcolor"
       >
         <div
           onClick={() => setIsOpen((prev) => (prev === i ? "" : i))}
@@ -64,7 +70,7 @@ const FaqItem = ({ question, answer, i, isOpen, setIsOpen }) => {
       <p
         className={`${
           isOpen === i ? "max-h-64 opacity-100 py-3" : "max-h-0 opacity-0"
-        } transition-all duration-200 px-5 desc text-[.9rem] text-primarytextcolor`}
+        } transition-all duration-200 px-5 desc text-[.9rem] text-primarytextcolor bg-backgroundcolor`}
       >
         {answer}
       </p>

@@ -99,58 +99,65 @@ const BlockchainDevelopment = () => {
 
       <section
         id="about"
-        className="py-[3rem] bg-backgroundcolor text-primarytextcolor wrapper"
+        className="py-[3rem] bg-backgroundcolor text-primarytextcolor relative"
+        style={{
+          backgroundImage: `url(${require("../../assets/images/pattern2.png")})`,
+        }}
       >
-        <div
-          data-aos="fade-up"
-          className="gradient-rounded-text-box mx-auto lg:mx-0"
-        >
-          Blockchain Technology
-        </div>
-        <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
-          <div
-            data-aos="fade-right"
-            className="flex h-full flex-col gap-7 text-center lg:text-start"
-          >
-            <div className="flex flex-col gap-7">
-              <h2 className="heading-2">
-                Enterprise-Grade Blockchain Solutions for Modern Businesses
-              </h2>
-              <p className="desc">
-                We design and implement blockchain architectures that solve real
-                business challenges. Whether you need supply chain transparency,
-                secure financial transactions, or decentralized data management,
-                our solutions deliver immutable trust and operational
-                efficiency.
-              </p>
-            </div>
+        <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
 
-            <div className="flex justify-center lg:justify-start gap-5 mt-4">
-              <ScrollLink
-                to="contact"
-                smooth
-                offset={-90}
-                className="primary-btn"
-              >
-                Get Consultation
-              </ScrollLink>
-              <ScrollLink
-                to="services"
-                smooth
-                offset={-80}
-                className="secondary-btn"
-              >
-                Our Services
-              </ScrollLink>
-            </div>
+        <div className="wrapper">
+          <div
+            data-aos="fade-up"
+            className="gradient-rounded-text-box mx-auto lg:mx-0"
+          >
+            Blockchain Technology
           </div>
-          <div data-aos="fade-left" className="h-full">
-            <img
-              loading="lazy"
-              src={blockchainLandingAbout}
-              className="object-contain max-h-[30rem] w-full rounded-lg"
-              alt="Blockchain network visualization"
-            />
+          <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
+            <div
+              data-aos="fade-right"
+              className="flex h-full flex-col gap-7 text-center lg:text-start"
+            >
+              <div className="flex flex-col gap-7">
+                <h2 className="heading-2">
+                  Enterprise-Grade Blockchain Solutions for Modern Businesses
+                </h2>
+                <p className="desc">
+                  We design and implement blockchain architectures that solve
+                  real business challenges. Whether you need supply chain
+                  transparency, secure financial transactions, or decentralized
+                  data management, our solutions deliver immutable trust and
+                  operational efficiency.
+                </p>
+              </div>
+
+              <div className="flex justify-center lg:justify-start gap-5 mt-4">
+                <ScrollLink
+                  to="contact"
+                  smooth
+                  offset={-90}
+                  className="primary-btn"
+                >
+                  Get Consultation
+                </ScrollLink>
+                <ScrollLink
+                  to="services"
+                  smooth
+                  offset={-80}
+                  className="secondary-btn"
+                >
+                  Our Services
+                </ScrollLink>
+              </div>
+            </div>
+            <div data-aos="fade-left" className="h-full">
+              <img
+                loading="lazy"
+                src={blockchainLandingAbout}
+                className="object-contain max-h-[30rem] w-full rounded-lg"
+                alt="Blockchain network visualization"
+              />
+            </div>
           </div>
         </div>
       </section>

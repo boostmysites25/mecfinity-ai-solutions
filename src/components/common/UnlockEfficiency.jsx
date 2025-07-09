@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 
 const UnlockEfficiency = () => {
   return (
-    <section className="py-[3rem] text-primarytextcolor bg-backgroundcolor">
+    <section
+      className="py-[3rem] text-primarytextcolor relative"
+      style={{
+        backgroundImage: `url(${require("../../assets/images/pattern1.png")})`,
+      }}
+    >
+      <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
       <div
         data-aos-offset={-400}
         data-aos="fade-up"
@@ -14,7 +20,9 @@ const UnlockEfficiency = () => {
           Ready to Maximize Your Business Potential with AI?
         </h2>
         <p className="desc max-w-[40rem] text-center">
-          We provide AI-driven solutions tailored to grow with your business. Discover how our innovative services can elevate your success—let's work together to build a smarter, more prosperous future!
+          We provide AI-driven solutions tailored to grow with your business.
+          Discover how our innovative services can elevate your success—let's
+          work together to build a smarter, more prosperous future!
         </p>
         <Link to="/contact-us" className="primary-btn mt-3">
           Contact Us

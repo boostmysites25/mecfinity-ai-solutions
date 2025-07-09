@@ -36,7 +36,13 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className="bg-secondary/5 relative text-primary_text">
+      <div
+        className="bg-secondary/5 relative text-primary_text relative"
+        style={{
+          backgroundImage: `url(${require("../../assets/images/pattern2.png")})`,
+        }}
+      >
+        <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
         <div className="py-[5rem] flex flex-col gap-5 items-center wrapper">
           <h4
             data-aos="fade-up"

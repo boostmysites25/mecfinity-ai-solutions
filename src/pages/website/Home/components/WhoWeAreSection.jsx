@@ -2,10 +2,15 @@ import React from "react";
 
 const WhoWeAreSection = () => {
   return (
-    <section className="py-[3rem] bg-secondary/5">
+    <section
+      className="py-[3rem] bg-secondary/5 relative"
+      style={{
+        backgroundImage: `url(${require("../../../../assets/images/pattern1.png")})`,
+      }}
+    >
+      <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
       <div
         data-aos-offset={-400}
-        // data-aos-anchor-placement="bottom-center"
         data-aos="fade-up"
         className="wrapper text-center flex flex-col gap-3"
       >

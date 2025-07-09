@@ -7,7 +7,15 @@ const LandingServices = ({ page }) => {
       ? webDevelopmentServices
       : appDevelopmentServices;
   return (
-    <div id="services" className="flex justify-center relative">
+    <div
+      id="services"
+      className="flex justify-center  relative"
+      style={{
+        backgroundImage: `url(${require("../../assets/images/pattern1.png")})`,
+      }}
+    >
+      <div className="bg-backgroundcolor/85 absolute inset-0 h-full w-full" />
+
       <div className="wrapper py-10 flex flex-col items-center gap-5 z-10 text-primarytextcolor">
         <div data-aos="fade-up" className="gradient-rounded-text-box mx-auto">
           Our {page === "web-development" ? "Web" : "App"} Development Services

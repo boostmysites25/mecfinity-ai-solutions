@@ -99,58 +99,65 @@ const IotDevelopment = () => {
 
       <section
         id="about"
-        className="py-[3rem] bg-backgroundcolor text-primarytextcolor wrapper"
+        className="py-[3rem] bg-backgroundcolor text-primarytextcolor relative"
+        style={{
+          backgroundImage: `url(${require("../../assets/images/pattern2.png")})`,
+        }}
       >
-        <div
-          data-aos="fade-up"
-          className="gradient-rounded-text-box mx-auto lg:mx-0"
-        >
-          IoT Development
-        </div>
-        <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
-          <div
-            data-aos="fade-right"
-            className="flex h-full flex-col gap-7 text-center lg:text-start"
-          >
-            <div className="flex flex-col gap-7">
-              <h2 className="heading-2">
-                Building the Connected Future with Advanced IoT Solutions
-              </h2>
-              <p className="desc">
-                We design and implement comprehensive IoT ecosystems that
-                connect devices, collect meaningful data, and provide actionable
-                insights. From industrial automation to smart home solutions,
-                our expertise bridges the gap between physical devices and
-                digital transformation.
-              </p>
-            </div>
+        <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
 
-            <div className="flex justify-center lg:justify-start gap-5 mt-4">
-              <ScrollLink
-                to="contact"
-                smooth
-                offset={-90}
-                className="primary-btn"
-              >
-                Contact Us
-              </ScrollLink>
-              <ScrollLink
-                to="services"
-                smooth
-                offset={-80}
-                className="secondary-btn"
-              >
-                Our Services
-              </ScrollLink>
-            </div>
+        <div className="wrapper">
+          <div
+            data-aos="fade-up"
+            className="gradient-rounded-text-box mx-auto lg:mx-0"
+          >
+            IoT Development
           </div>
-          <div data-aos="fade-left" className="h-full">
-            <img
-              loading="lazy"
-              src={iotLandingAbout}
-              className="object-contain max-h-[30rem] w-full rounded-lg"
-              alt="IoT network visualization"
-            />
+          <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
+            <div
+              data-aos="fade-right"
+              className="flex h-full flex-col gap-7 text-center lg:text-start"
+            >
+              <div className="flex flex-col gap-7">
+                <h2 className="heading-2">
+                  Building the Connected Future with Advanced IoT Solutions
+                </h2>
+                <p className="desc">
+                  We design and implement comprehensive IoT ecosystems that
+                  connect devices, collect meaningful data, and provide
+                  actionable insights. From industrial automation to smart home
+                  solutions, our expertise bridges the gap between physical
+                  devices and digital transformation.
+                </p>
+              </div>
+
+              <div className="flex justify-center lg:justify-start gap-5 mt-4">
+                <ScrollLink
+                  to="contact"
+                  smooth
+                  offset={-90}
+                  className="primary-btn"
+                >
+                  Contact Us
+                </ScrollLink>
+                <ScrollLink
+                  to="services"
+                  smooth
+                  offset={-80}
+                  className="secondary-btn"
+                >
+                  Our Services
+                </ScrollLink>
+              </div>
+            </div>
+            <div data-aos="fade-left" className="h-full">
+              <img
+                loading="lazy"
+                src={iotLandingAbout}
+                className="object-contain max-h-[30rem] w-full rounded-lg"
+                alt="IoT network visualization"
+              />
+            </div>
           </div>
         </div>
       </section>

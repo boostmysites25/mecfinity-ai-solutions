@@ -153,58 +153,65 @@ export const LandingPage = ({ page }) => {
 
       <section
         id="about"
-        className="py-[3rem] bg-backgroundcolor text-primarytextcolor wrapper"
+        className="py-[3rem] bg-backgroundcolor text-primarytextcolor relative"
+        style={{
+          backgroundImage: `url(${require("../../assets/images/pattern2.png")})`,
+        }}
       >
-        <div
-          data-aos="fade-up"
-          className="gradient-rounded-text-box mx-auto lg:mx-0"
-        >
-          {isWebDevelopment ? "Web Development" : "App Development"}
-        </div>
-        <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
-          <div
-            data-aos="fade-right"
-            className="flex h-full flex-col gap-7 text-center lg:text-start"
-          >
-            <div className="flex flex-col gap-7">
-              <h2 className="heading-2">
-                {isWebDevelopment
-                  ? "Empowering Brands with Cutting-Edge Web Development"
-                  : "Turning Ideas into High-Impact Mobile Apps"}
-              </h2>
-              <p className="desc">
-                {isWebDevelopment
-                  ? "We combine creativity and technical expertise to craft websites that not only represent your brand but also provide an optimized, seamless experience across all devices. Let us help you engage your audience and drive business growth."
-                  : "From startups to established enterprises, we offer customized app development services that align with your business goals. Our apps enhance user engagement, improve functionality, and scale with your growth, keeping you ahead in a competitive market."}
-              </p>
-            </div>
+        <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
 
-            <div className="flex justify-center lg:justify-start gap-5 mt-4">
-              <ScrollLink
-                to="contact"
-                smooth
-                offset={-90}
-                className="primary-btn"
-              >
-                Contact Us
-              </ScrollLink>
-              <ScrollLink
-                to="services"
-                smooth
-                offset={-80}
-                className="secondary-btn"
-              >
-                Our Services
-              </ScrollLink>
-            </div>
+        <div className="wrapper">
+          <div
+            data-aos="fade-up"
+            className="gradient-rounded-text-box mx-auto lg:mx-0"
+          >
+            {isWebDevelopment ? "Web Development" : "App Development"}
           </div>
-          <div data-aos="fade-left" className="h-full">
-            <img
-              loading="lazy"
-              src={isWebDevelopment ? webLandingAbout : appLandingAbout}
-              className="object-contain max-h-[30rem] w-full rounded-lg"
-              alt=""
-            />
+          <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
+            <div
+              data-aos="fade-right"
+              className="flex h-full flex-col gap-7 text-center lg:text-start"
+            >
+              <div className="flex flex-col gap-7">
+                <h2 className="heading-2">
+                  {isWebDevelopment
+                    ? "Empowering Brands with Cutting-Edge Web Development"
+                    : "Turning Ideas into High-Impact Mobile Apps"}
+                </h2>
+                <p className="desc">
+                  {isWebDevelopment
+                    ? "We combine creativity and technical expertise to craft websites that not only represent your brand but also provide an optimized, seamless experience across all devices. Let us help you engage your audience and drive business growth."
+                    : "From startups to established enterprises, we offer customized app development services that align with your business goals. Our apps enhance user engagement, improve functionality, and scale with your growth, keeping you ahead in a competitive market."}
+                </p>
+              </div>
+
+              <div className="flex justify-center lg:justify-start gap-5 mt-4">
+                <ScrollLink
+                  to="contact"
+                  smooth
+                  offset={-90}
+                  className="primary-btn"
+                >
+                  Contact Us
+                </ScrollLink>
+                <ScrollLink
+                  to="services"
+                  smooth
+                  offset={-80}
+                  className="secondary-btn"
+                >
+                  Our Services
+                </ScrollLink>
+              </div>
+            </div>
+            <div data-aos="fade-left" className="h-full">
+              <img
+                loading="lazy"
+                src={isWebDevelopment ? webLandingAbout : appLandingAbout}
+                className="object-contain max-h-[30rem] w-full rounded-lg"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </section>

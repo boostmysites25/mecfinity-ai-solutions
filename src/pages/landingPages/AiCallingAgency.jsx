@@ -99,58 +99,66 @@ const AiCallingAgency = () => {
 
       <section
         id="about"
-        className="py-[3rem] bg-backgroundcolor text-primarytextcolor wrapper"
+        className="py-[3rem] bg-backgroundcolor text-primarytextcolor relative"
+        style={{
+          backgroundImage: `url(${require("../../assets/images/pattern2.png")})`,
+        }}
       >
-        <div
-          data-aos="fade-up"
-          className="gradient-rounded-text-box mx-auto lg:mx-0"
-        >
-          AI Calling
-        </div>
-        <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
-          <div
-            data-aos="fade-right"
-            className="flex h-full flex-col gap-7 text-center lg:text-start"
-          >
-            <div className="flex flex-col gap-7">
-              <h2 className="heading-2">
-                Human-Like Conversations Powered by Cutting-Edge AI
-              </h2>
-              <p className="desc">
-                Our AI calling platform combines natural language processing,
-                emotional intelligence algorithms, and industry-specific
-                knowledge to deliver calls that customers can't distinguish from
-                human agents. Perfect for sales outreach, customer support,
-                appointment reminders, and market research at any scale.
-              </p>
-            </div>
+        <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
 
-            <div className="flex justify-center lg:justify-start gap-5 mt-4">
-              <ScrollLink
-                to="contact"
-                smooth
-                offset={-90}
-                className="primary-btn"
-              >
-                Get Started
-              </ScrollLink>
-              <ScrollLink
-                to="services"
-                smooth
-                offset={-80}
-                className="secondary-btn"
-              >
-                Our Capabilities
-              </ScrollLink>
-            </div>
+        <div className="wrapper">
+          <div
+            data-aos="fade-up"
+            className="gradient-rounded-text-box mx-auto lg:mx-0"
+          >
+            AI Calling
           </div>
-          <div data-aos="fade-left" className="h-full">
-            <img
-              loading="lazy"
-              src={aiCallingAbout}
-              className="object-contain max-h-[30rem] w-full rounded-lg"
-              alt="AI calling interface"
-            />
+          <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
+            <div
+              data-aos="fade-right"
+              className="flex h-full flex-col gap-7 text-center lg:text-start"
+            >
+              <div className="flex flex-col gap-7">
+                <h2 className="heading-2">
+                  Human-Like Conversations Powered by Cutting-Edge AI
+                </h2>
+                <p className="desc">
+                  Our AI calling platform combines natural language processing,
+                  emotional intelligence algorithms, and industry-specific
+                  knowledge to deliver calls that customers can't distinguish
+                  from human agents. Perfect for sales outreach, customer
+                  support, appointment reminders, and market research at any
+                  scale.
+                </p>
+              </div>
+
+              <div className="flex justify-center lg:justify-start gap-5 mt-4">
+                <ScrollLink
+                  to="contact"
+                  smooth
+                  offset={-90}
+                  className="primary-btn"
+                >
+                  Get Started
+                </ScrollLink>
+                <ScrollLink
+                  to="services"
+                  smooth
+                  offset={-80}
+                  className="secondary-btn"
+                >
+                  Our Capabilities
+                </ScrollLink>
+              </div>
+            </div>
+            <div data-aos="fade-left" className="h-full">
+              <img
+                loading="lazy"
+                src={aiCallingAbout}
+                className="object-contain max-h-[30rem] w-full rounded-lg"
+                alt="AI calling interface"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -99,58 +99,65 @@ const VRARDevelopment = () => {
 
       <section
         id="about"
-        className="py-[3rem] bg-backgroundcolor text-primarytextcolor wrapper"
+        className="py-[3rem] bg-backgroundcolor text-primarytextcolor relative"
+        style={{
+          backgroundImage: `url(${require("../../assets/images/pattern2.png")})`,
+        }}
       >
-        <div
-          data-aos="fade-up"
-          className="gradient-rounded-text-box mx-auto lg:mx-0"
-        >
-          Extended Reality
-        </div>
-        <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
-          <div
-            data-aos="fade-right"
-            className="flex h-full flex-col gap-7 text-center lg:text-start"
-          >
-            <div className="flex flex-col gap-7">
-              <h2 className="heading-2">
-                Bridging Physical and Digital Worlds with Immersive Technology
-              </h2>
-              <p className="desc">
-                We design and develop VR/AR solutions that solve real business
-                challenges across industries. Whether you need virtual product
-                demonstrations, augmented maintenance guides, or immersive
-                training simulations, our solutions drive measurable results
-                through next-generation experiences.
-              </p>
-            </div>
+        <div className="bg-backgroundcolor/70 absolute inset-0 h-full w-full" />
 
-            <div className="flex justify-center lg:justify-start gap-5 mt-4">
-              <ScrollLink
-                to="contact"
-                smooth
-                offset={-90}
-                className="primary-btn"
-              >
-                Get Started
-              </ScrollLink>
-              <ScrollLink
-                to="services"
-                smooth
-                offset={-80}
-                className="secondary-btn"
-              >
-                Our Solutions
-              </ScrollLink>
-            </div>
+        <div className="wrapper">
+          <div
+            data-aos="fade-up"
+            className="gradient-rounded-text-box mx-auto lg:mx-0"
+          >
+            Extended Reality
           </div>
-          <div data-aos="fade-left" className="h-full">
-            <img
-              loading="lazy"
-              src={vrArLandingAbout}
-              className="object-contain max-h-[30rem] w-full rounded-lg"
-              alt="VR/AR experience visualization"
-            />
+          <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
+            <div
+              data-aos="fade-right"
+              className="flex h-full flex-col gap-7 text-center lg:text-start"
+            >
+              <div className="flex flex-col gap-7">
+                <h2 className="heading-2">
+                  Bridging Physical and Digital Worlds with Immersive Technology
+                </h2>
+                <p className="desc">
+                  We design and develop VR/AR solutions that solve real business
+                  challenges across industries. Whether you need virtual product
+                  demonstrations, augmented maintenance guides, or immersive
+                  training simulations, our solutions drive measurable results
+                  through next-generation experiences.
+                </p>
+              </div>
+
+              <div className="flex justify-center lg:justify-start gap-5 mt-4">
+                <ScrollLink
+                  to="contact"
+                  smooth
+                  offset={-90}
+                  className="primary-btn"
+                >
+                  Get Started
+                </ScrollLink>
+                <ScrollLink
+                  to="services"
+                  smooth
+                  offset={-80}
+                  className="secondary-btn"
+                >
+                  Our Solutions
+                </ScrollLink>
+              </div>
+            </div>
+            <div data-aos="fade-left" className="h-full">
+              <img
+                loading="lazy"
+                src={vrArLandingAbout}
+                className="object-contain max-h-[30rem] w-full rounded-lg"
+                alt="VR/AR experience visualization"
+              />
+            </div>
           </div>
         </div>
       </section>
