@@ -64,7 +64,7 @@ const Credibility = () => {
       <div className="relative z-10 text-headertextcolor">
         <div className="wrapper">
           <h2 className="heading-2 max-w-[60rem] mx-auto text-center">
-            Join Our <span className="text-primary">50+</span> Happy Clients
+            Join Our <span className="text-primary heading-2">50+</span> Happy Clients
           </h2>
         </div>
         <div ref={sliderRef} className="keen-slider mt-5">
