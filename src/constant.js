@@ -173,52 +173,84 @@ export const routes = [
 
 export const faqs = [
   {
-    id: 1,
-    question: "What services does Mecfinity AI Solutions offer?",
+    question: "What does Mecfinity AI Solutions do?",
     answer:
-      "We specialize in Web Development, App Development, IoT Development, Cloud Computing Services, AI Calling Agency, Blockchain Development, and Virtual & Augmented Reality Development.",
+      "Mecfinity AI Solutions helps Indian businesses harness advanced AI, automation, and digital technologies - including machine learning, web/app development, and cloud services to boost efficiency, cut costs, and unlock growth.",
   },
   {
-    id: 2,
-    question: "How can I contact Mecfinity AI Solutions?",
+    question: "How can small businesses in India afford AI with Mecfinity?",
     answer:
-      "You can reach us through the 'Contact Us' page on our website or email us directly at info@mecfinityai.com.",
+      "We specialize in scalable, pay-as-you-grow solutions tailored to every budget. Our modular services allow startups and SMEs to begin with core automation and expand as needed with no massive upfront investment.",
   },
   {
-    id: 3,
-    question: "What industries do you serve?",
+    question: "What problems can Mecfinity help my business solve with AI?",
     answer:
-      "We cater to a diverse range of industries, including healthcare, finance, retail, and more, providing tailored solutions to meet specific business needs.",
+      "Automating time-consuming, repetitive tasks, enhancing customer engagement with chatbots and NLP, data-driven decision-making with predictive analytics, custom process automation for finance, HR, and operations, and boosting e-commerce personalization. We deliver measurable efficiency gains often 20-35% for businesses embracing automation.",
   },
   {
-    id: 4,
-    question: "Do you offer customized solutions?",
+    question: "How quickly can Mecfinity deploy an AI solution?",
     answer:
-      "Yes, we provide bespoke solutions tailored to your business requirements to ensure optimal outcomes.",
+      "Most projects, including pilot automations, are live in 2-6 weeks thanks to our agile frameworks and cloud-based setup.",
   },
   {
-    id: 5,
-    question: "What is your project development process?",
+    question: "Is Mecfinity's AI secure and compliant?",
     answer:
-      "Our process includes initial consultation, requirement analysis, design and development, testing, deployment, and ongoing support.",
+      "Yes. Every solution follows robust data privacy practices, strong security protocols, and compliance with Indian and global standards. We use end-to-end encryption, access controls, and routine security audits.",
   },
   {
-    id: 6,
-    question: "How long does it take to complete a project?",
+    question: "What industries does Mecfinity support?",
     answer:
-      "Project timelines vary based on complexity and scope. After understanding your requirements, we provide a detailed timeline.",
+      "Retail & E-commerce, Healthcare & Life Sciences, Manufacturing & Logistics, Finance & Insurance, Hospitality, Education, and more. We tailor our approach to each industry's unique challenges and opportunities.",
   },
   {
-    id: 7,
-    question: "What are your pricing models?",
+    question: "Can Mecfinity AI integrate with my existing software?",
     answer:
-      "We offer flexible pricing models, including fixed-price and time-and-materials, to suit different project needs.",
+      "Absolutely. Our solutions are designed for seamless integration with popular CRMs, ERPs, e-commerce platforms, and legacy databases.",
   },
   {
-    id: 8,
-    question: "Do you provide post-deployment support?",
+    question: "How does Mecfinity ensure AI remains affordable over time?",
     answer:
-      "Yes, we offer comprehensive post-deployment support and maintenance service.",
+      "Transparent pricing with no hidden fees, open-source foundations wherever possible, and ongoing performance tuning and support to maximize ROI. We focus on long-term partnerships, not one-time sales.",
+  },
+  {
+    question: "What kind of support can I expect from Mecfinity?",
+    answer:
+      "You get India-based, multilingual support - real humans, not bots - plus regular check-ins, updates, and troubleshooting. Our clients rate our post-launch support 4.8/5.",
+  },
+  {
+    question: "What makes Mecfinity different from other AI providers?",
+    answer:
+      "An India-first perspective, rooted in local business culture, client-first, honest, and adaptable partnerships, and rich industry experience and a commitment to democratizing technology access.",
+  },
+  {
+    question: "Fastest AI setup?",
+    answer: "2-6 weeks for most solutions.",
+  },
+  {
+    question: "Most budget-friendly AI?",
+    answer: "Modular, scalable services start small, grow fast.",
+  },
+  {
+    question: "Data privacy/Compliance?",
+    answer: "Yes, full regulatory compliance, strong security.",
+  },
+  {
+    question: "Human support or bots?",
+    answer: "Real people, with local language options.",
+  },
+  {
+    question: "Works for SMEs & big firms?",
+    answer: "Yes, flexible for any size.",
+  },
+  {
+    question: "How is AI making Indian businesses more competitive today?",
+    answer:
+      "AI-driven automation slashes repetitive tasks and delivers actionable insights, letting Indian businesses compete globally without breaking the bank.",
+  },
+  {
+    question: "What's the easiest way to get started with AI?",
+    answer:
+      "Book a free consultation with Mecfinity for an AI-readiness assessment and practical roadmap with no obligation.",
   },
 ];
 

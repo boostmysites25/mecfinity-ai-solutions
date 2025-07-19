@@ -29,7 +29,7 @@ const Faqs = ({ page }) => {
           <div className="flex flex-col gap-2 mt-3 w-full">
             {faqList.map((faq, i) => (
               <FaqItem
-                key={faq.id}
+                key={faq.question}
                 {...faq}
                 i={i}
                 isOpen={isOpen}
@@ -49,9 +49,6 @@ const FaqItem = ({ question, answer, i, isOpen, setIsOpen }) => {
   return (
     <div className="flex flex-col w-full text-white">
       <div
-        // className={`${
-        //   isOpen === i && "bg-gradient-to-r from-secondary/10 to-primary/80"
-        // } rounded-md bg-gradient-to-r from-secondary/10 to-primary/80`}
         className="bg-backgroundcolor"
       >
         <div
