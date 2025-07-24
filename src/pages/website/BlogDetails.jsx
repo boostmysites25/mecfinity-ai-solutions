@@ -5,6 +5,7 @@ import { blogs } from "../../data/blogs";
 import { IoIosArrowForward } from "react-icons/io";
 import blogsBanner from "../../assets/images/blog-details.webp";
 import { createUrlParam } from "../../utils/helper";
+import { Helmet } from "react-helmet";
 
 const BlogDetails = () => {
   const params = useParams();
@@ -17,6 +18,15 @@ const BlogDetails = () => {
   const recentBlogs = blogs.filter((item) => item.title !== blog.title) || [];
   return (
     <>
+      <Helmet>
+        <title>{blog.title} | Mecfinity AI Solutions</title>
+        <meta name="description" content={blog.metaDescription || blog.shortDesc} />
+        {blog.metaKeywords && <meta name="keywords" content={blog.metaKeywords.join(", ")} />}
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:description" content={blog.metaDescription || blog.shortDesc} />
+        <meta property="og:image" content={blog.image} />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <div
         data-aos="fade-down"
         className=" h-[40vh] sm:h-[55vh] md:h-[70vh] relative"
