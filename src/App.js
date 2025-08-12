@@ -38,6 +38,15 @@ const BlockchainDevelopment = lazy(() =>
 const VRARDevelopment = lazy(() =>
   import("./pages/landingPages/VRARDevelopment")
 );
+const AutomationServices = lazy(() =>
+  import("./pages/landingPages/AutomationServices")
+);
+const CustomWebDevelopment = lazy(() =>
+  import("./pages/landingPages/CustomWebDevelopment")
+);
+const CloudServices = lazy(() =>
+  import("./pages/landingPages/CloudServices")
+);
 
 AOS.init({
   once: true,
@@ -170,6 +179,36 @@ export default function App() {
                 </>
               }
             />
+            <Route
+              path="/automation-services"
+              element={
+                <>
+                  <LandingHeader />
+                  <AutomationServices />
+                  <LandingFooter />
+                </>
+              }
+            />
+                    <Route
+          path="/custom-web-development"
+          element={
+            <>
+              <LandingHeader />
+              <CustomWebDevelopment />
+              <LandingFooter />
+            </>
+          }
+        />
+        <Route
+          path="/cloud-services"
+          element={
+            <>
+              <LandingHeader />
+              <CloudServices />
+              <LandingFooter />
+            </>
+          }
+        />
             <Route
               path="/terms-and-conditions"
               element={
