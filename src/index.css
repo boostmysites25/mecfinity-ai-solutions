@@ -139,6 +139,10 @@ body {
   object-fit: cover;
 }
 
+.html-reset * {
+  all: revert;
+}
+
 /* loading spinner styles */
 .spinner-parent {
   display: flex;

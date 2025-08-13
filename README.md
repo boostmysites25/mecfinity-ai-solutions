@@ -1,6 +1,62 @@
-# Getting Started with Create React App
+# Mecfinity AI Solutions - React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Blog API Integration
+
+This application now includes TanStack Query integration for blog data fetching with the following APIs:
+
+- `GET /api/blogs/published` - Get all published blogs
+- `GET /api/blogs/slug/:slug` - Get blog by slug
+
+### API Configuration
+
+To configure the API endpoint, create a `.env` file in the root directory and add:
+
+```
+REACT_APP_API_BASE_URL=https://blogplatform-backend-mecfinityai.vercel.app/api
+```
+
+The application is now configured to use the production API by default. You can override this by setting a different `REACT_APP_API_BASE_URL` in your `.env` file.
+
+### Features
+
+- **TanStack Query Integration**: Efficient caching and state management
+- **Fallback Mechanism**: Uses local blog data when API is unavailable
+- **Error Handling**: Graceful error states with retry functionality
+- **Loading States**: Proper loading indicators during data fetching
+- **SEO Optimization**: Meta tags and structured data for blog posts
+
+### API Response Format
+
+The application expects the following response format from the blog APIs:
+
+```json
+{
+  "success": true,
+  "blogs": [
+    {
+      "_id": "blog_id",
+      "title": "Blog Title",
+      "slug": "blog-slug",
+      "excerpt": "Blog excerpt",
+      "imageUrl": "https://example.com/image.jpg",
+      "metaDescription": "SEO description",
+      "metaKeywords": ["keyword1", "keyword2"],
+      "content": "HTML content",
+      "publishDate": "2025-01-13T00:00:00.000Z",
+      "author": { "name": "Author Name" },
+      "categoryId": { "name": "Category Name" },
+      "tags": ["tag1", "tag2"],
+      "isFeatured": false,
+      "status": "published"
+    }
+  ],
+  "totalCount": 1,
+  "currentPage": 1,
+  "totalPages": null
+}
+```
 
 ## Available Scripts
 

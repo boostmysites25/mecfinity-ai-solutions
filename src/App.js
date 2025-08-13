@@ -18,6 +18,7 @@ import { HelmetProvider } from "react-helmet-async";
 import PageTracker from "./components/common/PageTracker.js";
 import TermsAndConditions from "./pages/website/TermsAndConditions.jsx";
 import PrivacyPolicy from "./pages/website/PrivacyPolicy.jsx";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const ServicePageLayout = lazy(() => import("./layout/ServicePageLayout"));
 const ServiceDetails = lazy(() => import("./pages/website/ServiceDetails"));
@@ -54,25 +55,38 @@ AOS.init({
   offset: 0,
 });
 
+// Create a client
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // 5 minutes
+      gcTime: 10 * 60 * 1000, // 10 minutes
+      retry: 2,
+      retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
+    },
+  },
+});
+
 export default function App() {
   return (
-    <SpinnerContextProvider>
-      <HelmetProvider>
-        <LoadingSpinnerContext />
-        <Suspense fallback={<LoadingSpinner />}>
-          <WhatsAppIcon />
-          <Toaster
-            position="top-center"
-            toastOptions={{
-              style: {
-                background: "#010C2A",
-                color: "#ffffff",
-              },
-            }}
-          />
-          <ScrollToTop />
-          <PageTracker />
-          <Routes>
+    <QueryClientProvider client={queryClient}>
+      <SpinnerContextProvider>
+        <HelmetProvider>
+          <LoadingSpinnerContext />
+          <Suspense fallback={<LoadingSpinner />}>
+            <WhatsAppIcon />
+            <Toaster
+              position="top-center"
+              toastOptions={{
+                style: {
+                  background: "#010C2A",
+                  color: "#ffffff",
+                },
+              }}
+            />
+            <ScrollToTop />
+            <PageTracker />
+            <Routes>
             {/* Website Pages */}
             {routes.map(({ component, name, path }, index) => (
               <Route
@@ -89,7 +103,7 @@ export default function App() {
             ))}
 
             <Route
-              path="/blogs/:title"
+              path="/blogs/:slug"
               element={
                 <>
                   <WebsiteHeader />
@@ -231,6 +245,7 @@ export default function App() {
         </Suspense>
       </HelmetProvider>
     </SpinnerContextProvider>
+    </QueryClientProvider>
   );
 }
 

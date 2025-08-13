@@ -1,11 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { blogs } from "../../data/blogs";
 import { IoIosArrowForward } from "react-icons/io";
 import blogsBanner from "../../assets/images/blogs.webp";
 import { createUrlParam } from "../../utils/helper";
+import { usePublishedBlogs } from "../../hooks/useBlogs";
+import { LoadingSpinner } from "../../components/common/LoadingSpinner";
 
 const Blogs = () => {
+  const { data, isLoading, error } = usePublishedBlogs();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <LoadingSpinner />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-red-600 mb-4">Error Loading Blogs</h2>
+          <p className="text-gray-600 mb-4">{error.message}</p>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const blogs = data?.blogs || [];
+
   return (
     <>
       <div
@@ -51,11 +81,17 @@ const Blogs = () => {
             AI, Tech & Beyond – Stay Ahead of the Curve
           </h4>
           <div className="mt-[2rem] grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7">
-            {blogs
-              .sort((a, b) => b.id - a.id)
-              .map((blog) => (
-                <BlogItem key={blog.id} blog={blog} />
-              ))}
+            {blogs.length > 0 ? (
+              blogs
+                .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
+                .map((blog) => (
+                  <BlogItem key={blog.id} blog={blog} />
+                ))
+            ) : (
+              <div className="col-span-full text-center py-8">
+                <p className="text-gray-600">No blogs available at the moment.</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -72,11 +108,11 @@ export const BlogItem = ({ blog }) => {
       data-aos="fade-up"
       className="bg-secondary/5 rounded-xl p-5 text-primary_text relative z-10 group"
     >
-      <Link to={`/blogs/${createUrlParam(blog.title)}`}>
+      <Link to={`/blogs/${blog.slug || createUrlParam(blog.title)}`}>
         <img
           loading="lazy"
           src={blog.image}
-          alt=""
+          alt={blog.title}
           width="600"
           height="400"
           className="object-cover aspect-video w-full rounded-xl group-hover:opacity-85 transition-all duration-200"
@@ -84,16 +120,21 @@ export const BlogItem = ({ blog }) => {
       </Link>
       <div className="flex flex-col gap-2 mt-[1rem]">
         <Link
-          to={`/blogs/${createUrlParam(blog.title)}`}
+          to={`/blogs/${blog.slug || createUrlParam(blog.title)}`}
           className="text-xl hyphen-auto font-medium leading-tight line-clamp-2 text-ellipsis hover:text-secondary transition-all duration-200"
         >
           {blog.title}
         </Link>
+        {blog.shortDesc && (
+          <p className="text-sm text-gray-600 line-clamp-2">
+            {blog.shortDesc}
+          </p>
+        )}
       </div>
 
       <div className="mt-6 w-full flex justify-center">
         <Link
-          to={`/blogs/${createUrlParam(blog.title)}`}
+          to={`/blogs/${blog.slug || createUrlParam(blog.title)}`}
           className="secondary-btn w-full"
         >
           Read More

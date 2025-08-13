@@ -1,29 +1,53 @@
 import React from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { BlogItem } from "./Blogs";
-import { blogs } from "../../data/blogs";
 import { IoIosArrowForward } from "react-icons/io";
 import blogsBanner from "../../assets/images/blog-details.webp";
 import { createUrlParam } from "../../utils/helper";
 import { Helmet } from "react-helmet";
+import { useBlogBySlug, usePublishedBlogs } from "../../hooks/useBlogs";
+import { LoadingSpinner } from "../../components/common/LoadingSpinner";
 
 const BlogDetails = () => {
   const params = useParams();
-  const blog = blogs.find(
-    (item) => createUrlParam(item.title) === params.title
-  );
-  if (!blog) {
+  const {
+    data: blog,
+    isLoading: blogLoading,
+    error: blogError,
+  } = useBlogBySlug(params.slug);
+  const { data: allBlogsData } = usePublishedBlogs();
+
+  if (blogLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <LoadingSpinner />
+      </div>
+    );
+  }
+
+  if (blogError || !blog) {
     return <Navigate to="/blogs" />;
   }
-  const recentBlogs = blogs.filter((item) => item.title !== blog.title) || [];
+
+  const recentBlogs =
+    allBlogsData?.blogs?.filter((item) => item.id !== blog.id) || [];
+
   return (
     <>
       <Helmet>
         <title>{blog.title} | Mecfinity AI Solutions</title>
-        <meta name="description" content={blog.metaDescription || blog.shortDesc} />
-        {blog.metaKeywords && <meta name="keywords" content={blog.metaKeywords.join(", ")} />}
+        <meta
+          name="description"
+          content={blog.metaDescription || blog.shortDesc}
+        />
+        {blog.metaKeywords && (
+          <meta name="keywords" content={blog.metaKeywords.join(", ")} />
+        )}
         <meta property="og:title" content={blog.title} />
-        <meta property="og:description" content={blog.metaDescription || blog.shortDesc} />
+        <meta
+          property="og:description"
+          content={blog.metaDescription || blog.shortDesc}
+        />
         <meta property="og:image" content={blog.image} />
         <meta property="og:type" content="article" />
       </Helmet>
@@ -51,7 +75,11 @@ const BlogDetails = () => {
           >
             <Link to="/">Home</Link>
             <IoIosArrowForward />
-            <h4 className="text-white">Blogs</h4>
+            <Link to="/blogs" className="text-white">
+              Blogs
+            </Link>
+            <IoIosArrowForward />
+            <h4 className="text-white">{blog.title}</h4>
           </div>
         </div>
       </div>
@@ -79,20 +107,22 @@ const BlogDetails = () => {
                 {blog.title}
               </h4>
               <div
-                dangerouslySetInnerHTML={{ __html: blog.html }}
                 data-aos="fade-up"
                 className="desc hyphen-auto leading-relaxed text-gray-800 border-t border-primary/30 pt-[2rem]"
-              ></div>
+              >
+                <div className="html-reset" dangerouslySetInnerHTML={{ __html: blog.html }}></div>
+              </div>
             </div>
           </div>
           {recentBlogs.length > 0 && (
             <div className="">
               <h2 className="heading-2">You May Also Like</h2>
               <div className="mt-[1.5rem] grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7">
-                {blogs
-                  .filter((item) => item.id !== blog.id)
+                {recentBlogs
                   .slice(0, 3)
-                  .sort((a, b) => b.id - a.id)
+                  .sort(
+                    (a, b) => new Date(b.publishDate) - new Date(a.publishDate)
+                  )
                   .map((item) => (
                     <BlogItem key={item.id} blog={item} />
                   ))}
