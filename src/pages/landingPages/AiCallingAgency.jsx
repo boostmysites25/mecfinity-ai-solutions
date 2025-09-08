@@ -162,7 +162,7 @@ const AiCallingAgency = () => {
           </div>
         </div>
       </section>
-      <Contact />
+      <Contact service="AI Calling Agency" />
       <KeyBenefits
         title="Why AI Calling is Transforming Business Communications"
         benefits={[
@@ -300,6 +300,7 @@ const AiCallingAgency = () => {
                 outreach, or automate routine calls, our solution delivers
                 measurable results from day one. Schedule a demo to experience
                 the future of customer engagement."
+        service="AI Calling Agency"
       />
     </>
   );

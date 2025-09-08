@@ -161,7 +161,7 @@ const VRARDevelopment = () => {
           </div>
         </div>
       </section>
-      <Contact />
+      <Contact service="AR VR Development" />
       <KeyBenefits
         title="Business Advantages of VR/AR Technology"
         benefits={[
@@ -302,6 +302,7 @@ const VRARDevelopment = () => {
                 or visualize complex data, our team of immersive technology
                 experts is ready to bring your vision to life. Let's discuss how
                 extended reality can transform your business."
+        service="AR VR Development"
       />
     </>
   );

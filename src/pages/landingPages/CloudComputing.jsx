@@ -161,7 +161,7 @@ const CloudComputing = () => {
           </div>
         </div>
       </section>
-      <Contact />
+      <Contact service="Cloud Computing" />
       <KeyBenefits
         title="The Business Advantages of Cloud Computing"
         benefits={[
@@ -299,6 +299,7 @@ const CloudComputing = () => {
                 certified cloud architects is ready to guide your
                 transformation. Let's discuss how the cloud can solve your
                 unique business challenges."
+        service="Cloud Computing"
       />
     </>
   );

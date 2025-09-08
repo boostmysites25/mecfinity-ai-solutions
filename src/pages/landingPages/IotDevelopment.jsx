@@ -161,7 +161,7 @@ const IotDevelopment = () => {
           </div>
         </div>
       </section>
-      <Contact />
+      <Contact service="IOT Development" />
       <KeyBenefits
         title="Why IoT Solutions Are Essential for Modern Businesses"
         benefits={[
@@ -300,6 +300,7 @@ const IotDevelopment = () => {
                 products, our team of IoT experts is ready to guide you through
                 every step of your digital transformation journey. Let's discuss
                 how IoT can solve your unique business challenges."
+        service="IOT Development"
       />
     </>
   );

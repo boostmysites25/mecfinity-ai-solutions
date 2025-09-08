@@ -18,6 +18,20 @@ const Contact = ({ heading, desc, asWhatsappMsg, service }) => {
   } = useForm();
   const navigate = useNavigate();
 
+  // Services list for dropdown
+  const services = [
+    "Web Development",
+    "App Development", 
+    "IoT Development",
+    "AI Calling Agency",
+    "Blockchain Development",
+    "VR-AR Development",
+    "AI Automation Services",
+    "Custom Web Development",
+    "Cloud Services",
+    "Cloud Computing",
+  ];
+
   const onSubmit = async (data) => {
     if (asWhatsappMsg) {
       doWhatsappMsg(data);
@@ -33,7 +47,8 @@ const Contact = ({ heading, desc, asWhatsappMsg, service }) => {
     var emailBody = "Name: " + data.fullName + "\n\n";
     emailBody += "Email: " + data.email + "\n\n";
     emailBody += "Phone: " + data.mobileNumber + "\n\n";
-    service && (emailBody += "Service: " + service + "\n\n");
+    data.service && (emailBody += "Service: " + data.service + "\n\n");
+    data.budget && (emailBody += "Budget: " + data.budget + "\n\n");
     emailBody += "Message:\n" + data.message;
 
     const formData = {
@@ -88,6 +103,7 @@ const Contact = ({ heading, desc, asWhatsappMsg, service }) => {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col gap-4 md:px-[1rem]"
           >
+            {/* Full Name - md:grid-cols-1 */}
             <div className="hover:scale-105 transition-all duration-500">
               <label htmlFor="" className="mb-6 font-medium">
                 Full Name
@@ -105,60 +121,106 @@ const Contact = ({ heading, desc, asWhatsappMsg, service }) => {
               )}
             </div>
 
-            <div className="hover:scale-105 transition-all duration-500">
-              <label htmlFor="" className="mb-6 font-medium">
-                Mobile Number
-              </label>
-              <input
-                type="text"
-                className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-primary/20 border-2 rounded-sm font-light px-2 py-3"
-                placeholder="Enter Mobile Number"
-                {...register("mobileNumber", {
-                  required: "Mobile number is required",
-                  pattern: {
-                    value: /^\+?[\d\s\-()]{6,14}\d$/,
-                    message: "Invalid phone number",
-                  },
-                })}
-              />
-              {errors.mobileNumber && (
-                <span className="text-red-500 text-sm">
-                  {errors.mobileNumber.message}
-                </span>
-              )}
+            {/* Email & Phone - md:grid-cols-2 */}
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="hover:scale-105 transition-all duration-500">
+                <label htmlFor="" className="mb-6 font-medium">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-primary/20 border-2 rounded-sm font-light px-2 py-3"
+                  placeholder="Enter Email"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                      message: "Invalid email address",
+                    },
+                  })}
+                />
+                {errors.email && (
+                  <span className="text-red-500 text-sm">
+                    {errors.email.message}
+                  </span>
+                )}
+              </div>
+
+              <div className="hover:scale-105 transition-all duration-500">
+                <label htmlFor="" className="mb-6 font-medium">
+                  Phone
+                </label>
+                <input
+                  type="text"
+                  className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-primary/20 border-2 rounded-sm font-light px-2 py-3"
+                  placeholder="Enter Mobile Number"
+                  {...register("mobileNumber", {
+                    required: "Mobile number is required",
+                    pattern: {
+                      value: /^\+?[\d\s\-()]{6,14}\d$/,
+                      message: "Invalid phone number",
+                    },
+                  })}
+                />
+                {errors.mobileNumber && (
+                  <span className="text-red-500 text-sm">
+                    {errors.mobileNumber.message}
+                  </span>
+                )}
+              </div>
             </div>
 
-            <div className="hover:scale-105 transition-all duration-500">
-              <label htmlFor="" className="mb-6 font-medium">
-                Email
-              </label>
-              <input
-                type="email"
-                className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-primary/20 border-2 rounded-sm font-light px-2 py-3"
-                placeholder="Enter Email"
-                {...register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                    message: "Invalid email address",
-                  },
-                })}
-              />
-              {errors.email && (
-                <span className="text-red-500 text-sm">
-                  {errors.email.message}
-                </span>
-              )}
+            {/* Service & Budget - md:grid-cols-2 */}
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="hover:scale-105 transition-all duration-500">
+                <label htmlFor="" className="mb-6 font-medium">
+                  Service
+                </label>
+                <select
+                  className="mt-1 w-full bg-transparent outline-none border-primary/20 border-2 rounded-sm font-light px-2 py-3"
+                  {...register("service", { required: "Please select a service" })}
+                >
+                  <option value="">Select a service</option>
+                  {services.map((serviceOption, index) => (
+                    <option key={index} value={serviceOption}>
+                      {serviceOption}
+                    </option>
+                  ))}
+                </select>
+                {errors.service && (
+                  <span className="text-red-500 text-sm">
+                    {errors.service.message}
+                  </span>
+                )}
+              </div>
+
+              <div className="hover:scale-105 transition-all duration-500">
+                <label htmlFor="" className="mb-6 font-medium">
+                  Budget
+                </label>
+                <input
+                  type="text"
+                  className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-primary/20 border-2 rounded-sm font-light px-2 py-3"
+                  placeholder="Enter your budget range"
+                  {...register("budget", { required: "Budget is required" })}
+                />
+                {errors.budget && (
+                  <span className="text-red-500 text-sm">
+                    {errors.budget.message}
+                  </span>
+                )}
+              </div>
             </div>
 
+            {/* Message - md:grid-cols-1 */}
             <div className="hover:scale-105 transition-all duration-500">
               <label htmlFor="" className="mb-6 font-medium">
-                Message
+                Describe your specific needs
               </label>
               <textarea
                 rows="4"
                 className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-primary/20 border-2 rounded-sm font-light px-2 py-3"
-                placeholder="Enter Message"
+                placeholder="Describe your specific needs"
                 {...register("message", { required: "Message is required" })}
               />
               {errors.message && (
@@ -170,7 +232,6 @@ const Contact = ({ heading, desc, asWhatsappMsg, service }) => {
 
             <button className="primary-btn" type="submit">
               {spinner ? "Sending..." : "Submit"}
-              {/* Submit */}
             </button>
           </form>
         </div>

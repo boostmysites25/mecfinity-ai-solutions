@@ -742,7 +742,7 @@ const AutomationServices = () => {
       <Testimonials reviews={automationReviews} />
       <WhyChooseUs />
       <Faqs />
-      <Contact />
+      <Contact service='AI Automation Services' />
     </>
   );
 };

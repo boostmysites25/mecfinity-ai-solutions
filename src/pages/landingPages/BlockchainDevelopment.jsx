@@ -161,7 +161,7 @@ const BlockchainDevelopment = () => {
           </div>
         </div>
       </section>
-      <Contact />
+      <Contact service="Blockchain Development" />
       <KeyBenefits
         title="The Business Value of Blockchain Technology"
         benefits={[
@@ -301,6 +301,7 @@ const BlockchainDevelopment = () => {
                 create new decentralized business models, our team of blockchain
                 experts is ready to guide your journey. Let's discuss how
                 blockchain can transform your operations."
+        service="Blockchain Development"
       />
     </>
   );

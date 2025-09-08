@@ -856,7 +856,7 @@ const CloudServices = () => {
       <Testimonials reviews={cloudServicesReviews} />
       <WhyChooseUs />
       <Faqs />
-      <Contact />
+      <Contact service="Cloud Services" />
     </>
   );
 };
