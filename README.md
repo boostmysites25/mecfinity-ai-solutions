@@ -2,7 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
 ## Blog API Integration
 
 This application now includes TanStack Query integration for blog data fetching with the following APIs:
