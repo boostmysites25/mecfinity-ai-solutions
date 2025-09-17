@@ -48,6 +48,9 @@ const CustomWebDevelopment = lazy(() =>
 const CloudServices = lazy(() =>
   import("./pages/landingPages/CloudServices")
 );
+const SaasTransformation = lazy(() =>
+  import("./pages/landingPages/SaasTransformation")
+);
 
 AOS.init({
   once: true,
@@ -219,6 +222,16 @@ export default function App() {
             <>
               <LandingHeader />
               <CloudServices />
+              <LandingFooter />
+            </>
+          }
+        />
+        <Route
+          path="/saas-transformation"
+          element={
+            <>
+              <LandingHeader />
+              <SaasTransformation />
               <LandingFooter />
             </>
           }

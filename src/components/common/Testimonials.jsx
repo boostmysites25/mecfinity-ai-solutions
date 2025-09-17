@@ -97,15 +97,17 @@ const Testimonials = ({ reviews }) => {
               <p className="italic desc">{item.desc}</p>
               <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-2">
-                  {/* <div className="h-[3rem] min-w-[3rem] bg-gray-300 rounded-full object-cover" /> */}
-
-                  {item.profileImg && (
+                  {item.profileImg ? (
                     <img
                       loading="lazy"
                       src={item.profileImg}
                       alt={item.name}
                       className="w-[3rem] h-[3rem] rounded-full object-cover"
                     />
+                  ) : (
+                    <div className="w-[3rem] h-[3rem] bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      {item.name ? item.name.charAt(0).toUpperCase() : '?'}
+                    </div>
                   )}
                   <div className="flex flex-col h-full">
                     <p className="font-medium">{item.name}</p>
