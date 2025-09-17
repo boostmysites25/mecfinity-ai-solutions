@@ -8,6 +8,7 @@ import automationServicesVideo from "../../assets/videos/automation-services.mp4
 import customWebDevVideo from "../../assets/videos/custom-web-development.mp4";
 import whyus1 from "../../assets/images/whyus1.webp";
 import whyus2 from "../../assets/images/whyus2.webp";
+import { Helmet } from "react-helmet";
 
 const SaasTransformation = () => {
   const [revenueCounter, setRevenueCounter] = useState(47200000);
@@ -106,6 +107,14 @@ const SaasTransformation = () => {
 
   return (
     <>
+      {/* ElevenLabs ConvAI Chatbot */}
+      <Helmet>
+        <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+      </Helmet>
+      
+      {/* ConvAI Widget */}
+      <elevenlabs-convai agent-id="agent_6901k5a28t5qf7sbja4899dr8am1"></elevenlabs-convai>
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}

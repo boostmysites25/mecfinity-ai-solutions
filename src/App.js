@@ -18,7 +18,7 @@ import { HelmetProvider } from "react-helmet-async";
 import PageTracker from "./components/common/PageTracker.js";
 import TermsAndConditions from "./pages/website/TermsAndConditions.jsx";
 import PrivacyPolicy from "./pages/website/PrivacyPolicy.jsx";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const ServicePageLayout = lazy(() => import("./layout/ServicePageLayout"));
 const ServiceDetails = lazy(() => import("./pages/website/ServiceDetails"));
@@ -45,9 +45,7 @@ const AutomationServices = lazy(() =>
 const CustomWebDevelopment = lazy(() =>
   import("./pages/landingPages/CustomWebDevelopment")
 );
-const CloudServices = lazy(() =>
-  import("./pages/landingPages/CloudServices")
-);
+const CloudServices = lazy(() => import("./pages/landingPages/CloudServices"));
 const SaasTransformation = lazy(() =>
   import("./pages/landingPages/SaasTransformation")
 );
@@ -77,7 +75,6 @@ export default function App() {
         <HelmetProvider>
           <LoadingSpinnerContext />
           <Suspense fallback={<LoadingSpinner />}>
-            <WhatsAppIcon />
             <Toaster
               position="top-center"
               toastOptions={{
@@ -90,174 +87,188 @@ export default function App() {
             <ScrollToTop />
             <PageTracker />
             <Routes>
-            {/* Website Pages */}
-            {routes.map(({ component, name, path }, index) => (
+              {/* Website Pages */}
+              {routes.map(({ component, name, path }, index) => (
+                <Route
+                  key={index}
+                  path={path}
+                  element={
+                    <>
+                      <WebsiteHeader name={name} />
+                      <WhatsAppIcon />
+                      {component}
+                      <WebsiteFooter />
+                    </>
+                  }
+                />
+              ))}
+
               <Route
-                key={index}
-                path={path}
+                path="/blogs/:slug"
                 element={
                   <>
-                    <WebsiteHeader name={name} />
-                    {component}
+                    <WebsiteHeader />
+                    <WhatsAppIcon />
+                    <BlogDetails />
                     <WebsiteFooter />
                   </>
                 }
               />
-            ))}
+              <Route path="/thank-you" element={<Thankyou />} />
 
-            <Route
-              path="/blogs/:slug"
-              element={
-                <>
-                  <WebsiteHeader />
-                  <BlogDetails />
-                  <WebsiteFooter />
-                </>
-              }
-            />
-            <Route path="/thank-you" element={<Thankyou />} />
+              <Route path="/services" element={<ServicePageLayout />}>
+                <Route path=":title" element={<ServiceDetails />} />
+                <Route
+                  path="*"
+                  element={<Navigate to="/services/Web Development" />}
+                />
+              </Route>
 
-            <Route path="/services" element={<ServicePageLayout />}>
-              <Route path=":title" element={<ServiceDetails />} />
+              {/* Landing Pages */}
               <Route
-                path="*"
-                element={<Navigate to="/services/Web Development" />}
+                path="/web-development"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <LandingPage page={"web-development"} />
+                    <LandingFooter />
+                  </>
+                }
               />
-            </Route>
-
-            {/* Landing Pages */}
-            <Route
-              path="/web-development"
-              element={
-                <>
-                  <LandingHeader />
-                  <LandingPage page={"web-development"} />
-                  <LandingFooter />
-                </>
-              }
-            />
-            <Route
-              path="/app-development"
-              element={
-                <>
-                  <LandingHeader />
-                  <LandingPage page={"app-development"} />
-                  <LandingFooter />
-                </>
-              }
-            />
-            <Route
-              path="/iot-development"
-              element={
-                <>
-                  <LandingHeader />
-                  <IotDevelopment />
-                  <LandingFooter />
-                </>
-              }
-            />
-            <Route
-              path="/cloud-computing"
-              element={
-                <>
-                  <LandingHeader />
-                  <CloudComputing />
-                  <LandingFooter />
-                </>
-              }
-            />
-            <Route
-              path="/ai-calling-agency"
-              element={
-                <>
-                  <LandingHeader />
-                  <AiCallingAgency />
-                  <LandingFooter />
-                </>
-              }
-            />
-            <Route
-              path="/blockchain"
-              element={
-                <>
-                  <LandingHeader />
-                  <BlockchainDevelopment />
-                  <LandingFooter />
-                </>
-              }
-            />
-            <Route
-              path="/vr-ar-development"
-              element={
-                <>
-                  <LandingHeader />
-                  <VRARDevelopment />
-                  <LandingFooter />
-                </>
-              }
-            />
-            <Route
-              path="/automation-services"
-              element={
-                <>
-                  <LandingHeader />
-                  <AutomationServices />
-                  <LandingFooter />
-                </>
-              }
-            />
-                    <Route
-          path="/custom-web-development"
-          element={
-            <>
-              <LandingHeader />
-              <CustomWebDevelopment />
-              <LandingFooter />
-            </>
-          }
-        />
-        <Route
-          path="/cloud-services"
-          element={
-            <>
-              <LandingHeader />
-              <CloudServices />
-              <LandingFooter />
-            </>
-          }
-        />
-        <Route
-          path="/saas-transformation"
-          element={
-            <>
-              <LandingHeader />
-              <SaasTransformation />
-              <LandingFooter />
-            </>
-          }
-        />
-            <Route
-              path="/terms-and-conditions"
-              element={
-                <>
-                  <WebsiteHeader />
-                  <TermsAndConditions />
-                </>
-              }
-            />
-            <Route
-              path="/Privacy-Policy"
-              element={
-                <>
-                  <WebsiteHeader />
-                  <PrivacyPolicy />
-                </>
-              }
-            />
-          </Routes>
-        </Suspense>
-      </HelmetProvider>
-    </SpinnerContextProvider>
+              <Route
+                path="/app-development"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <LandingPage page={"app-development"} />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/iot-development"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <IotDevelopment />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/cloud-computing"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <CloudComputing />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/ai-calling-agency"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <AiCallingAgency />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/blockchain"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <BlockchainDevelopment />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/vr-ar-development"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <VRARDevelopment />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/automation-services"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <AutomationServices />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/custom-web-development"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <CustomWebDevelopment />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/cloud-services"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <LandingHeader />
+                    <CloudServices />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/saas-transformation"
+                element={
+                  <>
+                    <LandingHeader />
+                    <SaasTransformation />
+                    <LandingFooter />
+                  </>
+                }
+              />
+              <Route
+                path="/terms-and-conditions"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <WebsiteHeader />
+                    <TermsAndConditions />
+                  </>
+                }
+              />
+              <Route
+                path="/Privacy-Policy"
+                element={
+                  <>
+                    <WhatsAppIcon />
+                    <WebsiteHeader />
+                    <PrivacyPolicy />
+                  </>
+                }
+              />
+            </Routes>
+          </Suspense>
+        </HelmetProvider>
+      </SpinnerContextProvider>
     </QueryClientProvider>
   );
 }

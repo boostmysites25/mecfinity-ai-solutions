@@ -14,6 +14,7 @@ import WebsiteFooter from "../components/website/WebsiteFooter";
 import { companyDetails, allServices } from "../constant";
 import ServiceDetailsBanner from "../components/common/ServiceBannerDetails";
 import { createUrlParam } from "../utils/helper";
+import WhatsAppIcon from "../components/common/Whatsapp";
 
 const ServicePageLayout = () => {
   const { pathname } = useLocation();
@@ -58,6 +59,7 @@ const ServicePageLayout = () => {
   return (
     <>
       <WebsiteHeader />
+      <WhatsAppIcon />
       <ServiceDetailsBanner title={service.title} />
       <div ref={wrapperRef} className="wrapper">
         <div className="pt-[5rem] grid md:grid-cols-[30%_65%] grid-cols-1 gap-10">
