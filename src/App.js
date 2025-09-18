@@ -239,6 +239,7 @@ export default function App() {
                 path="/saas-transformation"
                 element={
                   <>
+                    <WhatsAppIcon />
                     <LandingHeader />
                     <SaasTransformation />
                     <LandingFooter />

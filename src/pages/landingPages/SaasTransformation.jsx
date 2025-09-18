@@ -109,9 +109,13 @@ const SaasTransformation = () => {
     <>
       {/* ElevenLabs ConvAI Chatbot */}
       <Helmet>
-        <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+        <script
+          src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+          async
+          type="text/javascript"
+        ></script>
       </Helmet>
-      
+
       {/* ConvAI Widget */}
       <elevenlabs-convai agent-id="agent_6901k5a28t5qf7sbja4899dr8am1"></elevenlabs-convai>
 
@@ -648,9 +652,7 @@ const SaasTransformation = () => {
                 <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
                   {tech.name}
                 </h3>
-                <p className="text-primarytextcolor group-hover:text-white transition-colors">
-                  {tech.description}
-                </p>
+                <p className="text-primarytextcolor">{tech.description}</p>
               </div>
             ))}
           </div>
@@ -826,9 +828,14 @@ const SaasTransformation = () => {
               who's helped 500+ founders scale successfully."
             </p>
             <div className="flex gap-4">
-              <button className="primary-btn flex-1">
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={1000}
+                className="primary-btn flex-1"
+              >
                 Book 15 Minutes with Our Founder
-              </button>
+              </ScrollLink>
               <button
                 onClick={() => setShowExitIntent(false)}
                 className="px-6 py-3 border border-primary/30 rounded-lg text-primary hover:bg-primary/10 transition-colors"
