@@ -39,7 +39,7 @@ import aboutusintrotwo from "./assets/images/aboutusintrotwo.webp";
 import allbgimage from "./assets/images/allbgimage.webp";
 import { lazy } from "react";
 import { BiBrain, BiBulb, BiCustomize, BiRocket } from "react-icons/bi";
-import { GoFileMedia, GoGraph } from "react-icons/go";
+import { GoGraph } from "react-icons/go";
 import { SlBadge } from "react-icons/sl";
 import {
   MdCloudQueue,
@@ -628,41 +628,48 @@ export const blockchainServices = [
   },
 ];
 
-export const vrArServices = [
+export const gameDevelopmentServices = [
   {
     id: 1,
-    title: "VR Training Simulations",
-    img: <FaGraduationCap />,
+    title: "Mobile Game Development",
+    img: <FaMobileAlt />,
     description:
-      "Immersive training environments that improve knowledge retention by up to 75%. We create realistic simulations for equipment operation, safety procedures, and complex tasks.",
+      "Create engaging mobile games for iOS and Android platforms. We develop casual games, puzzle games, action games, and RPGs optimized for mobile performance and monetization.",
   },
   {
     id: 2,
-    title: "AR Product Visualization",
+    title: "PC & Console Games",
     img: <FaCube />,
     description:
-      "Let customers visualize products in their space before buying. Our AR solutions enable virtual try-ons, 3D product previews, and interactive demonstrations.",
+      "Develop high-quality PC and console games with stunning graphics and immersive gameplay. From indie titles to AAA games, we bring your vision to life.",
   },
   {
     id: 3,
-    title: "Virtual Showrooms",
-    img: <FaStore />,
+    title: "Unity Game Development",
+    img: <FaTools />,
     description:
-      "360° immersive environments that showcase your products beyond physical limitations. Perfect for real estate, automotive, and retail applications.",
+      "Leverage Unity's powerful engine to create cross-platform games. We specialize in 2D and 3D game development with advanced features and optimization.",
   },
   {
     id: 4,
-    title: "AR Maintenance Guides",
-    img: <FaTools />,
+    title: "Unreal Engine Games",
+    img: <FaGlobeAmericas />,
     description:
-      "Interactive, step-by-step repair instructions overlaid on equipment. Reduce service times by 40% and improve first-time fix rates.",
+      "Build photorealistic games using Unreal Engine's cutting-edge technology. Perfect for high-end graphics, VR experiences, and cinematic gameplay.",
   },
   {
     id: 5,
-    title: "Metaverse Development",
-    img: <FaGlobeAmericas />,
+    title: "Game Art & Animation",
+    img: <FaStore />,
     description:
-      "Build your presence in the metaverse with custom 3D spaces, avatars, and interactive experiences that engage customers and employees.",
+      "Professional game art services including character design, environment modeling, UI/UX design, and animation to create visually stunning games.",
+  },
+  {
+    id: 6,
+    title: "Game Testing & QA",
+    img: <FaGraduationCap />,
+    description:
+      "Comprehensive game testing services to ensure bug-free gameplay, performance optimization, and user experience refinement before launch.",
   },
 ];
 
@@ -725,11 +732,11 @@ export const allServices = [
   {
     id: 7,
     img: <MdOutlineSmartToy className="w-6 h-6" />,
-    image: require("./assets/images/services/arvr.jpg"),
-    title: "VR-AR Development",
-    desc: "Transform experiences with immersive Virtual and Augmented Reality solutions tailored to captivate and engage users.",
+    image: require("./assets/images/services/gamedevelopment.jpg"),
+    title: "Game Development",
+    desc: "Create engaging and immersive gaming experiences across multiple platforms. Our game development services deliver high-quality games that captivate audiences and drive user engagement.",
     detailContent:
-      "Our VR/AR development services focus on creating interactive and visually stunning applications that redefine user engagement. From immersive training modules to augmented reality marketing campaigns, we deliver tailored solutions that integrate seamlessly into your business strategy. Leveraging advanced frameworks and tools, we ensure a flawless blend of reality and technology to enhance customer experiences and drive innovation.",
+      "Our game development services focus on creating compelling and interactive gaming experiences that resonate with players. From mobile games to PC and console titles, we develop games using cutting-edge technologies and industry best practices. Our team specializes in Unity, Unreal Engine, and custom game engines to deliver stunning visuals, smooth gameplay, and engaging narratives. Whether you need casual mobile games, serious games for training, or complex multiplayer experiences, we provide end-to-end development services including concept design, programming, art creation, testing, and deployment. We ensure your games are optimized for performance, monetization, and user retention while maintaining the highest quality standards.",
   },
 ];
 

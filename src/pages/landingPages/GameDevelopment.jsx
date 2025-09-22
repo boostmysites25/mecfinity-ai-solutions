@@ -1,50 +1,50 @@
 import Contact from "../../components/common/Contact";
-import { vrArServices } from "../../constant";
+import { gameDevelopmentServices } from "../../constant";
 import { Link as ScrollLink } from "react-scroll";
 import WhyChooseUs from "../../components/common/WhyChooseUs";
 import Testimonials from "../../components/common/Testimonials";
 import ReactPlayer from "react-player";
-import vrArBanner from "../../assets/videos/vrar.mp4";
+import gameBanner from "../../assets/videos/game-development.mp4";
 import Faqs from "../../components/common/Faqs";
 import Credibility from "../../components/common/Credibility";
 import ProcessFlowchart from "../../components/landingPages/ProcessFlowChart";
 import KeyBenefits from "../../components/landingPages/KeyBenefits";
 import CTA from "../../components/landingPages/CTA";
-import vrArLandingAbout from "../../assets/images/vrar.webp";
+import gameLandingAbout from "../../assets/images/app-landing-about.webp";
 
-const vrArReviews = [
+const gameReviews = [
   {
     id: 1,
-    name: "Sanjay Verma",
-    role: "Training Head, Automotive Manufacturer",
-    desc: "“Our VR training modules reduced equipment training costs by 60% while improving knowledge retention by 45% among technicians.”",
+    name: "Alex Chen",
+    role: "Game Director, Pixel Studios",
+    desc: "MecfinityAI delivered an exceptional mobile game that exceeded our expectations. Their Unity expertise and attention to detail resulted in a polished, engaging experience that our players love.",
   },
   {
     id: 2,
-    name: "Priya Nair",
-    role: "Marketing Director, Real Estate Developer",
-    desc: "“The AR property tours increased customer engagement by 300% and reduced physical site visits by 50%.”",
+    name: "Sarah Johnson",
+    role: "Producer, Indie Game Studio",
+    desc: "Working with MecfinityAI was a game-changer for our indie project. They brought our vision to life with stunning visuals and smooth gameplay mechanics that captivated our audience.",
   },
   {
     id: 3,
-    name: "Rahul Sharma",
-    role: "CEO, Medical Education Startup",
-    desc: "“MecfinityAI's surgical simulation platform has transformed how medical students practice complex procedures risk-free.”",
+    name: "Michael Rodriguez",
+    role: "CEO, VR Gaming Company",
+    desc: "Their Unreal Engine expertise helped us create a breathtaking VR experience. The team's technical skills and creative approach made our ambitious project a reality.",
   },
   {
     id: 4,
-    name: "Anjali Patel",
-    role: "Retail Experience Manager",
-    desc: "“Our AR virtual try-on solution increased conversion rates by 35% and reduced returns by 28%.”",
+    name: "Emily Watson",
+    role: "Creative Director, Casual Games Inc",
+    desc: "MecfinityAI's mobile game development services helped us launch a successful puzzle game series. Their optimization techniques ensured smooth performance across all devices.",
   },
 ];
 
-const VRARDevelopment = () => {
+const GameDevelopment = () => {
   return (
     <>
       <div id="banner" className="landing-page min-h-screen relative">
         <ReactPlayer
-          url={vrArBanner}
+          url={gameBanner}
           loop
           muted
           width="100%"
@@ -68,22 +68,22 @@ const VRARDevelopment = () => {
           }}
           className="react-player left-0 top-0 absolute object-cover h-full w-full"
         />
-        <div className="bg-black/30 absolute w-full h-full"></div>
+        <div className="bg-black/40 absolute w-full h-full"></div>
         <div
           data-aos="fade-up"
-          className="pt-[8rem] sm:pt-[3rem] pb-[3rem] wrapper flex items-center min-h-screen"
+          className="pt-[8rem] sm:pt-[3rem] pb-[3rem] min-h-screen wrapper flex items-center h-full"
         >
           <div className="relative z-10 px-6 justify-center h-full flex flex-col items-center gap-5 text-center md:max-w-[60rem] mx-auto">
             <div className="rounded-text-box border-white/70 font-medium text-white">
-              VR/AR Development
+              Game Development
             </div>
             <h1 className="heading-1 text-white leading-tight">
-              Immersive Experiences That Transform Business Outcomes
+              Bring Your Game Ideas to Life with Professional Development
             </h1>
             <p className="text-white desc font-medium">
-              From virtual training to augmented commerce, we create
-              cutting-edge VR/AR solutions that engage customers, train
-              employees, and visualize the impossible.
+              From concept to launch, we create engaging games across all platforms. 
+              Our expert team delivers high-quality games with stunning visuals, 
+              smooth gameplay, and immersive experiences that captivate players.
             </p>
             <ScrollLink
               to="contact"
@@ -91,7 +91,7 @@ const VRARDevelopment = () => {
               offset={-90}
               className="primary-btn mt-2"
             >
-              Request Demo
+              Start Your Game Project
             </ScrollLink>
           </div>
         </div>
@@ -111,7 +111,7 @@ const VRARDevelopment = () => {
             data-aos="fade-up"
             className="gradient-rounded-text-box mx-auto lg:mx-0"
           >
-            Extended Reality
+            Game Services
           </div>
           <div className="flex flex-col-reverse items-center lg:grid grid-cols-2 gap-10 mt-7">
             <div
@@ -120,14 +120,12 @@ const VRARDevelopment = () => {
             >
               <div className="flex flex-col gap-7">
                 <h2 className="heading-2">
-                  Bridging Physical and Digital Worlds with Immersive Technology
+                  Professional Game Development Across All Platforms
                 </h2>
                 <p className="desc">
-                  We design and develop VR/AR solutions that solve real business
-                  challenges across industries. Whether you need virtual product
-                  demonstrations, augmented maintenance guides, or immersive
-                  training simulations, our solutions drive measurable results
-                  through next-generation experiences.
+                  We specialize in creating engaging games for mobile, PC, and console platforms. 
+                  From casual mobile games to complex AAA titles, our team combines technical 
+                  expertise with creative vision to deliver games that players love and remember.
                 </p>
               </div>
 
@@ -138,7 +136,7 @@ const VRARDevelopment = () => {
                   offset={-90}
                   className="primary-btn"
                 >
-                  Get Started
+                  Contact Us
                 </ScrollLink>
                 <ScrollLink
                   to="services"
@@ -146,51 +144,51 @@ const VRARDevelopment = () => {
                   offset={-80}
                   className="secondary-btn"
                 >
-                  Our Solutions
+                  Our Services
                 </ScrollLink>
               </div>
             </div>
             <div data-aos="fade-left" className="h-full">
               <img
                 loading="lazy"
-                src={vrArLandingAbout}
+                src={gameLandingAbout}
                 className="object-contain max-h-[30rem] w-full rounded-lg"
-                alt="VR/AR experience visualization"
+                alt="Game development process"
               />
             </div>
           </div>
         </div>
       </section>
-      <Contact service="AR VR Development" />
+      <Contact service="Game Development" />
       <KeyBenefits
-        title="Business Advantages of VR/AR Technology"
+        title="Why Choose Our Game Development Services"
         benefits={[
-          "Enhance training effectiveness by up to 75%",
-          "Reduce physical prototyping costs by 60%+",
-          "Increase customer engagement by 3-5x",
-          "Enable remote collaboration in 3D spaces",
-          "Improve product understanding through visualization",
-          "Create memorable brand experiences",
+          "Expert team with 5+ years of game development experience",
+          "Support for Unity, Unreal Engine, and custom engines",
+          "Cross-platform development for maximum reach",
+          "Professional game art and animation services",
+          "Comprehensive testing and quality assurance",
+          "Post-launch support and updates",
         ]}
       />
       <div id="services" className="flex justify-center relative">
         <div className="wrapper py-10 flex flex-col items-center gap-5 z-10 text-primarytextcolor">
           <div data-aos="fade-up" className="gradient-rounded-text-box mx-auto">
-            Our VR/AR Services
+            Our Game Services
           </div>
           <h1 data-aos="fade-up" className="heading-2 text-center max-w-2xl">
-            End-to-End Immersive Technology Solutions
+            Complete Game Development Solutions
           </h1>
           <p data-aos="fade-up" className="text-center max-w-2xl desc">
-            Comprehensive VR/AR development services from concept to deployment,
-            tailored to your specific industry and use case.
+            From initial concept to final release, we provide end-to-end game 
+            development services tailored to your vision and target audience.
           </p>
           <div
             data-aos="fade-up"
             className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 py-[2rem] mx-auto max-w-6xl"
           >
-            {vrArServices.map((item) => {
-              const isLastItem = item.id === vrArServices.length;
+            {gameDevelopmentServices.map((item) => {
+              const isLastItem = item.id === gameDevelopmentServices.length;
               const isLastItemOdd = isLastItem && item.id % 2 !== 0;
 
               return (
@@ -225,8 +223,7 @@ const VRARDevelopment = () => {
       </div>
       <div className="py-14 wrapper text-center space-y-5 flex flex-col items-center">
         <h6 className="heading-2">
-          Special offer: Free VR/AR feasibility consultation for qualified
-          businesses!
+          Ready to create your next hit game? Let's discuss your vision!
         </h6>
         <ScrollLink
           to="contact"
@@ -234,78 +231,83 @@ const VRARDevelopment = () => {
           offset={-90}
           className="primary-btn w-fit mt-4"
         >
-          Book Your Consultation
+          Get Game Consultation
         </ScrollLink>
       </div>
       <ProcessFlowchart
         steps={[
-          "Use Case Discovery & Strategy",
-          "Experience Design & Storyboarding",
-          "3D Asset Creation",
-          "Development & Programming",
-          "Hardware Integration",
-          "User Testing & Iteration",
-          "Deployment & Distribution",
-          "Analytics & Optimization",
+          "Game Concept & Design",
+          "Technical Architecture Planning",
+          "Art & Asset Creation",
+          "Core Gameplay Development",
+          "Level Design & Content",
+          "Testing & Quality Assurance",
+          "Platform Optimization",
+          "Launch & Post-Release Support",
         ]}
       />
       <WhyChooseUs
         points={[
-          "Unity and Unreal Engine certified developers",
-          "Cross-platform deployment expertise",
-          "Industry-specific solution frameworks",
-          "Hardware-agnostic approach",
-          "Proven track record across verticals",
-          "Ongoing support and maintenance",
+          "Certified Unity and Unreal Engine developers",
+          "5+ years of game development experience",
+          "Cross-platform expertise (Mobile, PC, Console)",
+          "Professional game art and animation team",
+          "Comprehensive testing and QA processes",
+          "Post-launch support and updates",
         ]}
       />
-      <Testimonials reviews={vrArReviews} />
+      <Testimonials reviews={gameReviews} />
       <Credibility />
       <CTA
-        title={
-          "Still relying on flat, 2D experiences to showcase your products?"
-        }
+        title={"Have a game idea but don't know where to start?"}
         desc={
-          "Our VR/AR solutions can increase customer engagement by 300% while reducing physical sample costs by up to 60%."
+          "Our game development team can help bring your vision to life, from initial concept to successful launch across all platforms."
         }
       />
       <Faqs
         questions={[
           {
-            question:
-              "What industries do you specialize in for VR/AR solutions?",
+            question: "What game engines do you work with?",
             answer:
-              "We have delivered immersive solutions for manufacturing, healthcare, real estate, retail, education, and entertainment. Our team understands the unique requirements of each vertical and tailors experiences accordingly.",
+              "We specialize in Unity and Unreal Engine, the industry's leading game development platforms. We also work with custom engines and can recommend the best solution for your specific project.",
           },
           {
-            question: "What hardware platforms do you support?",
+            question: "Do you develop games for all platforms?",
             answer:
-              "We develop for all major VR headsets (Oculus, HTC Vive, HoloLens, etc.), mobile AR (iOS/Android), and web-based AR. We'll recommend the best platform based on your use case, budget, and audience.",
+              "Yes! We develop games for mobile (iOS/Android), PC (Windows/Mac/Linux), and console platforms (PlayStation, Xbox, Nintendo Switch). We can also create cross-platform games that work on multiple devices.",
           },
           {
-            question: "How long does VR/AR development typically take?",
+            question: "What's included in your game development process?",
             answer:
-              "Most projects take 3-6 months depending on complexity. A basic proof-of-concept can be delivered in 4-8 weeks, with full development following requirements finalization.",
+              "Our comprehensive process includes concept design, technical architecture, art creation, programming, level design, testing, optimization, and post-launch support. We handle everything from idea to store release.",
           },
           {
-            question: "Can VR/AR work with our existing systems?",
+            question: "Can you help with game art and animation?",
             answer:
-              "Absolutely. We integrate with your CRM, LMS, e-commerce platforms, and other enterprise systems through APIs. Our solutions are designed to complement and enhance your current tech stack.",
+              "Absolutely! We have a dedicated team of game artists and animators who create characters, environments, UI/UX, and animations. We can also work with your existing art assets or collaborate with your art team.",
+          },
+          {
+            question: "How long does game development take?",
+            answer:
+              "Development time varies based on complexity, platform, and features. Simple mobile games typically take 2-4 months, while complex PC/console games can take 6-18 months. We provide detailed timelines during project planning.",
+          },
+          {
+            question: "Do you provide post-launch support?",
+            answer:
+              "Yes! We offer ongoing support including bug fixes, updates, new content, and platform-specific optimizations. We can also help with marketing assets and store optimization.",
           },
         ]}
       />
       <Contact
-        heading="Ready to Explore Immersive Technology?"
-        desc="At Mecfinity AI Solutions, we're passionate about helping
-                businesses harness the power of VR and AR. Whether you're
-                looking to revolutionize training, enhance customer experiences,
-                or visualize complex data, our team of immersive technology
-                experts is ready to bring your vision to life. Let's discuss how
-                extended reality can transform your business."
-        service="AR VR Development"
+        heading="Ready to Create Your Next Game?"
+        desc="At Mecfinity AI Solutions, we turn game ideas into reality. Whether you're 
+                an indie developer with a creative vision or an established studio looking 
+                to expand, our experienced team is ready to bring your game to life. 
+                Let's discuss your project and create something amazing together."
+        service="Game Development"
       />
     </>
   );
 };
 
-export default VRARDevelopment;
+export default GameDevelopment;

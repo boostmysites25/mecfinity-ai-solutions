@@ -72,7 +72,7 @@ const WebsiteFooter = () => {
             </div>
           </div>
           <div className="flex justify-center flex-wrap gap-3 mt-5 text-sm text-black text-center">
-            <p>© 2025 EventPro. All rights reserved.</p>
+            <p>© 2025 Mecfinity AI. All rights reserved.</p>
             <span>|</span>
             <Link
               to="/terms-and-conditions"

@@ -36,8 +36,8 @@ const AiCallingAgency = lazy(() =>
 const BlockchainDevelopment = lazy(() =>
   import("./pages/landingPages/BlockchainDevelopment")
 );
-const VRARDevelopment = lazy(() =>
-  import("./pages/landingPages/VRARDevelopment")
+const GameDevelopment = lazy(() =>
+  import("./pages/landingPages/GameDevelopment")
 );
 const AutomationServices = lazy(() =>
   import("./pages/landingPages/AutomationServices")
@@ -192,12 +192,12 @@ export default function App() {
                 }
               />
               <Route
-                path="/vr-ar-development"
+                path="/game-development"
                 element={
                   <>
                     <WhatsAppIcon />
                     <LandingHeader />
-                    <VRARDevelopment />
+                    <GameDevelopment />
                     <LandingFooter />
                   </>
                 }
